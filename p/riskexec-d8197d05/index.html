@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Wysdym × RiskExec — The substrate under the stack you already built</title>
+<meta name="description" content="You've already built a real agentic GTM stack — Clay, Claude skills, n8n, HubSpot. Wysdym is the harness underneath it: shared memory, governed write-access, and skills that improve instead of decay. Prepared for Alicia.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGcgZmlsbD0iI0JBNjI5NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMiwgMSkgc2NhbGUoMC4xNCkiPjxwb2x5Z29uIHBvaW50cz0iOTYsMzQgMTI4LDE0NyAxMDQsMTY3Ii8+PHBvbHlnb24gcG9pbnRzPSI5OCwzMiAxNTQsMTI3IDEzMSwxNDYiLz48cG9seWdvbiBwb2ludHM9IjE2OCw2MSAxNTUsMTIzIDEzOCw5NCIvPjxwb2x5Z29uIHBvaW50cz0iMTcxLDU5IDE5MCw3MSAxNjgsNzMiLz48cG9seWdvbiBwb2ludHM9IjEwMCwxNTQgMTAxLDE2OSAxMCwxNjEiLz48L2c+PC9zdmc+">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --magenta: #BA6296; --magenta-light: #c97aa6; --magenta-deep: #8d4874;
+    --midnight: #2c2a4a; --midnight-deeper: #1a1833; --near-black: #161517;
+    --paper: #f4ede2; --ink: #1b1b1b; --soft-lemon: #ffe066; --pale-sky: #a3d5ff;
+    --warm-taupe: #D3B1C2; --white: #FFFFFF; --green: #81C784;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--near-black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  .serif { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; }
+  .container { max-width: 1040px; margin: 0 auto; padding: 0 40px; }
+  section { position: relative; padding: 84px 0; }
+  h1 { font-size: clamp(40px, 5.6vw, 70px); font-weight: 700; line-height: 1.05; letter-spacing: -0.035em; }
+  h2 { font-size: clamp(28px, 3.6vw, 44px); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; }
+  h3 { font-size: 20px; font-weight: 600; line-height: 1.35; }
+  p { font-size: 17px; color: var(--warm-taupe); line-height: 1.7; }
+  .lead { font-size: 20px; color: rgba(255,255,255,0.85); font-weight: 400; line-height: 1.6; }
+  .accent { color: var(--magenta-light); }
+  .accent-lemon { color: var(--soft-lemon); }
+  .pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(186,98,150,0.12); color: var(--magenta-light); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 8px 16px; border-radius: 999px; border: 1px solid rgba(186,98,150,0.25); margin-bottom: 24px; }
+  .pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--magenta); }
+  .nav { position: sticky; top: 0; z-index: 90; background: rgba(22,21,23,0.86); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .nav-inner { max-width: 1040px; margin: 0 auto; padding: 16px 40px; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-weight: 700; font-size: 20px; letter-spacing: -0.02em; display: flex; align-items: center; gap: 9px; }
+  .logo svg { height: 26px; width: auto; display: block; }
+  .btn { display: inline-block; background: var(--magenta); color: var(--white); font-weight: 600; font-size: 15px; padding: 12px 26px; border-radius: 999px; transition: transform .15s ease, background .15s ease; }
+  .btn:hover { background: var(--magenta-light); transform: translateY(-1px); }
+  .hero { padding: 104px 0 72px; background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(186,98,150,0.18), transparent 60%); }
+  .hero .lead { max-width: 720px; margin-top: 26px; }
+  .byline { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 38px; font-size: 14px; color: rgba(255,255,255,0.65); }
+  .byline .avatar { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, var(--magenta), var(--midnight)); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; color: var(--white); }
+  .quote { border-left: 3px solid var(--magenta); padding: 6px 0 6px 22px; margin: 30px 0 0; font-family: 'Instrument Serif', serif; font-style: italic; font-size: 23px; line-height: 1.4; color: rgba(255,255,255,0.92); }
+  .quote span { display: block; font-family: 'Inter'; font-style: normal; font-size: 13px; letter-spacing: 0.04em; color: rgba(255,255,255,0.5); margin-top: 12px; text-transform: uppercase; }
+  .band { background: var(--midnight-deeper); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--magenta-light); margin-bottom: 16px; }
+  .pains { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; }
+  .pain { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; }
+  .pain h3 { color: var(--white); margin-bottom: 8px; }
+  .pain p { font-size: 15px; }
+  .map { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 44px; }
+  .comp { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 26px; }
+  .comp .name { font-weight: 700; font-size: 17px; color: var(--white); }
+  .comp .name b { color: var(--magenta-light); font-weight: 700; }
+  .comp .tag { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--soft-lemon); display: block; margin: 14px 0 8px; }
+  .comp p { font-size: 15px; }
+  .live { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; margin-left: 8px; vertical-align: middle; }
+  .live.on { background: rgba(129,199,132,0.15); color: var(--green); border: 1px solid rgba(129,199,132,0.3); }
+  .live.road { background: rgba(255,224,102,0.12); color: var(--soft-lemon); border: 1px solid rgba(255,224,102,0.3); }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
+  .step { padding: 22px; border-radius: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); }
+  .step .n { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 30px; color: var(--magenta-light); }
+  .step h3 { font-size: 16px; color: var(--white); margin: 6px 0; }
+  .step p { font-size: 14px; }
+  .cta { text-align: center; background: radial-gradient(ellipse 70% 80% at 50% 120%, rgba(186,98,150,0.22), transparent 60%); }
+  .cta h2 { max-width: 760px; margin: 0 auto; }
+  .cta .btn { margin-top: 32px; font-size: 16px; padding: 15px 34px; }
+  .footer { padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.06); color: rgba(255,255,255,0.5); font-size: 14px; }
+  .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
+  .disclaim { font-size: 12.5px; color: rgba(255,255,255,0.4); margin-top: 10px; max-width: 620px; }
+  @media (max-width: 820px) { .pains, .map, .steps { grid-template-columns: 1fr; } .nav-links { display: none; } }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="https://wysdym.ai">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><g fill="#BA6296" transform="translate(2,1) scale(0.14)"><polygon points="96,34 128,147 104,167"/><polygon points="98,32 154,127 131,146"/><polygon points="168,61 155,123 138,94"/><polygon points="171,59 190,71 168,73"/><polygon points="100,154 101,169 10,161"/></g></svg>
+      wysdym
+    </a>
+    <a class="btn" href="#talk">Become a design partner</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container">
+    <span class="pill"><span class="dot"></span>Prepared for Alicia · Strategic Programs &amp; AI Transformation, RiskExec</span>
+    <h1>You already built the <span class="serif">stack</span>.<br>Now it needs a <span class="accent">substrate</span>.</h1>
+    <p class="lead">Clay, Claude org skills, n8n, HubSpot, a GTM-IQ agent suite in build — yours is the most sophisticated agentic GTM setup we've seen. The ceiling you're hitting isn't more tools. It's the missing layer underneath them: governance you run by hand, context scattered across four systems, and skills that decay with no analytics. That layer is what Wysdym is.</p>
+    <div class="quote">"The full platform would be immediate value. A thin connector wouldn't be."
+      <span>— Alicia, on what Wysdym would have to be</span>
+    </div>
+    <div class="byline">
+      <span class="avatar">RC</span>
+      <span>Put together by Rob Catalano, co-founder, Wysdym — from one WorkTango alum to another</span>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="container">
+    <div class="eyebrow">What you told us</div>
+    <h2>The four ceilings on a stack as advanced as yours</h2>
+    <p style="max-width:740px;margin-top:18px;">You're not missing tools — you have the best of them. You're missing the substrate they should be standing on. You named four ceilings directly, and in a compliance-grade world where "responsibility cannot be automated," every one of them is the harness's job, not the agents'.</p>
+    <div class="pains">
+      <div class="pain"><h3>Manual governance</h3><p>You hand-govern what your agents are allowed to do and write. There's no per-agent RBAC, no approval queue, no audit trail by default — so the careful work stays on you.</p></div>
+      <div class="pain"><h3>Context fragmentation</h3><p>Your context lives in Clay, in Claude skills, in n8n flows, in HubSpot — four memories, none shared. Every agent re-learns what the last one already knew.</p></div>
+      <div class="pain"><h3>No skill analytics &amp; stale-skill decay</h3><p>Skills ship, then quietly rot. You can't see which ones earn their keep, which are drifting, or which to retire — so the library degrades instead of compounding.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="eyebrow">The harness</div>
+    <h2>Five components, mapped to <span class="accent">your</span> four ceilings</h2>
+    <p style="max-width:740px;margin-top:18px;">Wysdym is the platform every GTM agent runs on — not another agent. It sits under the stack you already built and makes all of it grounded, governed, and accountable. Your agents plug in over MCP and inherit the same grounding; nothing gets ripped out.</p>
+    <div class="map">
+      <div class="comp"><div class="name"><b>wysdymGateway</b> — one governed door <span class="live road">Live</span></div><span class="tag">Answers: manual governance</span><p>Read-only by default. Every agent write hits per-agent RBAC, a write-approval queue, HITL, and a full audit trail. The governance you do by hand becomes infrastructure — which is exactly the bar a compliance team holds AI to.</p></div>
+      <div class="comp"><div class="name"><b>wysdymGraph</b> (Cortex) — shared memory <span class="live on">In production</span></div><span class="tag">Answers: context fragmentation</span><p>One per-tenant typed knowledge graph across 39 GTM domains that Clay, your Claude skills, n8n, and HubSpot all read from. One memory, shared — not four that re-learn each other.</p></div>
+      <div class="comp"><div class="name"><b>wysdymSkills</b> + <b>wysdymObserve</b> <span class="live road">Live</span></div><span class="tag">Answers: no skill analytics &amp; stale-skill decay</span><p>An open skill library invoked by any agent over MCP, plus skill- and outcome-level analytics. Skills self-learn from every approval, edit, and outcome — so they improve instead of rotting, and you can finally see which ones are working.</p></div>
+      <div class="comp"><div class="name"><b>wysdymConnect</b> — the stack, wired once <span class="live on">Key connectors live</span></div><span class="tag">Answers: stop re-wiring &amp; re-paying</span><p>Your Clay / HubSpot / n8n-style stack connected once over MCP, not separately into every agent — so you stop re-wiring and re-paying for the same retrieval per agent. Salesforce/HubSpot, Gong, Slack, Drive, Notion supported.</p></div>
+    </div>
+    <p style="margin-top:26px;font-size:14.5px;color:rgba(255,255,255,0.55);">Operator — the reference agent that ships with Wysdym — runs on all of this on day one. But the point for you is the opposite direction: bring your GTM-IQ agents and they inherit the same grounding, governance, and learning loop the moment they connect.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="container">
+    <div class="eyebrow">If we did this together</div>
+    <h2>A 90-day design partner pilot</h2>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Ground</h3><p>Stand up RiskExec's graph on your real GTM data and unify what Clay, HubSpot, and n8n each know today. Founder-led, light lift on you.</p></div>
+      <div class="step"><div class="n">2</div><h3>Govern</h3><p>Put one of your agents' writes behind the Gateway — RBAC, approval queue, audit trail. The hand-governance becomes a system.</p></div>
+      <div class="step"><div class="n">3</div><h3>Compound</h3><p>Turn on Skills + Observe. Watch skills self-learn from outcomes and surface which ones earn their keep — no more silent decay.</p></div>
+      <div class="step"><div class="n">4</div><h3>Decide</h3><p>Locked pricing, grandfathered 24 months. You shape the roadmap — your four pains are already on it.</p></div>
+    </div>
+    <p style="margin-top:30px;max-width:740px;">Free 90-day pilot at platform launch. Founder-led implementation. Roadmap influence. Locked, grandfathered pricing. Optional co-marketing — only if it's a win for RiskExec. Full platform, because you already told us a thin connector wouldn't be.</p>
+  </div>
+</section>
+
+<section class="cta" id="talk">
+  <div class="container">
+    <span class="pill"><span class="dot"></span>The next 15 minutes</span>
+    <h2>You've already built the stack. Let's give it the substrate it's been missing.</h2>
+    <a class="btn" href="mailto:rob@wysdym.ai?subject=Wysdym%20%C3%97%20RiskExec%20%E2%80%94%20design%20partner%20pilot">Grab 15 minutes with Rob</a>
+  </div>
+</section>
+
+<div class="footer">
+  <div class="container footer-inner">
+    <div>
+      <a class="logo" href="https://wysdym.ai" style="font-size:17px;">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><g fill="#BA6296" transform="translate(2,1) scale(0.14)"><polygon points="96,34 128,147 104,167"/><polygon points="98,32 154,127 131,146"/><polygon points="168,61 155,123 138,94"/><polygon points="171,59 190,71 168,73"/><polygon points="100,154 101,169 10,161"/></g></svg>
+        wysdym
+      </a>
+      <p class="disclaim">More agents won't grow revenue. Compounding intelligence will. Wysdym is pre-launch and partnering with a small group of GTM leaders — wysdymGraph is in production; Platform v1 (first paid customers) is targeted for Q3 2026. Prepared privately for RiskExec.</p>
+    </div>
+    <div>wysdym.ai</div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Wysdym × TribalScale — The substrate under your agents</title>
+<meta name="description" content="You can build agents. The point of Wysdym is you shouldn't have to rebuild the substrate underneath them. A governed, self-learning harness your OpenClaw agents plug into over MCP. Prepared for Sheetal Jaitly, TribalScale.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGcgZmlsbD0iI0JBNjI5NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMiwgMSkgc2NhbGUoMC4xNCkiPjxwb2x5Z29uIHBvaW50cz0iOTYsMzQgMTI4LDE0NyAxMDQsMTY3Ii8+PHBvbHlnb24gcG9pbnRzPSI5OCwzMiAxNTQsMTI3IDEzMSwxNDYiLz48cG9seWdvbiBwb2ludHM9IjE2OCw2MSAxNTUsMTIzIDEzOCw5NCIvPjxwb2x5Z29uIHBvaW50cz0iMTcxLDU5IDE5MCw3MSAxNjgsNzMiLz48cG9seWdvbiBwb2ludHM9IjEwMCwxNTQgMTAxLDE2OSAxMCwxNjEiLz48L2c+PC9zdmc+">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --magenta: #BA6296; --magenta-light: #c97aa6; --magenta-deep: #8d4874;
+    --midnight: #2c2a4a; --midnight-deeper: #1a1833; --near-black: #161517;
+    --paper: #f4ede2; --ink: #1b1b1b; --soft-lemon: #ffe066; --pale-sky: #a3d5ff;
+    --warm-taupe: #D3B1C2; --white: #FFFFFF; --green: #81C784;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--near-black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  .serif { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; }
+  .container { max-width: 1040px; margin: 0 auto; padding: 0 40px; }
+  section { position: relative; padding: 84px 0; }
+  h1 { font-size: clamp(40px, 5.6vw, 70px); font-weight: 700; line-height: 1.05; letter-spacing: -0.035em; }
+  h2 { font-size: clamp(28px, 3.6vw, 44px); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; }
+  h3 { font-size: 20px; font-weight: 600; line-height: 1.35; }
+  p { font-size: 17px; color: var(--warm-taupe); line-height: 1.7; }
+  .lead { font-size: 20px; color: rgba(255,255,255,0.85); font-weight: 400; line-height: 1.6; }
+  .accent { color: var(--magenta-light); }
+  .accent-lemon { color: var(--soft-lemon); }
+  .pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(186,98,150,0.12); color: var(--magenta-light); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 8px 16px; border-radius: 999px; border: 1px solid rgba(186,98,150,0.25); margin-bottom: 24px; }
+  .pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--magenta); }
+  .nav { position: sticky; top: 0; z-index: 90; background: rgba(22,21,23,0.86); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .nav-inner { max-width: 1040px; margin: 0 auto; padding: 16px 40px; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-weight: 700; font-size: 20px; letter-spacing: -0.02em; display: flex; align-items: center; gap: 9px; }
+  .logo svg { height: 26px; width: auto; display: block; }
+  .btn { display: inline-block; background: var(--magenta); color: var(--white); font-weight: 600; font-size: 15px; padding: 12px 26px; border-radius: 999px; transition: transform .15s ease, background .15s ease; }
+  .btn:hover { background: var(--magenta-light); transform: translateY(-1px); }
+  .hero { padding: 104px 0 72px; background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(186,98,150,0.18), transparent 60%); }
+  .hero .lead { max-width: 720px; margin-top: 26px; }
+  .byline { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 38px; font-size: 14px; color: rgba(255,255,255,0.65); }
+  .byline .avatar { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, var(--magenta), var(--midnight)); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; color: var(--white); }
+  .quote { border-left: 3px solid var(--magenta); padding: 6px 0 6px 22px; margin: 30px 0 0; font-family: 'Instrument Serif', serif; font-style: italic; font-size: 23px; line-height: 1.4; color: rgba(255,255,255,0.92); }
+  .quote span { display: block; font-family: 'Inter'; font-style: normal; font-size: 13px; letter-spacing: 0.04em; color: rgba(255,255,255,0.5); margin-top: 12px; text-transform: uppercase; }
+  .band { background: var(--midnight-deeper); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--magenta-light); margin-bottom: 16px; }
+  .pains { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; }
+  .pain { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; }
+  .pain h3 { color: var(--white); margin-bottom: 8px; }
+  .pain p { font-size: 15px; }
+  .map { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 44px; }
+  .comp { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 26px; }
+  .comp .name { font-weight: 700; font-size: 17px; color: var(--white); }
+  .comp .name b { color: var(--magenta-light); font-weight: 700; }
+  .comp .tag { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--soft-lemon); display: block; margin: 14px 0 8px; }
+  .comp p { font-size: 15px; }
+  .live { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; margin-left: 8px; vertical-align: middle; }
+  .live.on { background: rgba(129,199,132,0.15); color: var(--green); border: 1px solid rgba(129,199,132,0.3); }
+  .live.road { background: rgba(255,224,102,0.12); color: var(--soft-lemon); border: 1px solid rgba(255,224,102,0.3); }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
+  .step { padding: 22px; border-radius: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); }
+  .step .n { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 30px; color: var(--magenta-light); }
+  .step h3 { font-size: 16px; color: var(--white); margin: 6px 0; }
+  .step p { font-size: 14px; }
+  .cta { text-align: center; background: radial-gradient(ellipse 70% 80% at 50% 120%, rgba(186,98,150,0.22), transparent 60%); }
+  .cta h2 { max-width: 760px; margin: 0 auto; }
+  .cta .btn { margin-top: 32px; font-size: 16px; padding: 15px 34px; }
+  .footer { padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.06); color: rgba(255,255,255,0.5); font-size: 14px; }
+  .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
+  .disclaim { font-size: 12.5px; color: rgba(255,255,255,0.4); margin-top: 10px; max-width: 620px; }
+  @media (max-width: 820px) { .pains, .map, .steps { grid-template-columns: 1fr; } .nav-links { display: none; } }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="https://wysdym.ai">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><g fill="#BA6296" transform="translate(2,1) scale(0.14)"><polygon points="96,34 128,147 104,167"/><polygon points="98,32 154,127 131,146"/><polygon points="168,61 155,123 138,94"/><polygon points="171,59 190,71 168,73"/><polygon points="100,154 101,169 10,161"/></g></svg>
+      wysdym
+    </a>
+    <a class="btn" href="#talk">Become a design partner</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container">
+    <span class="pill"><span class="dot"></span>Prepared for TribalScale · Sheetal Jaitly</span>
+    <h1>You can build the agents.<br>Don't rebuild the <span class="serif">substrate</span> <span class="accent">underneath</span> them.</h1>
+    <p class="lead">"AI-First, relentlessly human" is your whole game — you ship agents for the world's largest enterprises. So when you said you could build this too, you're right. The point isn't whether TribalScale can wire an agent. It's that your DIY GTM agent decays the moment you stop hand-feeding it, because nothing underneath makes it compound. Wysdym is that layer — a governed, self-learning graph your OpenClaw agents plug into over MCP.</p>
+    <div class="quote">"We could do it too."
+      <span>— Sheetal, on building a harness · exactly — so don't. Run yours on ours and skip the upkeep.</span>
+    </div>
+    <div class="byline">
+      <span class="avatar">RC</span>
+      <span>Put together by Rob Catalano, co-founder, Wysdym</span>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="container">
+    <div class="eyebrow">What you told us</div>
+    <h2>Why a DIY GTM agent doesn't hold</h2>
+    <p style="max-width:720px;margin-top:18px;">You already pay for the adjacent AI GTM tools — Pulse, ARA — and you stood up your own agent on top. The problem isn't the agent. It's that it decays without constant upkeep, it has no shared brain to draw on, and you want outcomes, not an "agent in a box." Those are substrate problems. They're the three we obsess over.</p>
+    <div class="pains">
+      <div class="pain"><h3>The agent decays without upkeep</h3><p>A DIY agent is only as fresh as the last time you hand-fed it. Skills go stale, context drifts, and the upkeep tax never ends. Nothing makes it learn on its own.</p></div>
+      <div class="pain"><h3>No shared brain to plug into</h3><p>Your agents each carry their own slice of context. There's no per-tenant memory underneath them that every agent inherits — so nothing compounds across the stack.</p></div>
+      <div class="pain"><h3>You want outcomes, not a box</h3><p>An "agent in a box" demos well and proves nothing. You want actions tied to results — what actually moved a deal — not another dashboard of tokens and latency.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="eyebrow">The harness</div>
+    <h2>Five components your <span class="accent">own</span> agents plug into</h2>
+    <p style="max-width:720px;margin-top:18px;">Wysdym is the platform every GTM agent runs on — not another agent. Bring your OpenClaw agents; they connect over MCP and inherit the same grounding, governance, and feedback loop. Substrate, not competitor: the better your agents get, the better this gets.</p>
+    <div class="map">
+      <div class="comp"><div class="name"><b>wysdymGraph</b> (Cortex) — the shared brain <span class="live on">In production</span></div><span class="tag">Answers: no shared brain to plug into</span><p>A per-tenant typed knowledge graph across 39 GTM domains, exposed over MCP. Your OpenClaw agents plug straight in and read from the same grounding — the brain your DIY setup never had. This is the part you specifically wanted to test hands-on.</p></div>
+      <div class="comp"><div class="name"><b>wysdymSkills</b> — skills that don't go stale <span class="live on">Live</span></div><span class="tag">Answers: the agent decays without upkeep</span><p>An open skill library any agent invokes over MCP — self-learning from every approval, edit, override, and outcome. The skills improve as you use them, so your agents stop decaying and you stop hand-feeding them.</p></div>
+      <div class="comp"><div class="name"><b>wysdymObserve</b> — outcomes, not a box <span class="live on">Live</span></div><span class="tag">Answers: you want outcomes, not a box</span><p>Attributes AI actions to deal stages, not tokens. Findings flag drift and deal-risk with the exact write to fix it. The opposite of an "agent in a box" — it shows what moved.</p></div>
+      <div class="comp"><div class="name"><b>wysdymGateway</b> + <b>wysdymConnect</b> <span class="live on">Key connectors live</span></div><span class="tag">Answers: govern the writes, wire it once</span><p>One governed door: per-agent RBAC, HITL, write-approval queues, full audit. Plus the GTM stack wired once (Salesforce/HubSpot, Gong, Slack, Drive) — so your agents share retrieval instead of re-paying for it per agent.</p></div>
+    </div>
+    <p style="margin-top:26px;font-size:14.5px;color:rgba(255,255,255,0.55);">Operator — the reference agent that ships with Wysdym — runs on all of this on day one. But the pitch to you is the opposite: bring your own OpenClaw agents and they inherit the grounding for free.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="container">
+    <div class="eyebrow">If we did this together</div>
+    <h2>A 90-day design partner pilot</h2>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Ground</h3><p>Stand up TribalScale's graph on your real GTM data. Founder-led, no heavy lift on your side.</p></div>
+      <div class="step"><div class="n">2</div><h3>Plug in</h3><p>Connect one OpenClaw agent to the graph over MCP. You drive the hands-on graph testing you committed to.</p></div>
+      <div class="step"><div class="n">3</div><h3>Attribute</h3><p>Turn on Observe. Watch your agent's actions tie to pipeline stages — outcomes, not a box.</p></div>
+      <div class="step"><div class="n">4</div><h3>Decide</h3><p>Locked pricing, grandfathered 24 months. You shape the roadmap. Depth over breadth — your advice.</p></div>
+    </div>
+    <p style="margin-top:30px;max-width:720px;">Free 90-day pilot at platform launch. Founder-led implementation. Roadmap influence. Locked, grandfathered pricing. Optional co-marketing — only if it's a win for TribalScale.</p>
+  </div>
+</section>
+
+<section class="cta" id="talk">
+  <div class="container">
+    <span class="pill"><span class="dot"></span>The next 15 minutes</span>
+    <h2>Let's get your OpenClaw agents reading the graph — and put your hands on it.</h2>
+    <a class="btn" href="mailto:rob@wysdym.ai?subject=Wysdym%20%C3%97%20TribalScale%20%E2%80%94%20graph%20testing%20%2B%20design%20partner%20pilot">Grab 15 minutes with Rob</a>
+  </div>
+</section>
+
+<div class="footer">
+  <div class="container footer-inner">
+    <div>
+      <a class="logo" href="https://wysdym.ai" style="font-size:17px;">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><g fill="#BA6296" transform="translate(2,1) scale(0.14)"><polygon points="96,34 128,147 104,167"/><polygon points="98,32 154,127 131,146"/><polygon points="168,61 155,123 138,94"/><polygon points="171,59 190,71 168,73"/><polygon points="100,154 101,169 10,161"/></g></svg>
+        wysdym
+      </a>
+      <p class="disclaim">More agents won't grow revenue. Compounding intelligence will. Wysdym is pre-launch and partnering with a small group of GTM leaders — wysdymGraph is in production; Platform v1 (first paid customers) is targeted for Q3 2026. Prepared privately for TribalScale.</p>
+    </div>
+    <div>wysdym.ai</div>
+  </div>
+</div>
+</body>
+</html>
