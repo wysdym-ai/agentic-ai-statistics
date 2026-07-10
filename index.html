@@ -277,6 +277,29 @@
   .method p { font-size: 15.5px; }
   .method p + p { margin-top: 14px; }
 
+  /* ---------- Side legend ---------- */
+  .legend {
+    position: fixed; right: 28px; top: 50%; transform: translateY(-50%);
+    z-index: 80; display: none;
+  }
+  .legend ul { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+  .legend a {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.02em;
+    color: rgba(255,255,255,0.42);
+    padding: 4px 8px; border-radius: 8px;
+    transition: color .15s ease;
+  }
+  .legend a .tick {
+    width: 14px; height: 2px; border-radius: 2px; flex: none;
+    background: rgba(255,255,255,0.22);
+    transition: background .15s ease, width .15s ease;
+  }
+  .legend a:hover { color: var(--white); }
+  .legend a.active { color: var(--magenta-light); }
+  .legend a.active .tick { background: var(--magenta); width: 22px; }
+  @media (min-width: 1400px) { .legend { display: block; } }
+
   /* ---------- Footer ---------- */
   footer {
     border-top: 1px solid rgba(255,255,255,0.07);
@@ -310,6 +333,25 @@
 
 <div id="progress"></div>
 
+<!-- Side legend — quick section navigation -->
+<nav class="legend" aria-label="Section navigation">
+  <ul>
+    <li><a href="#takeaways"><span class="tick"></span>Takeaways</a></li>
+    <li><a href="#market"><span class="tick"></span>Market</a></li>
+    <li><a href="#adoption"><span class="tick"></span>Adoption</a></li>
+    <li><a href="#pillars"><span class="tick"></span>Five Pillars</a></li>
+    <li><a href="#learning"><span class="tick"></span>Learning</a></li>
+    <li><a href="#skills"><span class="tick"></span>Skills</a></li>
+    <li><a href="#connectivity"><span class="tick"></span>Connectivity</a></li>
+    <li><a href="#governance"><span class="tick"></span>Governance</a></li>
+    <li><a href="#observability"><span class="tick"></span>Observability</a></li>
+    <li><a href="#roi"><span class="tick"></span>ROI</a></li>
+    <li><a href="#meaning"><span class="tick"></span>Bottom Line</a></li>
+    <li><a href="#faq"><span class="tick"></span>FAQ</a></li>
+    <li><a href="#methodology"><span class="tick"></span>Methodology</a></li>
+  </ul>
+</nav>
+
 
 <!-- Wysdym logo symbol (crane + wordmark) — reused in nav and footer -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
@@ -341,14 +383,14 @@
 <!-- ================= HERO ================= -->
 <header class="hero">
   <div class="container">
-    <div class="pill">Research Roundup · Updated June 2026</div>
+    <div class="pill">Research Roundup · Updated July 2026</div>
     <h1>52 agentic AI statistics <span class="serif accent">every GTM leader</span> should know in 2026</h1>
     <p class="lead">Agentic AI crossed from demo to deployment. These 52 statistics show where the market really stands. We've organized them around the five pillars that separate production agents from prototypes: <strong style="color: var(--white);">learning, skills, connectivity, governance, and observability</strong>.</p>
     <div class="byline">
       <div class="avatar">RC</div>
       <div><strong style="color: var(--white);">Rob Catalano</strong> · Co-Founder, wysdym</div>
       <span class="sep">|</span>
-      <div>Last updated: June 12, 2026</div>
+      <div>Last updated: July 10, 2026</div>
       <span class="sep">|</span>
       <div>Every stat links to its original source</div>
     </div>
@@ -359,8 +401,8 @@
         <div class="cap">Worldwide AI spending forecast for 2026 — up 47% in a single year. <em>(Gartner)</em></div>
       </div>
       <div class="hero-num">
-        <div class="fig">54%</div>
-        <div class="cap">Of organizations are actively deploying AI agents — 4.5x more than in 2024. <em>(KPMG)</em></div>
+        <div class="fig">53%</div>
+        <div class="cap">Of organizations are deploying AI agents — up from 12% in 2024 — and multi-agent orchestration doubled last quarter. <em>(KPMG)</em></div>
       </div>
       <div class="hero-num">
         <div class="fig">40%+</div>
@@ -383,7 +425,7 @@
       <div class="card">
         <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#BA6296" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
         <h3>Deployment is mainstream. Depth is rare.</h3>
-        <p>54% of organizations now deploy AI agents and AI took 80% of Q1 2026 venture funding — yet only 2% have fully scaled agents, and just 16% of enterprise deployments qualify as true agents.</p>
+        <p>53% of organizations now deploy AI agents and AI took over 70% of Q2 2026 venture funding — yet 95% of agents never reach production, and just 16% of enterprise deployments qualify as true agents.</p>
       </div>
       <div class="card">
         <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#BA6296" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 2 1 3.5 2 4.5S9 16 9 18h6c0-2 1-3.5 2-4.5s2-2.5 2-4.5a7 7 0 0 0-7-7z"/><line x1="9" y1="22" x2="15" y2="22"/></svg></div>
@@ -453,10 +495,10 @@
         </div>
       </article>
       <article class="stat" id="stat-4">
-        <div class="fig-wrap"><div class="idx">STAT 04</div><div class="fig">80%</div></div>
+        <div class="fig-wrap"><div class="idx">STAT 04</div><div class="fig">$510B</div></div>
         <div>
-          <h3>AI captured 80% of all global venture funding in Q1 2026</h3>
-          <p>$242 billion of a record $300 billion quarter went to AI companies. Investors aren't hedging on the agent thesis — they're concentrating on it.<br><a class="src" href="https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/" target="_blank" rel="noopener">Crunchbase News, April 2026</a></p>
+          <h3>Global venture funding hit a record $510 billion in H1 2026 — with AI taking over 70% of Q2 capital</h3>
+          <p>H1 2026 topped all of 2025 combined, and OpenAI plus Anthropic alone raised $217 billion — 43% of all H1 startup funding. Investors aren't hedging on the agent thesis — they're concentrating on it.<br><a class="src" href="https://news.crunchbase.com/venture/global-startup-exits-ipo-ma-soar-ai-q2-h1-2026/" target="_blank" rel="noopener">Crunchbase News, July 2026</a></p>
         </div>
       </article>
       <article class="stat" id="stat-5">
@@ -487,10 +529,10 @@
     </div>
     <div class="stats">
       <article class="stat" id="stat-7">
-        <div class="fig-wrap"><div class="idx">STAT 07</div><div class="fig">54%</div></div>
+        <div class="fig-wrap"><div class="idx">STAT 07</div><div class="fig">53%</div></div>
         <div>
-          <h3>54% of organizations are actively deploying AI agents — up from 12% in 2024</h3>
-          <p>KPMG's Q1 2026 Pulse tracks the jump: 12% → 33% → 54% in roughly two years, with leaders projecting $207M in average AI spend over the next 12 months.<br><a class="src" href="https://kpmg.com/us/en/media/news/q1-ai-pulse2026.html" target="_blank" rel="noopener">KPMG AI Quarterly Pulse, March 2026</a></p>
+          <h3>53% of organizations are deploying AI agents — and multi-agent orchestration doubled in a single quarter</h3>
+          <p>KPMG's Q2 2026 Pulse: agent deployment has held above half (up from 12% in 2024), while organizations orchestrating multiple agents across workflows jumped from 9% to 18% in one quarter. Leaders plan an average $202M in AI investment over the next 12 months.<br><a class="src" href="https://kpmg.com/us/en/media/news/q2-ai-pulse-2026.html" target="_blank" rel="noopener">KPMG AI Quarterly Pulse, June 2026</a></p>
         </div>
       </article>
       <article class="stat" id="stat-8">
@@ -501,10 +543,10 @@
         </div>
       </article>
       <article class="stat" id="stat-9">
-        <div class="fig-wrap"><div class="idx">STAT 09</div><div class="fig">79%</div></div>
+        <div class="fig-wrap"><div class="idx">STAT 09</div><div class="fig">95%</div></div>
         <div>
-          <h3>79% of senior executives say AI agents are already being adopted in their companies</h3>
-          <p>88% plan to increase AI budgets in the next 12 months because of agentic AI — and 75% agree agents will reshape the workplace more than the internet did.<br><a class="src" href="https://www.pwc.com/us/en/tech-effect/ai-analytics/ai-agent-survey.html" target="_blank" rel="noopener">PwC AI Agent Survey, May 2025</a></p>
+          <h3>95% of AI agents never make it to production</h3>
+          <p>Capgemini's follow-up to its 2025 agentic AI research puts a hard number on the pilot-to-production gap. The difference between the 95% and the 5% is rarely the model — it's the operating layer underneath it.<br><a class="src" href="https://www.capgemini.com/insights/research-library/from-pilots-to-real-impact-how-enterprises-actually-scale-agentic-ai/" target="_blank" rel="noopener">Capgemini Research Institute, April 2026</a></p>
         </div>
       </article>
       <article class="stat" id="stat-10">
@@ -597,14 +639,14 @@
         <div class="fig-wrap"><div class="idx">STAT 15</div><div class="fig">60%</div></div>
         <div>
           <h3>Sales reps spend 60% of their time on non-selling tasks</h3>
-          <p>Hunting for the right deck, re-entering CRM notes, chasing internal approvals — Salesforce's State of Sales finds most of a rep's week goes to everything except customers.<br><a class="src" href="https://www.salesforce.com/sales/state-of-sales/sales-statistics/" target="_blank" rel="noopener">Salesforce, State of Sales</a></p>
+          <p>Hunting for the right deck, re-entering CRM notes, chasing internal approvals — most of a rep's week goes to everything except customers. The counterweight: 85% of reps with agents say AI frees them to focus on higher-value work.<br><a class="src" href="https://www.salesforce.com/sales/state-of-sales/sales-statistics/" target="_blank" rel="noopener">Salesforce Sales Statistics, February 2026</a></p>
         </div>
       </article>
       <article class="stat" id="stat-16">
-        <div class="fig-wrap"><div class="idx">STAT 16</div><div class="fig">70%</div></div>
+        <div class="fig-wrap"><div class="idx">STAT 16</div><div class="fig">84%</div></div>
         <div>
-          <h3>70% of data leaders say their most valuable insights are trapped in unstructured data</h3>
-          <p>Emails, call transcripts, PDFs. And 84% agree AI's outputs are only as good as its data inputs — the exact gap a structured knowledge layer exists to close.<br><a class="src" href="https://www.salesforce.com/sales/state-of-sales/sales-statistics/" target="_blank" rel="noopener">Salesforce, State of Data &amp; Analytics</a></p>
+          <h3>84% of data leaders say their data strategy needs a complete overhaul before their AI ambitions can succeed</h3>
+          <p>70% believe their most valuable business insights sit inside the sliver of data that's inaccessible — siloed or unusable — and 89% of leaders with AI in production have already seen inaccurate or misleading outputs. That's the exact gap a structured knowledge layer exists to close.<br><a class="src" href="https://www.salesforce.com/news/stories/data-analytics-trends-2026/" target="_blank" rel="noopener">Salesforce, State of Data &amp; Analytics, November 2025</a></p>
         </div>
       </article>
       <article class="stat" id="stat-17">
@@ -638,7 +680,7 @@
     </div>
     <div class="lens">
       <div class="label">The wysdym lens</div>
-      <p>This is why wysdym is built around the wysdymGraph — a per-tenant typed graph with outcome-graded reinforcement — rather than a flat document store. Every agent on the harness reads from the same graph and writes what it learns back, so the next agent starts smarter than the last one. Knowledge in folders decays; a graph graded by deal outcomes compounds.</p>
+      <p>This is why wysdym is built around wysdymCortex — a typed knowledge graph of your business, 39 GTM domains, self-learning — rather than a flat document store. Every agent on the harness reads from the same graph and writes what it learns back, so the next agent starts smarter than the last one. Knowledge in folders decays; a graph graded by deal outcomes compounds.</p>
     </div>
   </div>
 </section>
@@ -663,7 +705,7 @@
         <div class="fig-wrap"><div class="idx">STAT 22</div><div class="fig">30%</div></div>
         <div>
           <h3>The best AI agent completed only 30% of real workplace tasks fully autonomously</h3>
-          <p>CMU's TheAgentCompany benchmark simulates an actual software company. Agents handled simpler tasks well; long-horizon, multi-step work still defeated them. Autonomy has a ceiling — design for it.<br><a class="src" href="https://arxiv.org/abs/2412.14161" target="_blank" rel="noopener">Carnegie Mellon et al., TheAgentCompany, 2024–2025</a></p>
+          <p>CMU's TheAgentCompany benchmark simulates an actual software company. Agents handled simpler tasks well; long-horizon, multi-step work still defeated them. Autonomy has a ceiling — design for it.<br><a class="src" href="https://arxiv.org/abs/2412.14161" target="_blank" rel="noopener">Carnegie Mellon et al., TheAgentCompany, NeurIPS 2025</a></p>
         </div>
       </article>
       <article class="stat" id="stat-23">
@@ -681,10 +723,10 @@
         </div>
       </article>
       <article class="stat" id="stat-25">
-        <div class="fig-wrap"><div class="idx">STAT 25</div><div class="fig">80%</div></div>
+        <div class="fig-wrap"><div class="idx">STAT 25</div><div class="fig">4.8 hrs</div></div>
         <div>
-          <h3>Agentic AI will autonomously resolve 80% of common customer service issues by 2029</h3>
-          <p>Gartner pairs that with a 30% reduction in operational costs. The first wave of agent ROI is conversational — exactly where your buyers already are.<br><a class="src" href="https://www.gartner.com/en/newsroom/press-releases/2025-03-05-gartner-predicts-agentic-ai-will-autonomously-resolve-80-percent-of-common-customer-service-issues-without-human-intervention-by-20290" target="_blank" rel="noopener">Gartner, March 2025</a></p>
+          <h3>AI saves sellers 4.8 hours a week — but 72% of sales organizations fail to reinvest the time in high-value work</h3>
+          <p>The teams that do reinvest it are 2.2x more likely to exceed customer-growth goals and 3.1x more likely to exceed lead-to-opportunity conversion goals, per Gartner's 2026 survey of 210 sales leaders. The skill isn't saving time; it's redeploying it.<br><a class="src" href="https://www.demandgenreport.com/industry-news/news-brief/gartner-as-ai-saves-time-sales-organizations-fail-to-reinvest-time-in-high-value-activities/52944/" target="_blank" rel="noopener">Gartner CSO &amp; Sales Leader Conference, May 2026</a></p>
         </div>
       </article>
       <article class="stat" id="stat-26">
@@ -719,10 +761,10 @@
         </div>
       </article>
       <article class="stat" id="stat-28">
-        <div class="fig-wrap"><div class="idx">STAT 28</div><div class="fig">100+</div></div>
+        <div class="fig-wrap"><div class="idx">STAT 28</div><div class="fig">150+</div></div>
         <div>
-          <h3>100+ technology companies back the Agent2Agent (A2A) interoperability protocol</h3>
-          <p>Launched by Google in April 2025 and now governed by the Linux Foundation, with supporters including AWS, Microsoft, Salesforce, SAP, and ServiceNow. Agents are becoming a network, not a feature.<br><a class="src" href="https://www.linuxfoundation.org/press/linux-foundation-launches-the-agent2agent-protocol-project-to-enable-secure-intelligent-communication-between-ai-agents" target="_blank" rel="noopener">The Linux Foundation, June 2025</a></p>
+          <h3>150+ organizations now back the Agent2Agent (A2A) interoperability protocol — triple its launch roster</h3>
+          <p>Launched by Google in April 2025 with 50+ supporters and now governed by the Linux Foundation, A2A reached production-ready status in under a year — SDKs in five languages, backing from AWS, Cisco, Google, IBM, Microsoft, Salesforce, SAP, and ServiceNow. Agents are becoming a network, not a feature.<br><a class="src" href="https://www.linuxfoundation.org/press/a2a-protocol-surpasses-150-organizations-lands-in-major-cloud-platforms-and-sees-enterprise-production-use-in-first-year" target="_blank" rel="noopener">The Linux Foundation, April 2026</a></p>
         </div>
       </article>
       <article class="stat" id="stat-29">
@@ -755,8 +797,7 @@
       <h2>The harness, <span class="serif accent">not the agent</span></h2>
       <p>You bring the agent — Claude, OpenAI, LangGraph, or your own. wysdym brings what's underneath: shared graph memory, typed skills, connections into your stack, approval queues, and a feedback loop that learns from deal outcomes. The more agents you run, the smarter every one gets.</p>
       <div class="cta-row">
-        <a class="btn" href="https://wysdym.ai">Become a design partner</a>
-        <a class="btn btn-ghost" href="https://wysdym.ai">Talk to the founders</a>
+        <a class="btn" href="https://wysdym.ai">Chat with wysdym</a>
       </div>
     </div>
   </div>
@@ -800,10 +841,10 @@
         </div>
       </article>
       <article class="stat" id="stat-35">
-        <div class="fig-wrap"><div class="idx">STAT 35</div><div class="fig">27%</div></div>
+        <div class="fig-wrap"><div class="idx">STAT 35</div><div class="fig">1 in 4</div></div>
         <div>
-          <h3>Trust in fully autonomous AI agents collapsed from 43% to 27% in one year</h3>
-          <p>Only 40% of organizations trust agents to manage tasks autonomously — and roughly three-quarters of executives say the benefits of human oversight outweigh its costs. The market is voting for governed autonomy.<br><a class="src" href="https://www.capgemini.com/news/press-releases/trust-and-human-ai-collaboration-set-to-define-the-next-era-of-agentic-ai-unlocking-450-billion-opportunity-by-2028/" target="_blank" rel="noopener">Capgemini Research Institute, July 2025</a></p>
+          <h3>Only one-quarter of leaders completely trust their AI systems — yet two-thirds have given AI write access to core systems</h3>
+          <p>And more than four in five tech leaders expect autonomous agents to make decisions with material business impact within a year, per Kyndryl's survey of 1,100 business and technology leaders. Trust is trailing autonomy — the market is voting for governed autonomy.<br><a class="src" href="https://www.kyndryl.com/us/en/insights/people-readiness-report-2026" target="_blank" rel="noopener">Kyndryl People Readiness Report, June 2026</a></p>
         </div>
       </article>
       <article class="stat" id="stat-36">
@@ -873,10 +914,10 @@
         </div>
       </article>
       <article class="stat" id="stat-43">
-        <div class="fig-wrap"><div class="idx">STAT 43</div><div class="fig">27%</div></div>
+        <div class="fig-wrap"><div class="idx">STAT 43</div><div class="fig">54/yr</div></div>
         <div>
-          <h3>Only 27% of organizations review all gen-AI output before it reaches use</h3>
-          <p>A similar share reviews 20% or less. Most AI-generated content goes out the door largely unchecked — including what gets said to customers.<br><a class="src" href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-how-organizations-are-rewiring-to-capture-value" target="_blank" rel="noopener">McKinsey, The State of AI, March 2025</a></p>
+          <h3>Enterprises average 54 AI agent incidents a year that require human correction</h3>
+          <p>37% of those incidents caused data exposure, 33% triggered cascading failures, and 17% created compliance issues — while organizations with embedded, automated controls deploy 16x more agents than those governing manually.<br><a class="src" href="https://newsroom.ibm.com/2026-06-08-new-ibm-study-finds-cios-and-ctos-face-growing-ai-control-gap-as-enterprise-deployment-scales" target="_blank" rel="noopener">IBM Institute for Business Value, June 2026</a></p>
         </div>
       </article>
       <article class="stat" id="stat-44">
@@ -918,10 +959,10 @@
         </div>
       </article>
       <article class="stat" id="stat-47">
-        <div class="fig-wrap"><div class="idx">STAT 47</div><div class="fig">66%</div></div>
+        <div class="fig-wrap"><div class="idx">STAT 47</div><div class="fig">7%</div></div>
         <div>
-          <h3>66% of executives adopting AI agents report measurable value through increased productivity</h3>
-          <p>ROI is real where deployment is real. The distribution problem is depth — compare stat 11 (2% fully scaled) and stat 12 (16% true agents).<br><a class="src" href="https://www.pwc.com/us/en/tech-effect/ai-analytics/ai-agent-survey.html" target="_blank" rel="noopener">PwC AI Agent Survey, May 2025</a></p>
+          <h3>84% of finance organizations have implemented or plan to implement AI — but only 7% report high impact</h3>
+          <p>Gartner's survey of 183 CFOs is the CFO-side version of the depth problem: near-universal adoption, single-digit transformation. The gap between the 84% and the 7% is an operating-model gap — compare stat 11 (2% fully scaled) and stat 12 (16% true agents).<br><a class="src" href="https://www.gartner.com/en/newsroom/press-releases/2026-06-08-gartner-says-cfos-need-structured-finance-ai-roadmaps" target="_blank" rel="noopener">Gartner, June 2026</a></p>
         </div>
       </article>
       <article class="stat" id="stat-48">
@@ -969,7 +1010,7 @@
     <div class="pill">The Bottom Line</div>
     <h2>What this means for GTM teams</h2>
     <p class="lead" style="margin-top: 28px;">Read all 52 together and one pattern keeps surfacing: capability stopped being the constraint. The operating model is.</p>
-    <p style="margin-top: 18px;">Agent task performance nearly quadrupled in a year (stat 21) — yet 95% of pilots return zero (stat 13), 40%+ of agentic projects face cancellation (stat 31), and trust in full autonomy fell by a third (stat 35). The teams winning aren't the ones with better models. Everyone has the same models.</p>
+    <p style="margin-top: 18px;">Agent task performance nearly quadrupled in a year (stat 21) — yet 95% of pilots return zero (stat 13), 40%+ of agentic projects face cancellation (stat 31), and only a quarter of leaders completely trust their AI systems (stat 35). The teams winning aren't the ones with better models. Everyone has the same models.</p>
     <p style="margin-top: 18px;">What separates them maps cleanly to five pillars. They ground agents in structured, learning knowledge instead of flat documents (stats 13, 14, 18). They scope skills to what agents verifiably do well (stat 22). They connect agents to the systems where work actually happens (stats 27–30). They gate consequential actions with human judgment (stat 34). And they watch everything (stats 39–40).</p>
     <p style="margin-top: 18px;">For GTM teams, the urgency is sharper. 67% of your buyers prefer to buy without a rep (stat 49). They expect two-way conversations your team can't staff (stat 26). They reward whoever answers first (stat 50). Agents will do more and more of this work — so the question the data keeps asking isn't which agent you'll run. It's what your agents run on.</p>
     <p style="margin-top: 18px;">That's the bet behind wysdym: the harness, not the agent. Every team is buying agents; no one is building the platform underneath. You bring the agent — Claude, OpenAI, LangGraph, or your own. wysdym is the platform underneath: shared graph memory, typed skills, approval-gated writes, and a feedback loop that ties every agent action to deal outcomes — so the next agent on your stack starts smarter than the last one.</p>
@@ -993,7 +1034,7 @@
     </div>
     <div class="faq-item">
       <h3>How big is the agentic AI market in 2026?</h3>
-      <p>Worldwide AI spending reaches $2.59 trillion in 2026 (Gartner), and 54% of organizations are actively deploying agents (KPMG). On the agentic-specific slice: Gartner projects agentic AI could drive over $450 billion in enterprise application software revenue by 2035, and Capgemini estimates up to $450 billion in economic value from agents by 2028.</p>
+      <p>Worldwide AI spending reaches $2.59 trillion in 2026 (Gartner), and 53% of organizations are deploying agents (KPMG). On the agentic-specific slice: Gartner projects agentic AI could drive over $450 billion in enterprise application software revenue by 2035, and Capgemini estimates up to $450 billion in economic value from agents by 2028.</p>
     </div>
     <div class="faq-item">
       <h3>Why do most agentic AI projects fail?</h3>
@@ -1005,7 +1046,7 @@
     </div>
     <div class="faq-item">
       <h3>What does wysdym do?</h3>
-      <p>wysdym is the platform GTM agents run on — the harness underneath, not another agent. You bring any agent (Claude, OpenAI, LangGraph, or custom), and wysdym supplies what every agent needs to work: shared memory through a typed GTM graph (wysdymGraph), a library of open skills over MCP (wysdymSkills), connections into your stack — Salesforce, HubSpot, Gong, Slack, Drive, Notion (wysdymConnect), one governed door with OAuth, per-agent RBAC, and human-in-the-loop write approval (wysdymGateway), and outcome attribution that ties every action back to deal stages (wysdymObserve). The more agents you run on it, the smarter every one gets.</p>
+      <p>wysdym is the platform GTM agents run on — the harness underneath, not another agent. You bring any agent (Claude, OpenAI, LangGraph, or custom), and wysdym supplies what every agent needs to work: shared memory through a typed knowledge graph of your business (wysdymCortex), an open skill library any agent invokes over MCP (wysdymSkills), your stack — Salesforce, HubSpot, Gong, Slack, Drive, Notion — wired once, not per agent (wysdymConnect), one governed door with per-agent permissions, human-in-the-loop, and receipts (wysdymGateway), and outcome attribution to deal stages, with Findings that flag drift with the fix attached (wysdymObserve). The more agents you run on it, the smarter every one gets.</p>
     </div>
 
     <script type="application/ld+json">
@@ -1015,7 +1056,7 @@
       "mainEntity": [
         {"@type": "Question", "name": "What is agentic AI?", "acceptedAnswer": {"@type": "Answer", "text": "AI systems that don't just generate answers — they plan and take actions toward goals: retrieving knowledge, using tools, and executing multi-step work with varying levels of autonomy. By Menlo Ventures' definition (a true agent plans, acts, observes feedback, and adapts), only 16% of enterprise AI deployments qualify today."}},
         {"@type": "Question", "name": "How is an AI agent different from a chatbot?", "acceptedAnswer": {"@type": "Answer", "text": "A scripted chatbot follows a decision tree. An agent reasons over knowledge and takes action — and a knowledge-grounded agent answers from your company's actual content and positioning. Grounding answers in structured knowledge took accuracy from 16% to 54% in benchmark testing."}},
-        {"@type": "Question", "name": "How big is the agentic AI market in 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Worldwide AI spending reaches $2.59 trillion in 2026 (Gartner), and 54% of organizations are actively deploying agents (KPMG). Gartner projects agentic AI could drive over $450 billion in enterprise application software revenue by 2035."}},
+        {"@type": "Question", "name": "How big is the agentic AI market in 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Worldwide AI spending reaches $2.59 trillion in 2026 (Gartner), and 53% of organizations are deploying agents (KPMG). Gartner projects agentic AI could drive over $450 billion in enterprise application software revenue by 2035."}},
         {"@type": "Question", "name": "Why do most agentic AI projects fail?", "acceptedAnswer": {"@type": "Answer", "text": "Knowledge: 95% of pilots return zero because systems don't learn or retain context (MIT Project NANDA). Governance: over 40% of agentic projects face cancellation on cost, unclear value, or risk (Gartner). Observability: roughly 3 in 10 teams don't evaluate their agents at all (LangChain)."}},
         {"@type": "Question", "name": "What should GTM leaders look for in the platform their agents run on?", "acceptedAnswer": {"@type": "Answer", "text": "Five questions: Learning (do agents run on your structured knowledge and improve with every outcome?), Skills (are capabilities typed and shared across agents?), Connectivity (does one layer plug every agent into your CRM, content, and conversation tools?), Governance (can you gate consequential writes behind human approval?), and Observability (can you trace every action and tie it to deal outcomes?)."}},
         {"@type": "Question", "name": "What does wysdym do?", "acceptedAnswer": {"@type": "Answer", "text": "wysdym is the platform GTM agents run on — the harness underneath, not another agent. Bring any agent (Claude, OpenAI, LangGraph, or custom); wysdym provides shared graph memory, typed skills, connections, approval queues, and outcome telemetry — so the next agent on your stack starts smarter than the last one."}}
@@ -1033,7 +1074,7 @@
       <h2>How we compiled this</h2>
     </div>
     <div class="method">
-      <p>All 52 statistics on this page link to their original sources — analyst press releases, primary research reports, vendor surveys with disclosed methodology, peer-reviewed papers, and official announcements. We verified each figure against the original publication in June 2026, and where a widely-cited number is older than 2025 (like the HBR speed-to-lead study), we say so instead of pretending it's new.</p>
+      <p>All 52 statistics on this page link to their original sources — analyst press releases, primary research reports, vendor surveys with disclosed methodology, peer-reviewed papers, and official announcements. We verified each figure against the original publication in July 2026, and where a widely-cited number is older than 2025 (like the HBR speed-to-lead study), we say so instead of pretending it's new.</p>
       <p>None of the numbers on this page are wysdym's own. We'd rather show you the industry's real data than dress up our opinions as research. Where we editorialize, it's clearly labeled as "the wysdym lens."</p>
       <p>Found an error or a fresher source? <a class="src" href="https://wysdym.ai">Tell us</a> — we update this page as the research evolves.</p>
     </div>
@@ -1045,11 +1086,10 @@
   <div class="container">
     <div class="cta-block">
       <div class="pill">Put the Pillars to Work</div>
-      <h2>Every team is buying agents.<br><span class="serif accent">No one is building the platform underneath.</span></h2>
-      <p>wysdym is the harness for GTM agents: every agent reads from your graph, runs typed skills, writes through approval queues, and learns from deal outcomes — so the next agent on your stack starts smarter than the last one.</p>
+      <h2>Agents alone won't grow revenue.<br><span class="serif accent">Compounding intelligence will.</span></h2>
+      <p>Any vendor can sell you an agent. None of them make your other agents better, act on your terms, or tell you which ones are working. That's where wysdym comes in — the layer underneath where every action compounds into a revenue advantage.</p>
       <div class="cta-row">
-        <a class="btn" href="https://wysdym.ai">Become a design partner</a>
-        <a class="btn btn-ghost" href="https://wysdym.ai">Talk to the founders</a>
+        <a class="btn" href="https://wysdym.ai">Chat with wysdym</a>
       </div>
     </div>
   </div>
@@ -1060,7 +1100,7 @@
     <div class="foot-inner">
       <div>
         <a class="footer-logo" href="https://wysdym.ai" aria-label="wysdym"><svg viewBox="0 0 600 140"><use href="#wysdym-logo"/></svg></a>
-        <p style="margin-top: 14px;">The platform every GTM agent runs on. All third-party statistics remain the property of their respective publishers; each is linked to its original source. Compiled June 2026.</p>
+        <p style="margin-top: 14px;">The platform every GTM agent runs on. All third-party statistics remain the property of their respective publishers; each is linked to its original source. Compiled July 2026.</p>
         <a class="back-top" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ Back to top</a>
       </div>
     </div>
@@ -1073,6 +1113,23 @@
     const h = document.documentElement;
     bar.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
   }, { passive: true });
+
+  // Side legend: highlight the section currently in view
+  const legendLinks = [...document.querySelectorAll('.legend a')];
+  const legendSections = legendLinks
+    .map(a => document.getElementById(a.getAttribute('href').slice(1)))
+    .filter(Boolean);
+  function updateLegend() {
+    const mark = scrollY + innerHeight * 0.35;
+    let current = legendSections[0];
+    for (const sec of legendSections) {
+      if (sec.offsetTop <= mark) current = sec;
+    }
+    legendLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current.id));
+  }
+  addEventListener('scroll', updateLegend, { passive: true });
+  addEventListener('resize', updateLegend, { passive: true });
+  updateLegend();
 </script>
 
 </body>
