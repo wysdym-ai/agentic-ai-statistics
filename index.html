@@ -279,26 +279,42 @@
 
   /* ---------- Side legend ---------- */
   .legend {
-    position: fixed; right: 28px; top: 50%; transform: translateY(-50%);
+    position: fixed; right: 16px; top: 50%; transform: translateY(-50%);
     z-index: 80; display: none;
+    padding: 8px 6px; border-radius: 14px;
+    border: 1px solid transparent;
+    transition: background .2s ease, border-color .2s ease;
   }
   .legend ul { list-style: none; display: flex; flex-direction: column; gap: 2px; }
   .legend a {
-    display: flex; align-items: center; gap: 10px;
+    display: flex; align-items: center; justify-content: flex-end; gap: 10px;
     font-size: 12px; font-weight: 600; letter-spacing: 0.02em;
     color: rgba(255,255,255,0.42);
     padding: 4px 8px; border-radius: 8px;
     transition: color .15s ease;
   }
+  .legend .lbl { display: none; white-space: nowrap; order: -1; }
   .legend a .tick {
     width: 14px; height: 2px; border-radius: 2px; flex: none;
-    background: rgba(255,255,255,0.22);
+    background: rgba(255,255,255,0.28);
     transition: background .15s ease, width .15s ease;
   }
   .legend a:hover { color: var(--white); }
+  .legend a:hover .tick { background: rgba(255,255,255,0.5); }
   .legend a.active { color: var(--magenta-light); }
   .legend a.active .tick { background: var(--magenta); width: 22px; }
-  @media (min-width: 1400px) { .legend { display: block; } }
+  /* Compact tick rail on laptops; hover the rail to reveal labels */
+  @media (min-width: 1150px) { .legend { display: block; } }
+  @media (min-width: 1150px) and (max-width: 1399px) {
+    .legend:hover, .legend:focus-within {
+      background: rgba(22, 21, 23, 0.94);
+      border-color: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+    }
+    .legend:hover .lbl, .legend:focus-within .lbl { display: inline; }
+  }
+  /* Full labels always visible on wide screens */
+  @media (min-width: 1400px) { .legend .lbl { display: inline; } }
 
   /* ---------- Footer ---------- */
   footer {
@@ -336,19 +352,19 @@
 <!-- Side legend — quick section navigation -->
 <nav class="legend" aria-label="Section navigation">
   <ul>
-    <li><a href="#takeaways"><span class="tick"></span>Takeaways</a></li>
-    <li><a href="#market"><span class="tick"></span>Market</a></li>
-    <li><a href="#adoption"><span class="tick"></span>Adoption</a></li>
-    <li><a href="#pillars"><span class="tick"></span>Five Pillars</a></li>
-    <li><a href="#learning"><span class="tick"></span>Learning</a></li>
-    <li><a href="#skills"><span class="tick"></span>Skills</a></li>
-    <li><a href="#connectivity"><span class="tick"></span>Connectivity</a></li>
-    <li><a href="#governance"><span class="tick"></span>Governance</a></li>
-    <li><a href="#observability"><span class="tick"></span>Observability</a></li>
-    <li><a href="#roi"><span class="tick"></span>ROI</a></li>
-    <li><a href="#meaning"><span class="tick"></span>Bottom Line</a></li>
-    <li><a href="#faq"><span class="tick"></span>FAQ</a></li>
-    <li><a href="#methodology"><span class="tick"></span>Methodology</a></li>
+    <li><a href="#takeaways" title="Takeaways"><span class="tick"></span><span class="lbl">Takeaways</span></a></li>
+    <li><a href="#market" title="Market"><span class="tick"></span><span class="lbl">Market</span></a></li>
+    <li><a href="#adoption" title="Adoption"><span class="tick"></span><span class="lbl">Adoption</span></a></li>
+    <li><a href="#pillars" title="Five Pillars"><span class="tick"></span><span class="lbl">Five Pillars</span></a></li>
+    <li><a href="#learning" title="Learning"><span class="tick"></span><span class="lbl">Learning</span></a></li>
+    <li><a href="#skills" title="Skills"><span class="tick"></span><span class="lbl">Skills</span></a></li>
+    <li><a href="#connectivity" title="Connectivity"><span class="tick"></span><span class="lbl">Connectivity</span></a></li>
+    <li><a href="#governance" title="Governance"><span class="tick"></span><span class="lbl">Governance</span></a></li>
+    <li><a href="#observability" title="Observability"><span class="tick"></span><span class="lbl">Observability</span></a></li>
+    <li><a href="#roi" title="ROI"><span class="tick"></span><span class="lbl">ROI</span></a></li>
+    <li><a href="#meaning" title="Bottom Line"><span class="tick"></span><span class="lbl">Bottom Line</span></a></li>
+    <li><a href="#faq" title="FAQ"><span class="tick"></span><span class="lbl">FAQ</span></a></li>
+    <li><a href="#methodology" title="Methodology"><span class="tick"></span><span class="lbl">Methodology</span></a></li>
   </ul>
 </nav>
 
