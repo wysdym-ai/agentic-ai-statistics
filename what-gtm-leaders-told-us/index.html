@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What 25+ GTM Leaders Told Us About AI Agents — and the Data Behind It | wysdym</title>
+<meta name="description" content="Five recurring themes from conversations with 25+ go-to-market leaders about running AI agents — each paired with the public, third-party data that backs it up.">
+<link rel="canonical" href="https://gtmstats.wysdym.ai/what-gtm-leaders-told-us/">
+<meta name="robots" content="max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What 25+ GTM Leaders Told Us About AI Agents — and the Data Behind It">
+<meta property="og:description" content="Five recurring themes from 25+ go-to-market leaders on running AI agents — each anchored to public, cited data.">
+<meta property="og:url" content="https://gtmstats.wysdym.ai/what-gtm-leaders-told-us/">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --magenta:#BA6296; --magenta-light:#c97aa6; --magenta-deep:#8d4874;
+    --midnight:#2c2a4a; --near-black:#161517; --soft-lemon:#ffe066;
+    --pale-sky:#a3d5ff; --warm-taupe:#D3B1C2; --white:#fff; --green:#81C784;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--near-black);color:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--magenta-light);text-decoration:none}
+  a:hover{color:var(--white)}
+  .wrap{max-width:820px;margin:0 auto;padding:0 24px}
+  header{border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;background:rgba(22,21,23,.86);backdrop-filter:blur(10px);z-index:10}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{font-weight:800;font-size:19px;letter-spacing:-.02em;color:var(--white)}
+  .brand span{color:var(--magenta-light)}
+  .nav-cta{background:var(--magenta);color:var(--white);padding:8px 16px;border-radius:6px;font-size:14px;font-weight:600}
+  .nav-cta:hover{background:var(--magenta-light);color:var(--white)}
+  .hero{padding:70px 0 30px}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(186,98,150,.12);color:var(--magenta-light);padding:6px 14px;border-radius:100px;font-size:13px;font-weight:600;letter-spacing:.02em;margin-bottom:22px}
+  .pill .dot{width:6px;height:6px;border-radius:50%;background:var(--magenta)}
+  h1{font-size:clamp(32px,5vw,46px);line-height:1.1;letter-spacing:-.03em;font-weight:800;margin-bottom:20px}
+  h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--soft-lemon)}
+  .lede{font-size:19px;color:var(--warm-taupe);line-height:1.65}
+  .method{border:1px solid rgba(255,255,255,.12);border-left:3px solid var(--magenta);border-radius:8px;padding:18px 22px;margin:34px 0 10px;font-size:14.5px;color:var(--warm-taupe);line-height:1.7}
+  .method strong{color:var(--white)}
+  .themes{padding:20px 0 10px;counter-reset:theme}
+  .theme{padding:38px 0;border-top:1px solid rgba(255,255,255,.08)}
+  .theme .n{counter-increment:theme;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--magenta-light)}
+  .theme .n::before{content:"THEME " counter(theme,decimal-leading-zero)}
+  .theme h2{font-size:26px;line-height:1.25;letter-spacing:-.02em;margin:12px 0 4px;font-weight:700}
+  .heard{font-family:'Instrument Serif',serif;font-style:italic;font-size:21px;color:var(--pale-sky);line-height:1.5;margin:16px 0;padding-left:18px;border-left:2px solid rgba(163,213,255,.35)}
+  .theme p{font-size:16.5px;color:var(--warm-taupe);margin:14px 0}
+  .theme p strong{color:var(--white);font-weight:600}
+  .evidence{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:20px 22px;margin-top:18px}
+  .evidence .lbl{font-size:11px;font-weight:700;letter-spacing:.16em;color:var(--soft-lemon);text-transform:uppercase}
+  .evidence ul{list-style:none;margin-top:12px}
+  .evidence li{font-size:15.5px;color:var(--white);padding:9px 0;border-top:1px dashed rgba(255,255,255,.1);line-height:1.55}
+  .evidence li:first-child{border-top:none}
+  .evidence .fig{font-weight:800;color:var(--soft-lemon)}
+  .evidence .src{color:var(--warm-taupe);font-size:13.5px}
+  .close{padding:44px 0 20px;border-top:1px solid rgba(255,255,255,.08)}
+  .close h2{font-size:28px;letter-spacing:-.02em;margin-bottom:14px}
+  .close h2 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--magenta-light)}
+  .close p{font-size:17px;color:var(--warm-taupe);margin-bottom:22px}
+  .btn{display:inline-block;background:var(--magenta);color:var(--white);font-weight:600;padding:13px 26px;border-radius:8px;font-size:16px;margin-right:12px}
+  .btn:hover{background:var(--magenta-light);color:var(--white)}
+  .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.2);color:var(--white)}
+  .btn.ghost:hover{border-color:var(--magenta)}
+  footer{border-top:1px solid rgba(255,255,255,.08);margin-top:40px;padding:34px 0}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+  footer p{font-size:13.5px;color:var(--warm-taupe);max-width:560px;line-height:1.6}
+  footer a{color:var(--magenta-light)}
+  @media(max-width:600px){.hero{padding:48px 0 20px}.theme h2{font-size:22px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="https://www.wysdym.ai">wysdym<span>.</span></a>
+  <a class="nav-cta" href="https://www.wysdym.ai/apply">Apply for access</a>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="pill"><span class="dot"></span>Field notes · GTM + AI</span>
+    <h1>What 25+ GTM leaders told us about AI agents — <em>and the data behind it</em></h1>
+    <p class="lede">We've spent the last stretch in conversation with go-to-market leaders — RevOps, sales, and marketing operators at mid-market and enterprise teams — about what actually happens when you put AI agents to work. Five themes came up again and again. Here they are, each paired with the public research that backs it up.</p>
+    <div class="method">
+      <strong>How to read this.</strong> These are qualitative themes from 25+ conversations, not a quantified survey — we're not reporting percentages from the interviews, because we didn't run one. What we <em>are</em> reporting is what we heard, alongside third-party public data that corroborates it. Every statistic below is external research, attributed and linked to its source.
+    </div>
+  </section>
+
+  <section class="themes">
+
+    <article class="theme">
+      <div class="n"></div>
+      <h2>"We keep adding agents. Nothing compounds."</h2>
+      <p class="heard">The agents work in isolation and demo well — but each one starts from scratch, and the stack as a whole never gets smarter.</p>
+      <p>Nearly every leader was already running multiple agents, added quarter over quarter. The frustration wasn't that any single agent failed — it's that the <strong>collective</strong> didn't improve. Work done by one agent never made the next one better.</p>
+      <div class="evidence">
+        <div class="lbl">The data behind it</div>
+        <ul>
+          <li><span class="fig">66.4%</span> of agentic AI is already multi-agent — most teams aren't running one agent, they're running many. <span class="src">— Landbase / Market.us, 2025</span></li>
+          <li>MCP installs went from <span class="fig">~100K to ~97M</span> in 16 months — the connective plumbing exploded, but shared context didn't come with it. <span class="src">— Anthropic, 2025</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="theme">
+      <div class="n"></div>
+      <h2>"The model was never the problem. The data underneath it was."</h2>
+      <p class="heard">Pilots didn't die because the model reasoned badly. They died because the agent stood on stale, scattered, or ungrounded knowledge.</p>
+      <p>Leaders who had run failed pilots almost never blamed model quality. They described agents citing a competitor they'd stopped losing to, or a pain point resolved two quarters ago — <strong>failures of foundation, not intelligence.</strong></p>
+      <div class="evidence">
+        <div class="lbl">The data behind it</div>
+        <ul>
+          <li><span class="fig">95%</span> of enterprise GenAI pilots return zero — largely because the systems don't retain context or learn. <span class="src">— MIT Project NANDA, 2025</span></li>
+          <li>Grounding a model in a structured knowledge graph moved enterprise-question accuracy from <span class="fig">16% to 54%</span> — same model, better foundation. <span class="src">— data.world benchmark</span></li>
+          <li><span class="fig">60%</span> of AI projects will be abandoned through 2026 without AI-ready data. <span class="src">— Gartner</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="theme">
+      <div class="n"></div>
+      <h2>"I can't put an ungoverned agent near my CRM."</h2>
+      <p class="heard">Trust is the adoption gate. A suggestion is fine; an agent writing to the system of record unsupervised is a non-starter.</p>
+      <p>The blocker leaders named most wasn't capability — it was <strong>governance</strong>. Without human-in-the-loop, an audit trail, and a way to gate consequential writes, agents stay stuck in read-only demos and never touch real pipeline.</p>
+      <div class="evidence">
+        <div class="lbl">The data behind it</div>
+        <ul>
+          <li>Over <span class="fig">40%</span> of agentic AI projects will be cancelled by end of 2027 — largely on cost, unclear value, and inadequate risk controls. <span class="src">— Gartner, 2025</span></li>
+          <li>Roughly <span class="fig">3 in 10</span> teams don't evaluate their agents at all — no way to trust, so no way to scale. <span class="src">— LangChain</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="theme">
+      <div class="n"></div>
+      <h2>"We're paying for the same work over and over."</h2>
+      <p class="heard">Every agent re-wires the same integrations and re-pays for the same retrieval. The duplication is quiet, but it adds up.</p>
+      <p>When the same connectors and the same context get built separately into every agent, teams pay for the same lookup a dozen times. <strong>The cost isn't the model — it's the redundancy around it.</strong></p>
+      <div class="evidence">
+        <div class="lbl">The data behind it</div>
+        <ul>
+          <li>LLM inference costs fell <span class="fig">90%+</span> in about two years — yet duplicated retrieval across isolated agents quietly erases much of that saving. <span class="src">— Stanford HAI, 2025</span></li>
+          <li>The AI orchestration market is projected to grow from <span class="fig">$11B to $82B</span> (~22% CAGR) through 2035 — spend is shifting to the coordination layer. <span class="src">— Precedence Research, 2026</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="theme">
+      <div class="n"></div>
+      <h2>"What we actually need is a shared foundation — not another agent."</h2>
+      <p class="heard">Don't sell me a tenth agent. Give me the layer underneath the ones I already have, so they finally work together.</p>
+      <p>The clearest signal across every conversation: leaders are past the point of wanting more agents. They want the <strong>substrate</strong> — shared memory, skills, governance, and a feedback loop — that turns a pile of agents into something that compounds. It's the "system of record → system of intelligence" shift, made real for the agent era.</p>
+      <div class="evidence">
+        <div class="lbl">The data behind it</div>
+        <ul>
+          <li>Only <span class="fig">16%</span> of enterprise AI deployments qualify as true agents that plan, act, observe, and adapt — the rest need a foundation to become that. <span class="src">— Menlo Ventures</span></li>
+        </ul>
+      </div>
+    </article>
+
+  </section>
+
+  <section class="close">
+    <h2>That foundation has a name — <em>the harness</em>.</h2>
+    <p>wysdym is the platform every GTM agent runs on: shared memory, a skills library, governed connections, and an outcome feedback loop, so every agent inherits the same grounding and gets smarter from every outcome. It's the layer these five themes keep pointing at.</p>
+    <a class="btn" href="https://www.wysdym.ai/platform">See the platform →</a>
+    <a class="btn ghost" href="https://gtmstats.wysdym.ai">Explore all 52 stats</a>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  <p><strong style="color:var(--white)">wysdym</strong> — the platform every GTM agent runs on. Themes are qualitative synthesis from 25+ go-to-market leader conversations; all statistics are third-party public research, linked to source. Compiled July 2026.</p>
+  <a href="https://www.wysdym.ai">wysdym.ai ↗</a>
+</div></footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What 25+ GTM Leaders Told Us About AI Agents — and the Data Behind It",
+  "description": "Five recurring themes from conversations with 25+ go-to-market leaders about running AI agents, each paired with public third-party data.",
+  "mainEntityOfPage": "https://gtmstats.wysdym.ai/what-gtm-leaders-told-us/",
+  "author": {"@type": "Organization", "name": "wysdym", "url": "https://www.wysdym.ai"},
+  "publisher": {"@type": "Organization", "name": "wysdym", "url": "https://www.wysdym.ai", "sameAs": ["https://www.linkedin.com/company/wysdym", "https://www.wikidata.org/wiki/Q140579033"]},
+  "about": ["go-to-market", "AI agents", "agentic AI", "RevOps"]
+}
+</script>
+</body>
+</html>
