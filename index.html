@@ -156,6 +156,28 @@
 
   .cta-row.hero-cta { justify-content: flex-start; margin-top: 32px; }
 
+  /* ---------- Share menu ---------- */
+  .share-wrap { position: relative; display: inline-block; }
+  .share-menu {
+    position: absolute; top: calc(100% + 10px); left: 0;
+    display: flex; flex-direction: column; gap: 2px;
+    min-width: 210px; padding: 8px;
+    background: #232127;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    box-shadow: 0 14px 36px rgba(0,0,0,0.5);
+    z-index: 95;
+  }
+  .share-menu[hidden] { display: none; }
+  .share-menu a, .share-menu button {
+    display: block; text-align: left;
+    font-size: 14px; font-weight: 500; font-family: inherit;
+    color: rgba(255,255,255,0.88);
+    padding: 9px 12px; border-radius: 8px;
+    background: none; border: 0; cursor: pointer;
+  }
+  .share-menu a:hover, .share-menu button:hover { background: rgba(186,98,150,0.16); color: var(--white); }
+
   /* ---------- Takeaways ---------- */
   .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 48px; }
   .card {
@@ -419,7 +441,17 @@
 
     <div class="cta-row hero-cta">
       <a class="btn" href="wysdym-52-agentic-ai-statistics-2026.pdf" download="wysdym-52-agentic-ai-statistics-2026.pdf">Download PDF</a>
-      <button class="btn btn-ghost" id="shareBtn" type="button">Share</button>
+      <div class="share-wrap">
+        <button class="btn btn-ghost" id="shareBtn" type="button" aria-haspopup="true" aria-expanded="false">Share</button>
+        <div class="share-menu" id="shareMenu" hidden>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fgtmstats.wysdym.ai%2F" target="_blank" rel="noopener">Share on LinkedIn</a>
+          <a href="https://twitter.com/intent/tweet?text=52%20agentic%20AI%20statistics%20every%20GTM%20leader%20should%20know%20in%202026&url=https%3A%2F%2Fgtmstats.wysdym.ai%2F" target="_blank" rel="noopener">Share on X</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgtmstats.wysdym.ai%2F" target="_blank" rel="noopener">Share on Facebook</a>
+          <a href="mailto:?subject=52%20Agentic%20AI%20Statistics%20Every%20GTM%20Leader%20Should%20Know%20in%202026&body=Worth%20a%20read%3A%20https%3A%2F%2Fgtmstats.wysdym.ai%2F">Share by email</a>
+          <button type="button" id="copyLink">Copy link</button>
+          <button type="button" id="nativeShare" hidden>More options…</button>
+        </div>
+      </div>
     </div>
 
     <div class="hero-numbers">
@@ -1175,26 +1207,39 @@
   addEventListener('resize', updateLegend, { passive: true });
   updateLegend();
 
-  // Share: native share sheet where available, copy-link fallback elsewhere
-  document.getElementById('shareBtn').addEventListener('click', async function () {
-    const btn = this;
-    const data = {
-      title: '52 Agentic AI Statistics Every GTM Leader Should Know in 2026',
-      text: '52 verified agentic AI statistics for 2026, organized around the five pillars of production-ready agents — from wysdym.',
-      url: 'https://gtmstats.wysdym.ai/'
-    };
-    if (navigator.share) {
-      try { await navigator.share(data); return; }
-      catch (e) { if (e.name === 'AbortError') return; }
-    }
+  // Share menu: LinkedIn / X / Facebook / email / copy link (+ system share sheet where available)
+  const shareBtn = document.getElementById('shareBtn');
+  const shareMenu = document.getElementById('shareMenu');
+  const copyLink = document.getElementById('copyLink');
+  const nativeShare = document.getElementById('nativeShare');
+  const shareData = {
+    title: '52 Agentic AI Statistics Every GTM Leader Should Know in 2026',
+    text: '52 verified agentic AI statistics for 2026, organized around the five pillars of production-ready agents — from wysdym.',
+    url: 'https://gtmstats.wysdym.ai/'
+  };
+  if (navigator.share) nativeShare.hidden = false;
+  function closeShareMenu() { shareMenu.hidden = true; shareBtn.setAttribute('aria-expanded', 'false'); }
+  shareBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    shareMenu.hidden = !shareMenu.hidden;
+    shareBtn.setAttribute('aria-expanded', String(!shareMenu.hidden));
+  });
+  document.addEventListener('click', (e) => {
+    if (!shareMenu.hidden && !shareMenu.contains(e.target) && e.target !== shareBtn) closeShareMenu();
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeShareMenu(); });
+  copyLink.addEventListener('click', async () => {
     try {
-      await navigator.clipboard.writeText(data.url);
-      const original = btn.textContent;
-      btn.textContent = 'Link copied ✓';
-      setTimeout(() => { btn.textContent = original; }, 2000);
+      await navigator.clipboard.writeText(shareData.url);
+      copyLink.textContent = 'Copied ✓';
+      setTimeout(() => { copyLink.textContent = 'Copy link'; closeShareMenu(); }, 1200);
     } catch (e) {
-      window.prompt('Copy this link:', data.url);
+      window.prompt('Copy this link:', shareData.url);
     }
+  });
+  nativeShare.addEventListener('click', async () => {
+    closeShareMenu();
+    try { await navigator.share(shareData); } catch (e) {}
   });
 </script>
 
