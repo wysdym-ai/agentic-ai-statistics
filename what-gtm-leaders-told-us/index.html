@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>What ~100 GTM Leaders Told Us About AI Agents — and the Data Behind It | wysdym</title>
-<meta name="description" content="Eight recurring themes from conversations with ~100 go-to-market leaders about running AI agents — each paired with the public, third-party data that backs it up.">
+<meta name="description" content="Six recurring themes from conversations with ~100 go-to-market leaders about running AI agents — each paired with the public, third-party data that backs it up.">
 <link rel="canonical" href="https://gtmstats.wysdym.ai/what-gtm-leaders-told-us/">
 <meta name="robots" content="max-image-preview:large">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="wysdym">
 <meta property="og:title" content="What ~100 GTM Leaders Told Us About AI Agents — and the Data Behind It">
-<meta property="og:description" content="Eight recurring themes from ~100 go-to-market leaders on running AI agents — each anchored to public, cited data.">
+<meta property="og:description" content="Six recurring themes from ~100 go-to-market leaders on running AI agents — each anchored to public, cited data.">
 <meta property="og:url" content="https://gtmstats.wysdym.ai/what-gtm-leaders-told-us/">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGcgZmlsbD0iI0JBNjI5NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMiwgMSkgc2NhbGUoMC4xNCkiPjxwb2x5Z29uIHBvaW50cz0iOTYsMzQgMTI4LDE0NyAxMDQsMTY3Ii8+PHBvbHlnb24gcG9pbnRzPSI5OCwzMiAxNTQsMTI3IDEzMSwxNDYiLz48cG9seWdvbiBwb2ludHM9IjE2OCw2MSAxNTUsMTIzIDEzOCw5NCIvPjxwb2x5Z29uIHBvaW50cz0iMTcxLDU5IDE5MCw3MSAxNjgsNzMiLz48cG9seWdvbiBwb2ludHM9IjEwMCwxNTQgMTAxLDE2OSAxMCwxNjEiLz48L2c+PC9zdmc+">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,6 +31,7 @@
     --warm-taupe: #D3B1C2;
     --white: #FFFFFF;
     --green: #81C784;
+    --amber: #d4924a;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -234,6 +235,40 @@
   a.src:hover { border-bottom-color: var(--pale-sky); }
   span.src { border-bottom: 0; }
 
+  /* ---------- Diagnostic ---------- */
+  .qbox {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-left: 3px solid var(--amber);
+    border-radius: 16px;
+    padding: 24px 30px;
+    margin-top: 18px;
+    max-width: 900px;
+  }
+  .qbox .q { font-size: 20px; font-weight: 600; color: var(--white); line-height: 1.35; }
+  .qbox .a { font-size: 15px; color: var(--warm-taupe); line-height: 1.6; margin-top: 8px; }
+  .qbox .a .tag { font-size: 11.5px; font-weight: 800; letter-spacing: 0.1em; color: var(--amber); text-transform: uppercase; margin-right: 8px; }
+  .diag-note { font-size: 16px; color: rgba(255,255,255,0.7); margin-top: 26px; max-width: 860px; line-height: 1.65; }
+  .diag-note strong { color: var(--white); }
+
+  /* ---------- Through-line ---------- */
+  .four { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 40px; }
+  .four .f {
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px; padding: 28px 24px;
+  }
+  .four .f .ft { font-size: 19px; font-weight: 700; color: var(--magenta-light); }
+  .four .f .fd { font-size: 14.5px; color: var(--warm-taupe); line-height: 1.6; margin-top: 10px; }
+  .thesis-line {
+    margin-top: 34px; max-width: 900px;
+    background: rgba(186,98,150,0.07);
+    border-left: 3px solid var(--magenta);
+    border-radius: 0 16px 16px 0;
+    padding: 24px 30px;
+  }
+  .thesis-line p { font-size: 17px; color: rgba(255,255,255,0.88); line-height: 1.65; }
+  .thesis-line strong { color: var(--magenta-light); }
+
   /* ---------- CTA block ---------- */
   .cta-block {
     background: linear-gradient(135deg, var(--midnight) 0%, var(--midnight-deeper) 100%);
@@ -306,8 +341,10 @@
     .hero-numbers { grid-template-columns: 1fr; }
     .toc ol { columns: 1; }
     .stat { grid-template-columns: 1fr; gap: 14px; padding: 26px 24px; }
+    .four { grid-template-columns: 1fr; }
     .cta-block { padding: 44px 28px; }
     .heard { font-size: 19px; }
+    .qbox .q { font-size: 18px; }
   }
 </style>
 </head>
@@ -319,14 +356,14 @@
 <nav class="legend" aria-label="Section navigation">
   <ul>
     <li><a href="#how" title="How to read this"><span class="tick"></span><span class="lbl">How to read</span></a></li>
-    <li><a href="#theme-1" title="Theme 1 — Compounding"><span class="tick"></span><span class="lbl">Compounding</span></a></li>
-    <li><a href="#theme-2" title="Theme 2 — Knowledge"><span class="tick"></span><span class="lbl">Knowledge</span></a></li>
-    <li><a href="#theme-3" title="Theme 3 — Governance"><span class="tick"></span><span class="lbl">Governance</span></a></li>
-    <li><a href="#theme-4" title="Theme 4 — Cost"><span class="tick"></span><span class="lbl">Cost</span></a></li>
-    <li><a href="#theme-5" title="Theme 5 — Trust"><span class="tick"></span><span class="lbl">Trust</span></a></li>
-    <li><a href="#theme-6" title="Theme 6 — Attribution"><span class="tick"></span><span class="lbl">Attribution</span></a></li>
-    <li><a href="#theme-7" title="Theme 7 — Buyers"><span class="tick"></span><span class="lbl">Buyers</span></a></li>
-    <li><a href="#theme-8" title="Theme 8 — Foundation"><span class="tick"></span><span class="lbl">Foundation</span></a></li>
+    <li><a href="#theme-1" title="Theme 1 — Attribution"><span class="tick"></span><span class="lbl">Attribution</span></a></li>
+    <li><a href="#theme-2" title="Theme 2 — Data"><span class="tick"></span><span class="lbl">Data</span></a></li>
+    <li><a href="#theme-3" title="Theme 3 — Fragmentation"><span class="tick"></span><span class="lbl">Fragmentation</span></a></li>
+    <li><a href="#theme-4" title="Theme 4 — Trust"><span class="tick"></span><span class="lbl">Trust</span></a></li>
+    <li><a href="#theme-5" title="Theme 5 — Compounding"><span class="tick"></span><span class="lbl">Compounding</span></a></li>
+    <li><a href="#theme-6" title="Theme 6 — Production"><span class="tick"></span><span class="lbl">Production</span></a></li>
+    <li><a href="#diagnostic" title="The diagnostic"><span class="tick"></span><span class="lbl">Diagnostic</span></a></li>
+    <li><a href="#throughline" title="The through-line"><span class="tick"></span><span class="lbl">Through-line</span></a></li>
     <li><a href="#layer" title="The operating layer"><span class="tick"></span><span class="lbl">The Layer</span></a></li>
   </ul>
 </nav>
@@ -359,7 +396,7 @@
   <div class="container">
     <div class="pill"><span class="dot"></span>Field Notes · GTM + AI · August 2026</div>
     <h1>What ~100 GTM leaders told us about AI agents — <span class="serif accent">and the data behind it</span></h1>
-    <p class="lead">We've spent the last stretch in conversation with go-to-market leaders — RevOps, sales, and marketing operators at mid-market and enterprise teams — about what actually happens when you put AI agents to work. Eight themes came up again and again. Here they are, each paired with the public research that backs it up.</p>
+    <p class="lede lead">We've spent the last stretch in conversation with go-to-market leaders — RevOps, sales, and marketing operators at mid-market and enterprise teams — about what actually happens when you put AI agents to work. Six patterns surfaced again and again, and the market data says they're structural, not anecdotal.</p>
     <div class="byline">
       <div class="avatar">RC</div>
       <div><strong style="color: var(--white);">Rob Catalano</strong> · Co-Founder, wysdym</div>
@@ -375,8 +412,8 @@
         <div class="cap">Conversations with GTM leaders — RevOps, sales, and marketing operators at mid-market and enterprise teams.</div>
       </div>
       <div class="hero-num">
-        <div class="fig">8</div>
-        <div class="cap">Themes that came up again and again — the recurring frustrations, blockers, and asks.</div>
+        <div class="fig">6</div>
+        <div class="cap">Patterns that surfaced again and again — the recurring frustrations, blockers, and asks.</div>
       </div>
       <div class="hero-num">
         <div class="fig">52</div>
@@ -393,16 +430,14 @@
       <p><strong>How to read this.</strong> These are qualitative themes from ~100 conversations, not a quantified survey — we're not reporting percentages from the interviews, because we didn't run one. What we <em>are</em> reporting is what we heard, alongside third-party public data that corroborates it. Every statistic below is external research, attributed and linked to its source.</p>
     </div>
     <div class="toc">
-      <h3>The eight themes</h3>
+      <h3>The six themes</h3>
       <ol>
-        <li><a href="#theme-1">"We keep adding agents. Nothing compounds."</a></li>
-        <li><a href="#theme-2">"The model was never the problem. The data underneath it was."</a></li>
-        <li><a href="#theme-3">"I can't put an ungoverned agent near my CRM."</a></li>
-        <li><a href="#theme-4">"We're paying for the same work over and over."</a></li>
-        <li><a href="#theme-5">"We gave agents access before we gave them rules."</a></li>
-        <li><a href="#theme-6">"Nobody can show me what important numbers ACTUALLY moved."</a></li>
-        <li><a href="#theme-7">"Our buyers are already buying this way."</a></li>
-        <li><a href="#theme-8">"What we actually need is a shared foundation — not another agent."</a></li>
+        <li><a href="#theme-1">"Everyone's using it. No one can tie it to the number."</a></li>
+        <li><a href="#theme-2">"The AI is only as good as our data, and our data's a mess."</a></li>
+        <li><a href="#theme-3">"Every tool has its own AI, and none share a brain."</a></li>
+        <li><a href="#theme-4">"I can't put an agent in front of a customer without guardrails."</a></li>
+        <li><a href="#theme-5">"It never compounds. Every quarter starts from zero."</a></li>
+        <li><a href="#theme-6">"The pilot worked. Production didn't."</a></li>
       </ol>
     </div>
   </div>
@@ -412,9 +447,72 @@
 <section id="theme-1" style="padding-top: 40px;">
   <div class="container">
     <div class="sec-head">
-      <div class="pill"><span class="dot"></span>Theme 01 · Compounding</div>
-      <h2>"We keep adding agents. Nothing compounds."</h2>
-      <p class="heard">The agents work in isolation and demo well — but each one starts from scratch, and the stack as a whole never gets smarter.</p>
+      <div class="pill"><span class="dot"></span>Theme 01 · Attribution</div>
+      <h2>"Everyone's using it. No one can tie it to the number."</h2>
+      <p class="heard">Most pilots never defined success, so teams measure activity, not revenue. There's no view that ties an agent's work to a deal stage.</p>
+      <p class="theme-body">When we asked what the agents had actually changed in pipeline, the honest answer was usually a shrug. Teams can count actions; almost none can <strong>attribute outcomes</strong> — which makes every renewal conversation about the AI budget a leap of faith.</p>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">3 in 10</span></div>
+        <div>
+          <h3>Roughly 3 in 10 agent teams aren't evaluating their agents at all</h3>
+          <p>Only 52.4% run offline evals before deployment, and just 37.3% evaluate live traffic. Most agent failures aren't mysterious; they're unmeasured.<br><a class="src" href="https://www.langchain.com/state-of-agent-engineering" target="_blank" rel="noopener">LangChain, State of Agent Engineering, December 2025</a></p>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">39%</span></div>
+        <div>
+          <h3>88% of organizations use AI — but only 39% see any EBIT impact from it</h3>
+          <p>And most of those attribute less than 5% of EBIT to AI. The bright spot: revenue gains show up most often in marketing and sales use cases — when anyone can measure them.<br><a class="src" href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noopener">McKinsey, The State of AI, November 2025</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THEME 2 ================= -->
+<section id="theme-2">
+  <div class="container">
+    <div class="sec-head">
+      <div class="pill"><span class="dot"></span>Theme 02 · Data</div>
+      <h2>"The AI is only as good as our data, and our data's a mess."</h2>
+      <p class="heard">The number-one barrier leaders name isn't the model. It's stale, scattered, ungrounded data underneath it.</p>
+      <p class="theme-body">Leaders who had run failed pilots almost never blamed model quality. They described agents citing a competitor they'd stopped losing to, or a pain point resolved two quarters ago — <strong>failures of foundation, not intelligence.</strong></p>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">60%</span></div>
+        <div>
+          <h3>60% of AI projects will be abandoned through 2026 without AI-ready data</h3>
+          <p>63% of data leaders either don't have — or aren't sure they have — the right data practices for AI. The model isn't the bottleneck. The knowledge is.<br><a class="src" href="https://www.gartner.com/en/newsroom/press-releases/2025-02-26-lack-of-ai-ready-data-puts-ai-projects-at-risk" target="_blank" rel="noopener">Gartner, February 2025</a></p>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">16%→54%</span></div>
+        <div>
+          <h3>Grounding a model in a knowledge graph moved enterprise-question accuracy from 16% to 54%</h3>
+          <p>Same model, better foundation. Structure isn't a nice-to-have — it's the accuracy mechanism.<br><a class="src" href="https://arxiv.org/abs/2311.07509" target="_blank" rel="noopener">Sequeda, Allemang &amp; Jacob (data.world AI Lab), arXiv, 2023</a></p>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">84%</span></div>
+        <div>
+          <h3>84% of data leaders say their data strategy needs a complete overhaul before their AI ambitions can succeed</h3>
+          <p>And 89% of leaders with AI in production have already seen inaccurate or misleading outputs. That's the exact gap a structured knowledge layer exists to close.<br><a class="src" href="https://www.salesforce.com/news/stories/data-analytics-trends-2026/" target="_blank" rel="noopener">Salesforce, State of Data &amp; Analytics, November 2025</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THEME 3 ================= -->
+<section id="theme-3">
+  <div class="container">
+    <div class="sec-head">
+      <div class="pill"><span class="dot"></span>Theme 03 · Fragmentation</div>
+      <h2>"Every tool has its own AI, and none share a brain."</h2>
+      <p class="heard">Per-agent memory means five tools give five answers and re-learn the same context. AI is being used, but rarely orchestrated.</p>
       <p class="theme-body">Nearly every leader was already running multiple agents, added quarter over quarter. The frustration wasn't that any single agent failed — it's that the <strong>collective</strong> didn't improve. Work done by one agent never made the next one better.</p>
     </div>
     <div class="stats">
@@ -422,7 +520,7 @@
         <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">66.4%</span></div>
         <div>
           <h3>66.4% of agentic AI is already multi-agent</h3>
-          <p>Most teams aren't running one agent — they're running many. The compounding problem is the default condition, not the edge case.<br><span class="src">Landbase / Market.us, 2025</span></p>
+          <p>Most teams aren't running one agent — they're running many. The shared-brain problem is the default condition, not the edge case.<br><span class="src">Landbase / Market.us, 2025</span></p>
         </div>
       </div>
       <div class="stat">
@@ -436,105 +534,14 @@
   </div>
 </section>
 
-<!-- ================= THEME 2 ================= -->
-<section id="theme-2">
-  <div class="container">
-    <div class="sec-head">
-      <div class="pill"><span class="dot"></span>Theme 02 · Knowledge</div>
-      <h2>"The model was never the problem. The data underneath it was."</h2>
-      <p class="heard">Pilots didn't die because the model reasoned badly. They died because the agent stood on stale, scattered, or ungrounded knowledge.</p>
-      <p class="theme-body">Leaders who had run failed pilots almost never blamed model quality. They described agents citing a competitor they'd stopped losing to, or a pain point resolved two quarters ago — <strong>failures of foundation, not intelligence.</strong></p>
-    </div>
-    <div class="stats">
-      <div class="stat">
-        <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">95%</span></div>
-        <div>
-          <h3>95% of enterprise GenAI pilots return zero</h3>
-          <p>MIT's diagnosis is blunt: most systems "do not retain feedback, adapt to context, or improve over time." The barrier is learning, not reasoning.<br><a class="src" href="https://www.aigl.blog/content/files/2025/09/The-GenAI-Divide-STATE-OF-AI-IN-BUSINESS-2025.pdf" target="_blank" rel="noopener">MIT Project NANDA, The GenAI Divide, 2025</a></p>
-        </div>
-      </div>
-      <div class="stat">
-        <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">16%→54%</span></div>
-        <div>
-          <h3>Grounding a model in a knowledge graph moved enterprise-question accuracy from 16% to 54%</h3>
-          <p>Same model, better foundation. Structure isn't a nice-to-have — it's the accuracy mechanism.<br><a class="src" href="https://arxiv.org/abs/2311.07509" target="_blank" rel="noopener">Sequeda, Allemang &amp; Jacob (data.world AI Lab), arXiv, 2023</a></p>
-        </div>
-      </div>
-      <div class="stat">
-        <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">60%</span></div>
-        <div>
-          <h3>60% of AI projects will be abandoned through 2026 without AI-ready data</h3>
-          <p>63% of data leaders either don't have — or aren't sure they have — the right data practices for AI. The model isn't the bottleneck. The knowledge is.<br><a class="src" href="https://www.gartner.com/en/newsroom/press-releases/2025-02-26-lack-of-ai-ready-data-puts-ai-projects-at-risk" target="_blank" rel="noopener">Gartner, February 2025</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= THEME 3 ================= -->
-<section id="theme-3">
-  <div class="container">
-    <div class="sec-head">
-      <div class="pill"><span class="dot"></span>Theme 03 · Governance</div>
-      <h2>"I can't put an ungoverned agent near my CRM."</h2>
-      <p class="heard">Trust is the adoption gate. A suggestion is fine; an agent writing to the system of record unsupervised is a non-starter.</p>
-      <p class="theme-body">The blocker leaders named most wasn't capability — it was <strong>governance</strong>. Without human-in-the-loop, an audit trail, and a way to gate consequential writes, agents stay stuck in read-only demos and never touch real pipeline.</p>
-    </div>
-    <div class="stats">
-      <div class="stat">
-        <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">40%+</span></div>
-        <div>
-          <h3>Over 40% of agentic AI projects will be cancelled by end of 2027</h3>
-          <p>Escalating costs, unclear business value, inadequate risk controls — Gartner's reasons read like a governance checklist.<br><a class="src" href="https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027" target="_blank" rel="noopener">Gartner, June 2025</a></p>
-        </div>
-      </div>
-      <div class="stat">
-        <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">40%</span></div>
-        <div>
-          <h3>By 2027, 40% of enterprises will demote or decommission AI agents over governance gaps found only after production incidents</h3>
-          <p>Gartner's warning is specific: treating agent governance as binary — locked down or fully trusted — is the root cause of failure. Graduated autonomy wins.<br><a class="src" href="https://www.gartner.com/en/newsroom/press-releases/2026-05-26-gartner-says-applying-uniform-governance-across-ai-agents-will-lead-to-enterprise-ai-agent-failure" target="_blank" rel="noopener">Gartner, May 2026</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ================= THEME 4 ================= -->
 <section id="theme-4">
   <div class="container">
     <div class="sec-head">
-      <div class="pill"><span class="dot"></span>Theme 04 · Cost</div>
-      <h2>"We're paying for the same work over and over."</h2>
-      <p class="heard">Every agent re-wires the same integrations and re-pays for the same retrieval. The duplication is quiet, but it adds up.</p>
-      <p class="theme-body">When the same connectors and the same context get built separately into every agent, teams pay for the same lookup a dozen times. <strong>The cost isn't the model — it's the redundancy around it.</strong></p>
-    </div>
-    <div class="stats">
-      <div class="stat">
-        <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">90%+</span></div>
-        <div>
-          <h3>LLM inference costs fell 90%+ in about two years</h3>
-          <p>Yet duplicated retrieval across isolated agents quietly erases much of that saving — you keep re-buying the same context per agent.<br><a class="src" href="https://hai.stanford.edu/ai-index/2025-ai-index-report" target="_blank" rel="noopener">Stanford HAI, AI Index, 2025</a></p>
-        </div>
-      </div>
-      <div class="stat">
-        <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">$11B→$82B</span></div>
-        <div>
-          <h3>The AI orchestration market is projected to grow from $11B to $82B through 2035</h3>
-          <p>~22% CAGR. Spend is shifting from the agents themselves to the coordination layer underneath them.<br><a class="src" href="https://www.precedenceresearch.com/ai-orchestration-market" target="_blank" rel="noopener">Precedence Research, 2026</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= THEME 5 ================= -->
-<section id="theme-5">
-  <div class="container">
-    <div class="sec-head">
-      <div class="pill"><span class="dot"></span>Theme 05 · Trust</div>
-      <h2>"We gave agents access before we gave them rules."</h2>
-      <p class="heard">The write access came before the trust — and now the review process is being bolted on after the fact.</p>
-      <p class="theme-body">Leaders further along described a strange inversion: agents got real access to real systems faster than they earned real trust. The reaction is everywhere the same — <strong>human review is being retrofitted onto stacks that were wired for autonomy first.</strong></p>
+      <div class="pill"><span class="dot"></span>Theme 04 · Trust</div>
+      <h2>"I can't put an agent in front of a customer without guardrails."</h2>
+      <p class="heard">Legal and the CRO say no until there's role-based access, human-in-the-loop, and an audit trail. Until then, agents stay stuck in read-only demos.</p>
+      <p class="theme-body">The blocker leaders named most wasn't capability — it was <strong>governance</strong>. Without a way to gate consequential writes, agents never touch real pipeline. And where access came first, trust is being retrofitted after the fact.</p>
     </div>
     <div class="stats">
       <div class="stat">
@@ -555,86 +562,119 @@
   </div>
 </section>
 
-<!-- ================= THEME 6 ================= -->
-<section id="theme-6">
+<!-- ================= THEME 5 ================= -->
+<section id="theme-5">
   <div class="container">
     <div class="sec-head">
-      <div class="pill"><span class="dot"></span>Theme 06 · Attribution</div>
-      <h2>"Nobody can show me what important numbers ACTUALLY moved."</h2>
-      <p class="heard">There are dashboards of tokens and latency. There's no view that ties an agent's work to a deal stage.</p>
-      <p class="theme-body">When we asked what the agents had actually changed in pipeline, the honest answer was usually a shrug. Teams can count actions; almost none can <strong>attribute outcomes</strong> — which makes every renewal conversation about the AI budget a leap of faith.</p>
+      <div class="pill"><span class="dot"></span>Theme 05 · Compounding</div>
+      <h2>"It never compounds. Every quarter starts from zero."</h2>
+      <p class="heard">Winners learn from feedback and retain context. Everyone else redoes the pilot, and the corrections never stick.</p>
+      <p class="theme-body">Leaders described correcting the same agent mistake for the third quarter in a row. Nothing underneath the agents retains what the team already taught them — <strong>the work never accumulates.</strong></p>
     </div>
     <div class="stats">
       <div class="stat">
-        <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">3 in 10</span></div>
+        <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">95%</span></div>
         <div>
-          <h3>Roughly 3 in 10 agent teams aren't evaluating their agents at all</h3>
-          <p>Only 52.4% run offline evals before deployment, and just 37.3% evaluate live traffic. Most agent failures aren't mysterious — they're unmeasured.<br><a class="src" href="https://www.langchain.com/state-of-agent-engineering" target="_blank" rel="noopener">LangChain, State of Agent Engineering, December 2025</a></p>
+          <h3>95% of enterprise GenAI pilots return zero — and the core barrier is learning</h3>
+          <p>MIT's diagnosis is blunt: most systems "do not retain feedback, adapt to context, or improve over time." 66% of executives want AI that learns from feedback; 63% demand tools that retain context.<br><a class="src" href="https://www.aigl.blog/content/files/2025/09/The-GenAI-Divide-STATE-OF-AI-IN-BUSINESS-2025.pdf" target="_blank" rel="noopener">MIT Project NANDA, The GenAI Divide, 2025</a></p>
         </div>
       </div>
-      <div class="stat">
-        <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">39%</span></div>
-        <div>
-          <h3>88% of organizations use AI — but only 39% see any EBIT impact from it</h3>
-          <p>And most of those attribute less than 5% of EBIT to AI. The bright spot: revenue gains show up most often in marketing and sales use cases — when anyone can measure them.<br><a class="src" href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noopener">McKinsey, The State of AI, November 2025</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= THEME 7 ================= -->
-<section id="theme-7">
-  <div class="container">
-    <div class="sec-head">
-      <div class="pill"><span class="dot"></span>Theme 07 · Buyers</div>
-      <h2>"Our buyers are already buying this way."</h2>
-      <p class="heard">The pressure isn't just internal efficiency. Buyers research with AI, expect two-way conversations, and reward whoever answers first.</p>
-      <p class="theme-body">The sharpest urgency came from the demand side: buyers adopted agentic buying faster than most GTM teams adopted agentic selling. Leaders described being <strong>out-tooled by their own prospects</strong> — and knowing it.</p>
-    </div>
-    <div class="stats">
-      <div class="stat">
-        <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">67%</span></div>
-        <div>
-          <h3>67% of B2B buyers prefer a rep-free buying experience</h3>
-          <p>And 45% used AI during a recent purchase. Your buyers brought agents to the table first.<br><a class="src" href="https://www.gartner.com/en/newsroom/press-releases/2026-03-09-gartner-sales-survey-finds-67-percent-of-b2b-buyers-prefer-a-rep-free-experience" target="_blank" rel="noopener">Gartner, March 2026</a></p>
-        </div>
-      </div>
-      <div class="stat">
-        <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">83%</span></div>
-        <div>
-          <h3>83% of marketers say customers expect two-way conversations — but 69% can't respond promptly</h3>
-          <p>And 81% would trust AI to respond to customers to help them scale. The conversation gap is now the most quantified problem in marketing.<br><a class="src" href="https://www.salesforce.com/news/stories/state-of-marketing-2026/" target="_blank" rel="noopener">Salesforce, State of Marketing, February 2026</a></p>
-        </div>
-      </div>
-      <div class="stat">
-        <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">7×</span></div>
-        <div>
-          <h3>Contacting a web lead within an hour makes you ~7× more likely to qualify them</h3>
-          <p>The classic benchmark: 60× better than waiting 24+ hours — yet average response time was 42 hours. Speed-to-lead remains the oldest argument for always-on agents, and for grounding them so the first touch is right, not just fast.<br><a class="src" href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" target="_blank" rel="noopener">Harvard Business Review, 2011</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= THEME 8 ================= -->
-<section id="theme-8">
-  <div class="container">
-    <div class="sec-head">
-      <div class="pill"><span class="dot"></span>Theme 08 · Foundation</div>
-      <h2>"What we actually need is a shared foundation — not another agent."</h2>
-      <p class="heard">Don't sell me a tenth agent. Give me the layer underneath the ones I already have, so they finally work together.</p>
-      <p class="theme-body">The clearest signal across every conversation: leaders are past the point of wanting more agents. They want the <strong>substrate</strong> — shared memory, skills, governance, and a feedback loop — that turns a pile of agents into something that compounds. It's the "system of record → system of intelligence" shift, made real for the agent era.</p>
-    </div>
-    <div class="stats">
       <div class="stat">
         <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">16%</span></div>
         <div>
           <h3>Only 16% of enterprise AI deployments qualify as true agents</h3>
-          <p>Menlo's bar: systems that plan, act, observe feedback, and adapt. The rest need a foundation to become that.<br><a class="src" href="https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/" target="_blank" rel="noopener">Menlo Ventures, December 2025</a></p>
+          <p>Menlo's bar: systems that plan, act, observe feedback, and adapt. The rest need a foundation that learns before they can.<br><a class="src" href="https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/" target="_blank" rel="noopener">Menlo Ventures, December 2025</a></p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THEME 6 ================= -->
+<section id="theme-6">
+  <div class="container">
+    <div class="sec-head">
+      <div class="pill"><span class="dot"></span>Theme 06 · Production</div>
+      <h2>"The pilot worked. Production didn't."</h2>
+      <p class="heard">The demo impressed everyone. Then it met real data, real governance, and real workflows.</p>
+      <p class="theme-body">Almost every leader had a pilot story that ended the same way: strong demo, stalled rollout. The gap was never the model — it was everything the pilot didn't have to survive: <strong>real data, real permissions, real workflows.</strong></p>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">95%</span></div>
+        <div>
+          <h3>95% of AI agents never make it to production</h3>
+          <p>The difference between the 95% and the 5% is rarely the model — it's the operating layer underneath it.<br><a class="src" href="https://www.capgemini.com/insights/research-library/from-pilots-to-real-impact-how-enterprises-actually-scale-agentic-ai/" target="_blank" rel="noopener">Capgemini Research Institute, April 2026</a></p>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">2%</span></div>
+        <div>
+          <h3>Only 2% of organizations have fully scaled agentic AI deployment</h3>
+          <p>Yet 93% of leaders believe scaling agents in the next 12 months will provide a competitive edge. Everyone sees the prize; almost nobody has operationalized it.<br><a class="src" href="https://www.capgemini.com/news/press-releases/trust-and-human-ai-collaboration-set-to-define-the-next-era-of-agentic-ai-unlocking-450-billion-opportunity-by-2028/" target="_blank" rel="noopener">Capgemini Research Institute, July 2025</a></p>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="fig-wrap"><span class="idx">THE DATA</span><span class="fig">40%+</span></div>
+        <div>
+          <h3>Over 40% of agentic AI projects will be cancelled by end of 2027</h3>
+          <p>Escalating costs, unclear business value, inadequate risk controls — the reasons read like a governance checklist.<br><a class="src" href="https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027" target="_blank" rel="noopener">Gartner, June 2025</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THE DIAGNOSTIC ================= -->
+<section id="diagnostic">
+  <div class="container">
+    <div class="sec-head">
+      <div class="pill"><span class="dot"></span>The diagnostic</div>
+      <h2>Three questions your team should be able to answer — <span class="serif accent">but usually can't today</span></h2>
+    </div>
+    <div class="qbox">
+      <div class="q">If you added a new agent tomorrow, would it know everything your existing agents know?</div>
+      <div class="a"><span class="tag">If no</span>Your memory is per-agent, and nothing you deploy compounds. You're buying tools, not building capability.</div>
+    </div>
+    <div class="qbox">
+      <div class="q">Can you name which of your AI investments moved a deal stage last quarter?</div>
+      <div class="a"><span class="tag">If no</span>You have observability of cost, not outcome. You can't manage what you can't attribute — and you won't defend the budget next cycle.</div>
+    </div>
+    <div class="qbox">
+      <div class="q">Who approved the last thing an agent wrote to your CRM?</div>
+      <div class="a"><span class="tag">If nobody knows</span>You don't have governance, you have exposure. This is the question the CFO asks at renewal.</div>
+    </div>
+    <p class="diag-note">Three no's is the normal answer today. That's the point: <strong>it isn't a maturity failure, it's a missing layer.</strong></p>
+  </div>
+</section>
+
+<!-- ================= THE THROUGH-LINE ================= -->
+<section id="throughline">
+  <div class="container">
+    <div class="sec-head">
+      <div class="pill"><span class="dot"></span>The through-line</div>
+      <h2>Every theme points at the same four things <span class="serif accent">underneath the agents</span></h2>
+    </div>
+    <div class="four">
+      <div class="f">
+        <div class="ft">Grounding</div>
+        <div class="fd">In what's actually true about this account, this quarter, this product.</div>
+      </div>
+      <div class="f">
+        <div class="ft">Capability</div>
+        <div class="fd">Reusable skills any agent can invoke — not rebuilt per tool.</div>
+      </div>
+      <div class="f">
+        <div class="ft">Governance</div>
+        <div class="fd">On every action: who can act, on what, with what approval and audit trail.</div>
+      </div>
+      <div class="f">
+        <div class="ft">Feedback</div>
+        <div class="fd">From every outcome — so the system learns instead of repeating.</div>
+      </div>
+    </div>
+    <div class="thesis-line">
+      <p>This isn't a maturity failure. The models work. The stack around them doesn't — and it's the same missing stack every time. <strong>Those four aren't features of any agent. They're the layer the agents run on.</strong></p>
     </div>
   </div>
 </section>
@@ -645,7 +685,7 @@
     <div class="cta-block">
       <div class="pill" style="margin-bottom: 20px;"><span class="dot"></span>Where this points</div>
       <h2>That foundation has a name — <em>the operating layer</em>.</h2>
-      <p>wysdym is the operating layer for agentic GTM — the layer underneath your agents, not another agent: shared memory, a skills library, governed connections, and an outcome feedback loop. Every agent inherits the same grounding, acts within the limits you set, and gets smarter from every outcome. It's the layer these eight themes keep pointing at.</p>
+      <p>wysdym is the operating layer for agentic GTM — the layer underneath your agents, not another agent: shared memory, a skills library, governed connections, and an outcome feedback loop. Every agent inherits the same grounding, acts within the limits you set, and gets smarter from every outcome. It's the layer these six themes keep pointing at.</p>
       <div class="cta-row">
         <a class="btn" href="https://wysdym.ai">Meet wysdym</a>
         <a class="btn btn-ghost" href="https://gtmstats.wysdym.ai">Explore all 52 stats</a>
@@ -700,7 +740,7 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "What ~100 GTM Leaders Told Us About AI Agents — and the Data Behind It",
-  "description": "Eight recurring themes from conversations with ~100 go-to-market leaders about running AI agents, each paired with public third-party data.",
+  "description": "Six recurring themes from conversations with ~100 go-to-market leaders about running AI agents, each paired with public third-party data.",
   "mainEntityOfPage": "https://gtmstats.wysdym.ai/what-gtm-leaders-told-us/",
   "author": {"@type": "Organization", "name": "wysdym", "url": "https://www.wysdym.ai"},
   "publisher": {"@type": "Organization", "name": "wysdym", "url": "https://www.wysdym.ai", "sameAs": ["https://www.linkedin.com/company/wysdym", "https://www.wikidata.org/wiki/Q140579033"]},
