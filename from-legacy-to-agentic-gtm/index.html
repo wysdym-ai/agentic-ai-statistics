@@ -322,7 +322,7 @@ ul.plain li::marker { color: var(--m-lit); }
 .eight { display: flex; flex-direction: column; }
 .eight-row {
   display: grid;
-  grid-template-columns: 2.2rem 1fr;
+  grid-template-columns: 2.2rem 2.4rem 1fr;
   gap: 0 .5rem;
   padding: .55rem 0;
   border-bottom: 1px dashed rgba(120,116,140,.3);
@@ -330,6 +330,8 @@ ul.plain li::marker { color: var(--m-lit); }
   break-inside: avoid; page-break-inside: avoid;
 }
 .eight-row:last-child { border-bottom: none; }
+.ei { padding-top: .05rem; }
+.ei svg { width: 27px; height: 27px; display: block; }
 .eight-row .n { font-family: var(--f-hand); font-weight: 700; font-size: 1.25rem; color: var(--m-lit); line-height: 1; padding-top: .1rem; }
 .eight-move { font-size: .95rem; margin-bottom: .1rem; }
 .eight-move .from { color: var(--grey); font-weight: 500; }
@@ -1038,56 +1040,56 @@ section { scroll-margin-top: 84px; }
 
       <div class="eight">
         <div class="eight-row">
-          <span class="n">01</span>
+          <span class="n">01</span><span class="ei"><svg viewBox="0 0 30 30" fill="none" stroke="#BA6296" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(-4 15 15)"><path d="M22 8.5 A 9 9 0 1 0 24 15.5"/><polygon points="21.5,3.5 26.5,8.5 19.5,9.8" fill="#BA6296" stroke="none"/></g></svg></span>
           <div>
             <div class="eight-move"><span class="from">Campaigns</span><span class="arrow">→</span><span class="to">Continuous loops</span></div>
             <div class="eight-why">Cycle time collapses from a quarter to minutes — <em>if</em> outcomes feed back</div>
           </div>
         </div>
         <div class="eight-row">
-          <span class="n">02</span>
+          <span class="n">02</span><span class="ei"><svg viewBox="0 0 30 30" fill="none" stroke="#BA6296" stroke-width="2" stroke-linecap="round"><g transform="rotate(3 15 15)"><circle cx="8" cy="22" r="2" fill="#BA6296" stroke="none"/><path d="M9.2 15.1 A 7 7 0 0 1 14.9 20.8"/><path d="M10.1 10.2 A 12 12 0 0 1 19.8 19.9"/></g></svg></span>
           <div>
             <div class="eight-move"><span class="from">Lists</span><span class="arrow">→</span><span class="to">Signals</span></div>
             <div class="eight-why">Membership in a segment is a weak reason to act; an observed event is a strong one</div>
           </div>
         </div>
         <div class="eight-row">
-          <span class="n">03</span>
+          <span class="n">03</span><span class="ei"><svg viewBox="0 0 30 30" fill="none" stroke="#BA6296" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(-2 15 15)"><path d="M15 3.5 L24.5 7.5 C24.5 16.5 21 23 15 26.5 C9 23 5.5 16.5 5.5 7.5 Z"/><path d="M11 14.5 l2.8 3 l5.2 -6"/></g></svg></span>
           <div>
             <div class="eight-move"><span class="from">Scarcity rationing</span><span class="arrow">→</span><span class="to">Abundance governance</span></div>
             <div class="eight-why">The job changes from <em>deciding who gets attention</em> to <em>deciding what's allowed</em></div>
           </div>
         </div>
         <div class="eight-row">
-          <span class="n">04</span>
+          <span class="n">04</span><span class="ei"><svg viewBox="0 0 30 30" fill="none" stroke="#BA6296" stroke-width="2" stroke-linecap="round"><g transform="rotate(4 15 15)"><path d="M15.2 14.8 a1.6 1.6 0 0 1 1.6 1.8 a3.4 3.4 0 0 1 -3.6 3 a5.6 5.6 0 0 1 -5 -5.6 a8 8 0 0 1 8.2 -7.6 a10.4 10.4 0 0 1 9.8 9.6"/></g></svg></span>
           <div>
             <div class="eight-move"><span class="from">Activity records</span><span class="arrow">→</span><span class="to">Outcome memory</span></div>
             <div class="eight-why">CRM logged what happened; the new system has to know what worked</div>
           </div>
         </div>
         <div class="eight-row">
-          <span class="n">05</span>
+          <span class="n">05</span><span class="ei"><svg viewBox="0 0 30 30" fill="none" stroke="#BA6296" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(-3 15 15)"><path d="M5.5 6 L24.5 5.5 L18 14.5 L18 23 L12.5 25.5 L12.5 14.5 Z"/></g></svg></span>
           <div>
             <div class="eight-move"><span class="from">Funnel</span><span class="arrow">→</span><span class="to">Loop</span></div>
             <div class="eight-why">Stages become states you can enter, exit, and re-enter — measured continuously</div>
           </div>
         </div>
         <div class="eight-row">
-          <span class="n">06</span>
+          <span class="n">06</span><span class="ei"><svg viewBox="0 0 30 30" fill="none" stroke="#BA6296" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(2 15 15)"><path d="M15 4.5 L26 10 L15 15.5 L4 10 Z"/><path d="M4.5 16 L15 21.5 L25.5 15.5"/><path d="M4.5 21 L15 26.5 L25.5 20.5"/></g></svg></span>
           <div>
             <div class="eight-move"><span class="from">Tools per function</span><span class="arrow">→</span><span class="to">A layer beneath all functions</span></div>
             <div class="eight-why">Twenty-five agents with twenty-five memories compound nothing</div>
           </div>
         </div>
         <div class="eight-row">
-          <span class="n">07</span>
+          <span class="n">07</span><span class="ei"><svg viewBox="0 0 30 30" fill="none" stroke="#BA6296" stroke-width="2" stroke-linecap="round"><g transform="rotate(-3 15 15)"><circle cx="8" cy="8.5" r="2.6"/><circle cx="22" cy="8" r="2.6"/><circle cx="15" cy="22" r="2.6"/><path d="M10.6 9 L19.4 8.5"/><path d="M9.3 11 L13.7 19.5"/><path d="M20.8 10.4 L16.3 19.7"/></g></svg></span>
           <div>
             <div class="eight-move"><span class="from">Managing people</span><span class="arrow">→</span><span class="to">Governing agents</span></div>
             <div class="eight-why">A wholly new management discipline, and nobody has a playbook yet</div>
           </div>
         </div>
         <div class="eight-row">
-          <span class="n">08</span>
+          <span class="n">08</span><span class="ei"><svg viewBox="0 0 30 30" fill="none" stroke="#BA6296" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(2 15 15)"><path d="M4.5 20.5 L25.5 14"/><path d="M13.5 21.5 L10.5 26.5 L17 26.5 Z"/><circle cx="23.8" cy="12" r="2.1" fill="#BA6296" stroke="none"/></g></svg></span>
           <div>
             <div class="eight-move"><span class="from">Headcount leverage</span><span class="arrow">→</span><span class="to">System leverage</span></div>
             <div class="eight-why">Growth decouples from hiring — which breaks planning, comp, and career paths</div>
