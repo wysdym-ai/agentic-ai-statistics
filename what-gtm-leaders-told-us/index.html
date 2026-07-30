@@ -33,7 +33,7 @@
 </header>
 <nav class="secnav" aria-label="Sections">
   <a href="#how">How to read</a>
-  <a href="#theme-1">The six themes</a>
+  <a href="#attribution">The six themes</a>
   <a href="#diagnostic">Three questions</a>
   <a href="#throughline">The through-line</a>
   <a href="#layer">Where it leads</a>
@@ -106,7 +106,7 @@ p { margin: 0 0 .8rem; max-width: 62ch; }
 .brandline { display: flex; align-items: center; gap: .8rem; margin-bottom: 1.3rem; }
 .lockup { height: 26px; width: auto; color: var(--m-lit); display: block; }
 .brandline .sep { display: none; }
-.brandline .dim { font-family: var(--f-hand); font-weight: 600; font-size: 1.25rem; color: var(--coral); text-transform: lowercase; }
+.brandline .dim { font-family: var(--f-hand); font-weight: 600; font-size: 1.25rem; color: var(--coral); }
 .brandline .dim::after { content: " ↓"; }
 h1 {
   font-family: var(--f-sans);
@@ -468,7 +468,7 @@ a.datasrc:hover { color: var(--magenta); }
 
   <header class="masthead">
     <div class="brandline">
-      <span class="dim">Education series - August 2026</span>
+      <span class="dim">pearls of wysdym Education Series - Aug 2026</span>
     </div>
     <h1>What ~100 GTM leaders told us about AI agents — <span class="turn">and the data behind it</span></h1>
     <p class="standfirst">Six patterns from conversations with go-to-market leaders across RevOps, sales, and marketing at mid-market and enterprise teams — each paired with the public research that says they're structural, not anecdotal.</p>
@@ -491,16 +491,16 @@ a.datasrc:hover { color: var(--magenta); }
       </div>
       <p>These are qualitative themes from ~100 conversations, not a quantified survey — we're not reporting percentages from the interviews, because we didn't run one. What we <em>are</em> reporting is what we heard, alongside third-party public data that corroborates it. Every statistic below is external research, attributed and linked to its source.</p>
       <ul class="plain">
-        <li><a href="#theme-1">"Everyone's using it. No one can tie it to the number."</a></li>
-        <li><a href="#theme-2">"The AI is only as good as our data, and our data's a mess."</a></li>
-        <li><a href="#theme-3">"Every tool has its own AI, and none share a brain."</a></li>
-        <li><a href="#theme-4">"I can't put an agent in front of a customer without guardrails."</a></li>
-        <li><a href="#theme-5">"It never compounds. Every quarter starts from zero."</a></li>
-        <li><a href="#theme-6">"The pilot worked. Production didn't."</a></li>
+        <li><a href="#attribution">"Everyone's using it. No one can tie it to the number."</a></li>
+        <li><a href="#data">"The AI is only as good as our data, and our data's a mess."</a></li>
+        <li><a href="#fragmentation">"Every tool has its own AI, and none share a brain."</a></li>
+        <li><a href="#trust">"I can't put an agent in front of a customer without guardrails."</a></li>
+        <li><a href="#compounding">"It never compounds. Every quarter starts from zero."</a></li>
+        <li><a href="#production">"The pilot worked. Production didn't."</a></li>
       </ul>
     </section>
 
-    <section id="theme-1">
+    <section id="attribution">
       <div class="sec-head">
         <span class="n">02</span>
         <h2 class="sec-title">"Everyone's using it. No one can tie it to the number."</h2>
@@ -518,7 +518,7 @@ a.datasrc:hover { color: var(--magenta); }
       </div>
     </section>
 
-    <section id="theme-2">
+    <section id="data">
       <div class="sec-head">
         <span class="n">03</span>
         <h2 class="sec-title">"The AI is only as good as our data, and our data's a mess."</h2>
@@ -540,7 +540,7 @@ a.datasrc:hover { color: var(--magenta); }
       </div>
     </section>
 
-    <section id="theme-3">
+    <section id="fragmentation">
       <div class="sec-head">
         <span class="n">04</span>
         <h2 class="sec-title">"Every tool has its own AI, and none share a brain."</h2>
@@ -558,7 +558,7 @@ a.datasrc:hover { color: var(--magenta); }
       </div>
     </section>
 
-    <section id="theme-4">
+    <section id="trust">
       <div class="sec-head">
         <span class="n">05</span>
         <h2 class="sec-title">"I can't put an agent in front of a customer without guardrails."</h2>
@@ -576,7 +576,7 @@ a.datasrc:hover { color: var(--magenta); }
       </div>
     </section>
 
-    <section id="theme-5">
+    <section id="compounding">
       <div class="sec-head">
         <span class="n">06</span>
         <h2 class="sec-title">"It never compounds. Every quarter starts from zero."</h2>
@@ -594,7 +594,7 @@ a.datasrc:hover { color: var(--magenta); }
       </div>
     </section>
 
-    <section id="theme-6">
+    <section id="production">
       <div class="sec-head">
         <span class="n">07</span>
         <h2 class="sec-title">"The pilot worked. Production didn't."</h2>
@@ -714,7 +714,7 @@ a.datasrc:hover { color: var(--magenta); }
       }
     });
   }, { rootMargin: '-20% 0px -65% 0px' });
-  ['how','theme-1','diagnostic','throughline','layer'].forEach(id => {
+  ['how','attribution','diagnostic','throughline','layer'].forEach(id => {
     const el = document.getElementById(id);
     if (el) obs.observe(el);
   });
