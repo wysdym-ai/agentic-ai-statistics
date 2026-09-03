@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Evaluate the Platform Your AI GTM Agents Run On: A Buyer's Framework (2026) | wysdym</title>
+<meta name="description" content="Eight criteria, four architectures, a scorecard and twelve RFP questions for choosing where multiple AI sales and marketing agents should run — shared memory, governance, outcome attribution, data ownership, openness and total stack cost. Vendor-neutral structure, disclosed authorship.">
+<link rel="canonical" href="https://gtmstats.wysdym.ai/evaluating-gtm-agent-platforms/">
+<meta name="robots" content="max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="wysdym">
+<meta property="og:title" content="How to Evaluate the Platform Your AI GTM Agents Run On — A Buyer's Framework">
+<meta property="og:description" content="A buyer's framework for choosing where multiple AI sales and marketing agents should run: 8 criteria, 4 architectures, 13 RFP questions. Every stat source-linked.">
+<meta property="og:url" content="https://gtmstats.wysdym.ai/evaluating-gtm-agent-platforms/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGcgZmlsbD0iI0JBNjI5NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMiwgMSkgc2NhbGUoMC4xNCkiPjxwb2x5Z29uIHBvaW50cz0iOTYsMzQgMTI4LDE0NyAxMDQsMTY3Ii8+PHBvbHlnb24gcG9pbnRzPSI5OCwzMiAxNTQsMTI3IDEzMSwxNDYiLz48cG9seWdvbiBwb2ludHM9IjE2OCw2MSAxNTUsMTIzIDEzOCw5NCIvPjxwb2x5Z29uIHBvaW50cz0iMTcxLDU5IDE5MCw3MSAxNjgsNzMiLz48cG9seWdvbiBwb2ludHM9IjEwMCwxNTQgMTAxLDE2OSAxMCwxNjEiLz48L2c+PC9zdmc+">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500..700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="tb-home" href="https://wysdym.ai" aria-label="wysdym home"><svg  viewBox="0 0 600 140" role="img" aria-label="wysdym">
+        <g fill="currentColor" transform="translate(2.3, -8.0) scale(0.7693)">
+          <polygon points="96,34 128,147 104,167"/>
+          <polygon points="98,32 154,127 131,146"/>
+          <polygon points="168,61 155,123 138,94"/>
+          <polygon points="171,59 190,71 168,73"/>
+          <polygon points="100,154 101,169 10,161"/>
+        </g>
+        <g transform="translate(171.6,22.2) scale(1.7033)"><path fill="currentColor" fill-rule="evenodd" d="M70.5,56.9C71.1,55.5 72.5,52.3 73.5,49.9C74.6,47.5 78.4,38.4 82.1,29.7C85.8,21.1 88.8,13.9 88.8,13.9C88.8,13.8 87.3,13.7 85.5,13.8L82.2,13.8L77.5,25.7C74.9,32.2 72.7,37.8 72.5,38.1C72.3,38.7 71.8,37.5 67.3,26.3L62.4,13.8L59.0,13.8L55.6,13.7L55.8,14.2C55.9,14.5 58.9,21.8 62.5,30.3C66.1,38.9 69.1,45.9 69.1,46.0C69.1,46.0 67.7,49.0 65.9,52.7C64.2,56.3 62.8,59.4 62.8,59.4C62.8,59.5 64.3,59.5 66.1,59.5L69.4,59.4L70.5,56.9ZM177.0,57.3C178.6,53.6 181.4,46.8 187.9,31.7C191.2,23.9 194.3,16.7 194.7,15.6L195.6,13.7L192.2,13.7L188.9,13.7L183.9,26.2C181.2,33.0 178.9,38.5 178.8,38.4C178.7,38.3 176.5,32.7 173.8,26.0L169.0,13.7L165.6,13.7L162.2,13.7L168.9,29.7C172.6,38.4 175.6,45.8 175.6,45.9C175.6,46.1 174.4,48.7 173.0,51.7C171.6,54.7 170.2,57.6 169.9,58.3L169.3,59.5L172.6,59.5L176.0,59.5L177.0,57.3ZM110.7,46.6C113.8,45.9 116.3,44.0 117.5,41.4C118.2,40.0 118.3,39.7 118.3,37.6C118.3,35.5 118.2,35.1 117.6,33.9C116.3,31.3 114.2,30.1 107.3,27.7C101.4,25.6 100.2,24.9 99.8,23.3C99.0,20.4 101.8,18.2 106.0,18.4C109.0,18.6 110.7,19.9 111.4,22.6L111.7,23.7L114.5,23.7L117.2,23.7L117.2,23.0C117.2,20.8 116.1,18.1 114.5,16.3C112.5,14.1 109.6,13.0 105.6,13.0C100.1,13.0 96.0,15.1 94.1,18.8C93.5,20.2 93.4,20.5 93.4,22.4C93.4,24.3 93.5,24.7 94.0,25.8C95.3,28.5 98.2,30.4 103.7,32.1C108.6,33.6 109.6,34.0 110.5,34.6C112.7,36.1 112.5,39.5 110.0,40.9C109.1,41.4 108.7,41.5 106.6,41.6C103.3,41.7 101.4,41.2 99.8,39.6C98.9,38.7 98.5,38.1 98.2,37.1L97.8,35.8L94.9,35.8L92.0,35.8L92.2,37.3C92.5,41.3 96.0,45.1 100.6,46.4C103.4,47.2 107.5,47.3 110.7,46.6ZM142.0,46.7C145.9,45.6 148.8,42.6 150.4,37.9L150.8,36.6L151.0,40.2C151.0,42.2 151.2,44.4 151.3,45.1L151.4,46.3L154.3,46.3L157.2,46.3L157.2,23.4L157.2,0.5L154.1,0.5L150.9,0.5L150.9,11.3L150.8,22.2L150.3,20.8C148.7,16.6 146.1,14.1 142.1,13.3C140.4,12.9 136.4,13.0 134.8,13.4C130.2,14.5 126.5,17.9 124.5,22.7C122.7,27.3 122.9,34.3 125.1,38.6C127.2,42.7 130.7,45.6 134.8,46.6C136.6,47.0 140.5,47.1 142.0,46.7ZM22.2,34.0C24.7,27.2 26.8,21.5 26.8,21.5C27.0,21.3 27.0,21.5 31.2,33.3C33.0,38.5 34.6,42.8 34.7,42.8C34.7,42.8 35.4,41.1 36.0,38.9L37.2,35.1L33.4,24.4L29.6,13.6L26.4,13.5L23.1,13.5L19.0,25.3C16.7,31.8 14.2,39.2 13.3,41.7C12.4,44.3 11.6,46.4 11.6,46.4C11.6,46.5 13.0,46.5 14.7,46.5L17.7,46.4L22.2,34.0ZM43.1,42.7C43.8,40.7 46.4,33.3 48.8,26.3L53.2,13.6L49.8,13.5C48.0,13.5 46.4,13.6 46.3,13.7C46.1,13.8 36.3,44.6 35.9,46.0L35.8,46.5L38.8,46.5L41.8,46.5L43.1,42.7ZM199.9,46.3C199.9,46.2 201.5,41.4 203.3,35.6C205.1,29.7 207.3,22.6 208.3,19.6C209.2,16.7 210.0,14.1 210.0,13.9C210.0,13.5 209.7,13.5 207.0,13.5L204.0,13.5L198.5,29.7C195.5,38.6 193.0,46.1 193.0,46.2C193.0,46.4 193.9,46.5 196.4,46.5C198.2,46.5 199.8,46.4 199.9,46.3ZM224.4,42.2C225.5,38.6 227.6,32.0 233.4,13.9C233.5,13.5 233.3,13.5 230.9,13.5L228.2,13.5L227.6,15.3C226.0,19.9 219.4,38.5 219.3,38.7C219.2,38.8 217.4,33.9 215.2,27.9C213.1,21.9 211.3,17.0 211.2,17.1C211.2,17.1 210.6,19.0 209.9,21.2L208.6,25.3L212.0,35.8L215.4,46.3L216.2,46.3C216.5,46.4 218.2,46.5 219.9,46.5L223.0,46.5L224.4,42.2ZM245.1,45.2C244.9,44.6 242.5,38.1 239.8,30.7C237.0,23.3 234.8,17.2 234.7,17.1C234.5,17.0 232.1,24.2 232.1,24.9C232.1,25.1 233.5,29.8 235.2,35.4C237.0,40.9 238.4,45.6 238.5,45.9C238.6,46.2 239.0,46.3 242.1,46.3L245.6,46.3L245.1,45.2ZM12.3,38.5L13.7,34.3L10.6,24.1L7.5,13.8L4.0,13.8L0.5,13.7L2.2,18.7C3.1,21.4 5.4,28.0 7.2,33.3C9.0,38.7 10.6,43.0 10.7,42.9C10.8,42.8 11.5,40.8 12.3,38.5ZM137.8,41.3C134.9,40.6 132.1,38.3 130.8,35.7C128.0,29.8 130.1,22.0 135.2,19.5C139.3,17.6 144.8,18.3 147.8,21.3C151.1,24.6 151.9,31.3 149.6,36.1C148.8,37.8 147.0,39.6 145.4,40.5C143.3,41.5 140.1,41.9 137.8,41.3Z"/></g>
+      </svg></a>
+  <a class="tb-cta" href="https://wysdym.ai">Meet wysdym</a>
+</header>
+<nav class="secnav" aria-label="Sections">
+  <a href="#who">Who this is for</a>
+  <a href="#shift">Why it changed</a>
+  <a href="#architectures">Four architectures</a>
+  <a href="#criteria">Eight criteria</a>
+  <a href="#scorecard">Scorecard</a>
+  <a href="#rfp">RFP questions</a>
+  <a href="#redflags">Red flags</a>
+  <a href="#disclosure">Disclosure</a>
+  <a href="#faq">FAQ</a>
+</nav>
+<div class="margin-line"></div>
+<div class="hole p1"></div><div class="hole p2"></div><div class="hole p3"></div>
+<style>
+
+:root {
+  --line-x: clamp(56px, 8vw, 130px);
+  --paper:     #F8F6EF;
+  --rule-line: rgba(112, 134, 176, .15);
+  --margin-ln: #E8A9B8;
+  --indigo:    #2c2a4a;
+  --slate:     #4A4A5E;
+  --grey:      #77748C;
+  --magenta:   #8E3F6C;
+  --m-lit:     #BA6296;
+  --coral:     #C05B33;
+  --card:      #FFFFFF;
+  --card-sh:   rgba(58, 63, 85, .15);
+  --tape:      rgba(233, 224, 199, .9);
+  --hilite:    #F6D3E7;
+  --sticky:    #FBEFC3;
+  --tint:      #F3F0E6;
+
+  --f-sans: 'Inter', -apple-system, sans-serif;
+  --f-hand: 'Caveat', cursive;
+  --f-serif: 'Instrument Serif', Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--f-sans);
+  font-size: 16.5px;
+  line-height: 1.58;
+  color: var(--slate);
+  background:
+    repeating-linear-gradient(to bottom, transparent 0, transparent 30px, var(--rule-line) 30px, var(--rule-line) 31px),
+    var(--paper);
+  -webkit-font-smoothing: antialiased;
+}
+
+.margin-line { position: fixed; top: 0; bottom: 0; left: var(--line-x); width: 2px; background: var(--margin-ln); z-index: 5; }
+.hole { position: fixed; left: calc(var(--line-x) * .42 - 11px); width: 22px; height: 22px; border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid rgba(58,63,85,.10);
+  box-shadow: inset 0 2.5px 3px rgba(58,63,85,.28), inset 0 -1px 1.5px rgba(255,255,255,.9), 0 1px 0 rgba(255,255,255,.75); }
+.hole.p1 { top: 16%; } .hole.p2 { top: 48%; } .hole.p3 { top: 80%; }
+
+.shell {
+  display: block;
+  max-width: 860px;
+  margin-left: calc(var(--line-x) + clamp(28px, 4.5vw, 64px));
+  margin-right: auto;
+  padding: 108px clamp(20px, 5vw, 56px) 120px 0;
+}
+.rail { display: none; }
+.doc { max-width: none; }
+
+strong { font-weight: 700; color: var(--indigo); }
+em { font-style: italic; }
+a { color: var(--magenta); }
+p { margin: 0 0 .8rem; max-width: 62ch; }
+
+/* ---------- masthead ---------- */
+.masthead { padding: .4rem 0 1.1rem; }
+.brandline { display: flex; align-items: center; gap: .8rem; margin-bottom: 1.3rem; }
+.lockup { height: 26px; width: auto; color: var(--m-lit); display: block; }
+.brandline .sep { display: none; }
+.brandline .dim { font-family: var(--f-hand); font-weight: 600; font-size: 1.25rem; color: var(--coral); }
+.brandline .dim::after { content: " ↓"; }
+h1 {
+  font-family: var(--f-sans);
+  font-weight: 800;
+  font-size: 2.6rem;
+  line-height: 1.03;
+  letter-spacing: -.03em;
+  color: var(--indigo);
+  margin: 0 0 .9rem;
+}
+h1 .turn { font-family: var(--f-serif); font-style: italic; font-weight: 400; color: var(--m-lit); font-size: 1.07em; }
+.standfirst { font-size: 1.05rem; line-height: 1.5; color: var(--slate); max-width: 36rem; margin: 0 0 1.3rem; }
+.stamp {
+  display: flex; gap: 1.6rem;
+  font-size: .68rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--grey);
+  padding-top: .9rem;
+  border-top: 2px dashed rgba(120,116,140,.3);
+}
+
+/* ---------- download stickers ---------- */
+.gets { display: flex; flex-wrap: wrap; gap: 16px 20px; margin-top: 26px; }
+.get {
+  font-family: var(--f-hand);
+  font-weight: 700;
+  font-size: 1.35rem;
+  line-height: 1.15;
+  color: #fff;
+  background: var(--magenta);
+  padding: .34rem 1.15rem .46rem;
+  border-radius: 3px;
+  box-shadow: 3px 4px 0 var(--indigo);
+  text-decoration: none;
+  display: inline-block;
+  transform: rotate(-.8deg);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.get:hover { transform: rotate(-.8deg) translate(2px, 2px); box-shadow: 1px 2px 0 var(--indigo); }
+.get.alt { background: var(--indigo); box-shadow: 3px 4px 0 var(--m-lit); transform: rotate(.6deg); }
+.get.alt:hover { transform: rotate(.6deg) translate(2px, 2px); box-shadow: 1px 2px 0 var(--m-lit); }
+
+/* ---------- sections ---------- */
+section { padding-top: 2rem; }
+.sec-head {
+  display: flex; align-items: baseline; gap: .7rem;
+  margin-bottom: 1.1rem; padding-bottom: .5rem;
+  border-bottom: 2px dashed rgba(120,116,140,.3);
+  break-after: avoid; page-break-after: avoid;
+}
+.sec-head .n { font-family: var(--f-hand); font-weight: 700; font-size: 1.5rem; color: var(--coral); flex: none; }
+h2.sec-title { font-family: var(--f-sans); font-weight: 800; font-size: 1.5rem; letter-spacing: -.02em; line-height: 1.12; color: var(--indigo); margin: 0; }
+
+h3 { font-family: var(--f-sans); font-weight: 700; font-size: 1.12rem; letter-spacing: -.015em; color: var(--indigo); margin: 1.5rem 0 .5rem; break-after: avoid; page-break-after: avoid; }
+
+.lede { font-size: 1rem; color: var(--slate); }
+.note { font-size: .84rem; color: var(--grey); }
+
+ul.plain { margin: 0 0 .9rem; padding-left: 1.1rem; max-width: 62ch; }
+ul.plain li { margin-bottom: .4rem; }
+ul.plain li::marker { color: var(--m-lit); }
+
+/* ---------- pull quotes: taped index cards ---------- */
+.pull {
+  position: relative;
+  margin: 1.5rem 0;
+  padding: 1.35rem 1.2rem .95rem;
+  background: var(--card);
+  border: 1px solid rgba(58,63,85,.1);
+  border-radius: 3px;
+  box-shadow: 3px 4px 0 var(--card-sh);
+  font-family: var(--f-serif);
+  font-size: 1.08rem;
+  line-height: 1.42;
+  color: var(--indigo);
+  break-inside: avoid; page-break-inside: avoid;
+}
+.pull::before {
+  content: "";
+  position: absolute; top: -8px; left: 34px;
+  width: 52px; height: 15px;
+  transform: rotate(-2.5deg);
+  background: var(--tape);
+  box-shadow: 0 1px 2px rgba(58,63,85,.12);
+}
+.pull p { margin: 0; max-width: none; }
+.pull p + p { margin-top: .55rem; }
+.pull strong { color: var(--magenta); font-weight: 600; }
+
+/* ---------- triptych ---------- */
+.triptych { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .9rem .7rem; margin: 1.3rem 0 1.7rem; }
+.tri {
+  position: relative;
+  background: var(--card);
+  border: 1px solid rgba(58,63,85,.1);
+  border-radius: 3px;
+  box-shadow: 3px 4px 0 var(--card-sh);
+  padding: .8rem .9rem .9rem;
+  break-inside: avoid; page-break-inside: avoid;
+}
+.tri:nth-child(1) { transform: rotate(-.5deg); }
+.tri:nth-child(2) { transform: rotate(.35deg); }
+.tri:nth-child(3) { transform: rotate(-.3deg); }
+.tri::before {
+  content: "";
+  position: absolute; top: -7px; left: 50%;
+  width: 44px; height: 13px;
+  transform: translateX(-50%) rotate(-2deg);
+  background: var(--tape);
+  box-shadow: 0 1px 2px rgba(58,63,85,.12);
+}
+.tri-n { font-family: var(--f-hand); font-weight: 700; font-size: 1.1rem; color: var(--coral); display: block; margin-bottom: .5rem; }
+.tri-glyph { width: 52px; height: 32px; color: var(--m-lit); margin-bottom: .6rem; display: block; }
+.tri-glyph .ghost { opacity: .35; }
+.tri-title { font-family: var(--f-sans); font-weight: 700; font-size: .92rem; line-height: 1.25; color: var(--indigo); margin: 0 0 .35rem; }
+.tri-sub { font-size: .76rem; line-height: 1.42; color: var(--grey); margin: 0; max-width: none; }
+.tri-move {
+  font-size: .68rem; font-weight: 600;
+  margin-top: .65rem; padding-top: .5rem;
+  border-top: 1px dashed rgba(120,116,140,.35);
+  color: var(--grey);
+}
+.tri-move b { color: var(--magenta); font-weight: 700; }
+
+/* ---------- figure: the shape of the shift ---------- */
+.figure {
+  position: relative;
+  margin: 1.6rem 0;
+  padding: 1.3rem 1.2rem 1rem;
+  background: var(--card);
+  border: 1px solid rgba(58,63,85,.1);
+  border-radius: 3px;
+  box-shadow: 3px 4px 0 var(--card-sh);
+  break-inside: avoid; page-break-inside: avoid;
+}
+.figure::before {
+  content: "";
+  position: absolute; top: 4px; left: 50%;
+  width: 54px; height: 15px;
+  transform: translateX(-50%) rotate(-2deg);
+  background: var(--tape);
+  box-shadow: 0 1px 2px rgba(58,63,85,.12);
+}
+.fig-tag { font-family: var(--f-hand); font-weight: 700; font-size: 1.2rem; color: var(--coral); display: block; margin-bottom: .2rem; }
+.figure svg { width: 100%; height: auto; display: block; }
+
+/* ---------- shift blocks ---------- */
+.shift-block { margin: 1.7rem 0; padding-left: 1rem; border-left: 3px solid var(--hilite); }
+.shift-block .tag { font-family: var(--f-hand); font-weight: 700; font-size: 1.35rem; color: var(--coral); display: block; margin-bottom: .2rem; }
+.shift-block h3 { margin-top: 0; font-size: 1.25rem; font-weight: 800; }
+
+/* ---------- clusters & pillars ---------- */
+.cluster { margin: 1.8rem 0 0; }
+.cluster-head { display: flex; align-items: center; gap: .6rem; margin-bottom: .15rem; break-after: avoid; page-break-after: avoid; }
+.cluster-letter {
+  font-weight: 800; font-size: .68rem; color: #fff;
+  background: var(--magenta);
+  width: 1.35rem; height: 1.35rem;
+  display: grid; place-items: center;
+  border-radius: 3px; flex: none;
+  clip-path: none;
+}
+.cluster-name { font-family: var(--f-sans); font-weight: 800; font-size: .95rem; letter-spacing: .14em; text-transform: uppercase; color: var(--indigo); margin: 0; }
+.cluster-gloss { font-family: var(--f-hand); font-weight: 600; font-size: 1.15rem; color: var(--coral); margin: 0 0 .8rem 1.95rem; max-width: none; }
+
+.pillars { display: flex; flex-direction: column; gap: .55rem; }
+.pillar {
+  background: var(--card);
+  border: 1px solid rgba(58,63,85,.1);
+  border-radius: 3px;
+  box-shadow: 2.5px 3.5px 0 var(--card-sh);
+  overflow: hidden;
+  clip-path: none;
+  filter: none;
+  break-inside: avoid; page-break-inside: avoid;
+}
+.pillar-head {
+  display: flex; align-items: baseline; gap: .6rem;
+  padding: .55rem .8rem .45rem;
+  border-bottom: 1px solid rgba(58,63,85,.09);
+  flex-wrap: wrap;
+}
+.pillar-num { font-family: var(--f-hand); font-weight: 700; font-size: 1rem; color: var(--m-lit); flex: none; }
+.pillar-name { font-family: var(--f-sans); font-size: .86rem; font-weight: 700; color: var(--indigo); margin: 0; flex: 1 1 auto; }
+.pillar-shift {
+  font-size: .62rem; font-weight: 700; letter-spacing: .02em;
+  color: var(--magenta);
+  background-color: var(--hilite);
+  border-radius: 2px;
+  padding: .12rem .45rem;
+  white-space: nowrap; flex: none;
+}
+.split { display: grid; grid-template-columns: 1fr 1fr; }
+.side { padding: .6rem .8rem .7rem; }
+.side p { margin: 0; font-size: .78rem; line-height: 1.45; max-width: none; }
+.side-label { font-size: .56rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; display: block; margin-bottom: .3rem; }
+.side.legacy { background: var(--tint); }
+.side.legacy .side-label { color: var(--grey); }
+.side.legacy p { color: var(--grey); }
+.side.agentic { border-left: 2px solid var(--m-lit); }
+.side.agentic .side-label { color: var(--magenta); }
+.side.agentic p { color: var(--indigo); font-weight: 500; }
+
+.requires {
+  margin: .9rem 0 0;
+  padding: .75rem 1rem .8rem;
+  border: 1.5px dashed rgba(186,98,150,.45);
+  border-radius: 3px;
+  background: rgba(255,255,255,.55);
+  break-inside: avoid; page-break-inside: avoid;
+}
+.requires .tag { font-family: var(--f-hand); font-weight: 700; font-size: 1.05rem; color: var(--coral); display: block; margin-bottom: .3rem; }
+.requires ul { margin: 0; padding-left: 1rem; }
+.requires li { font-size: .78rem; line-height: 1.45; color: var(--slate); margin-bottom: .3rem; }
+.requires li:last-child { margin-bottom: 0; }
+.requires li::marker { color: var(--m-lit); }
+
+/* ---------- eight shifts ---------- */
+.eight { display: flex; flex-direction: column; }
+.eight-row {
+  display: grid;
+  grid-template-columns: 2.2rem 1fr;
+  gap: 0 .5rem;
+  padding: .55rem 0;
+  border-bottom: 1px dashed rgba(120,116,140,.3);
+  align-items: start;
+  break-inside: avoid; page-break-inside: avoid;
+}
+.eight-row:last-child { border-bottom: none; }
+.eight-row .n { font-family: var(--f-hand); font-weight: 700; font-size: 1.25rem; color: var(--m-lit); line-height: 1; padding-top: .1rem; }
+.eight-move { font-size: .95rem; margin-bottom: .1rem; }
+.eight-move .from { color: var(--grey); font-weight: 500; }
+.eight-move .arrow { color: var(--m-lit); padding: 0 .3rem; }
+.eight-move .to { color: var(--indigo); font-weight: 700; }
+.eight-why { font-size: .78rem; color: var(--grey); line-height: 1.45; }
+
+/* ---------- diagnostic: sticky notes ---------- */
+.qs { display: flex; flex-direction: column; gap: 1rem; margin: 1.2rem 0; }
+.q {
+  background: var(--sticky);
+  border: none;
+  border-radius: 2px;
+  box-shadow: 2.5px 4px 0 rgba(58,63,85,.14);
+  padding: .85rem 1.1rem .9rem;
+  clip-path: none;
+  filter: none;
+  max-width: 40rem;
+  break-inside: avoid; page-break-inside: avoid;
+}
+.q:nth-child(1) { transform: rotate(-.6deg); }
+.q:nth-child(2) { transform: rotate(.45deg); margin-left: 1.4rem; }
+.q:nth-child(3) { transform: rotate(-.35deg); margin-left: .6rem; }
+.q-ask { font-family: var(--f-sans); font-weight: 700; font-size: .98rem; line-height: 1.3; color: var(--indigo); margin: 0 0 .4rem; max-width: none; }
+.q-then { font-size: .8rem; color: var(--slate); margin: 0; max-width: none; }
+.q-then b { font-family: var(--f-hand); font-weight: 700; font-size: 1.02rem; color: var(--coral); text-transform: none; letter-spacing: 0; }
+
+.also { font-size: .88rem; }
+
+/* ---------- footer ---------- */
+.foot-brand { display: inline-flex; align-items: center; gap: .55rem; }
+.foot-lockup { height: 16px; width: auto; color: var(--m-lit); display: block; }
+
+footer {
+  margin-top: 2.2rem;
+  align-items: center;
+  padding-top: .8rem;
+  border-top: 2px dashed rgba(120,116,140,.3);
+  display: flex; gap: 1.8rem;
+  font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--grey);
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 900px) {
+  h1 { font-size: 2.1rem; }
+  .triptych { grid-template-columns: 1fr; }
+  .split { grid-template-columns: 1fr; }
+  .side.agentic { border-left: none; border-top: 2px solid var(--m-lit); }
+  .q:nth-child(2), .q:nth-child(3) { margin-left: 0; }
+}
+@media (max-width: 640px) {
+  :root { --line-x: 26px; }
+  .hole { display: none; }
+  h1 { font-size: 1.8rem; }
+  .pillar-head { padding-right: .8rem; }
+}
+
+/* ---------- top bar ---------- */
+.topbar {
+  position: fixed; top: 0; left: 0; right: 0; height: 58px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 clamp(20px, 4vw, 48px);
+  background: rgba(248, 246, 239, .9);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(58, 63, 85, .09);
+  z-index: 60;
+}
+.tb-home { display: flex; align-items: center; color: var(--m-lit); }
+.tb-home svg { height: 22px; width: auto; display: block; }
+.tb-cta {
+  font-family: var(--f-sans); font-weight: 700; font-size: 14px;
+  color: #fff; background: var(--m-lit);
+  padding: 9px 22px; border-radius: 999px; text-decoration: none;
+  box-shadow: 0 2px 10px rgba(186, 98, 150, .35);
+  transition: background .15s ease, transform .15s ease;
+}
+.tb-cta:hover { background: var(--magenta); transform: translateY(-1px); }
+
+/* ---------- right section nav ---------- */
+.secnav {
+  position: fixed; right: clamp(14px, 2.2vw, 40px); top: 50%;
+  transform: translateY(-50%);
+  display: flex; flex-direction: column; gap: 15px;
+  z-index: 50; text-align: right;
+}
+.secnav a {
+  font-family: var(--f-sans); font-size: 12.5px; font-weight: 600;
+  color: var(--grey); text-decoration: none;
+  display: flex; align-items: center; justify-content: flex-end; gap: 9px;
+  transition: color .15s ease;
+}
+.secnav a::after {
+  content: ""; width: 16px; height: 2px; border-radius: 2px;
+  background: rgba(119, 116, 140, .35);
+  transition: width .15s ease, background .15s ease;
+}
+.secnav a:hover { color: var(--magenta); }
+.secnav a.active { color: var(--magenta); }
+.secnav a.active::after { width: 30px; background: var(--m-lit); }
+@media (max-width: 1240px) { .secnav { display: none; } }
+
+html { scroll-behavior: smooth; }
+section { scroll-margin-top: 84px; }
+</style>
+
+<style>
+h1 .turn { font-weight: 700; }
+/* ---------- data rows (this page) ---------- */
+.datarow {
+  display: grid;
+  grid-template-columns: 128px 1fr;
+  gap: 0 1rem;
+  padding: .7rem 0;
+  border-bottom: 1px dashed rgba(120,116,140,.3);
+  align-items: start;
+  break-inside: avoid; page-break-inside: avoid;
+}
+.datarow:last-child { border-bottom: none; }
+.datarow .fig { font-family: var(--f-sans); font-weight: 800; font-size: 1.5rem; letter-spacing: -.02em; color: var(--magenta); line-height: 1.1; padding-top: .1rem; }
+.datarow h4 { font-family: var(--f-sans); font-weight: 700; font-size: .95rem; line-height: 1.3; color: var(--indigo); margin: 0 0 .25rem; }
+.datarow p { font-size: .8rem; color: var(--grey); line-height: 1.5; margin: 0; max-width: none; }
+.datarow .src { display: inline-block; margin-top: .3rem; font-size: .62rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--m-lit); text-decoration: none; }
+a.datasrc:hover { color: var(--magenta); }
+.fourptych { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1rem .8rem; margin: 1.3rem 0 1.5rem; }
+.fourptych .tri:nth-child(4) { transform: rotate(.4deg); }
+@media (max-width: 700px) { .fourptych { grid-template-columns: 1fr; } .datarow { grid-template-columns: 1fr; } }
+</style>
+
+<style>
+/* ---------- scorecard table (this page) ---------- */
+.tablewrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: .6rem; }
+table.score { width: 100%; min-width: 720px; border-collapse: collapse; font-size: .78rem; line-height: 1.4; }
+table.score th { text-align: left; font-family: var(--f-sans); font-weight: 800; font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; color: var(--indigo); padding: .5rem .6rem; border-bottom: 2px dashed rgba(120,116,140,.35); vertical-align: bottom; }
+table.score th:first-child { color: var(--grey); }
+table.score td { padding: .55rem .6rem; border-bottom: 1px dashed rgba(120,116,140,.25); vertical-align: top; color: var(--slate); }
+table.score td:first-child { font-weight: 700; color: var(--indigo); white-space: nowrap; }
+table.score tbody tr:last-child td { border-bottom: none; }
+table.score tr.tr-caveat td { background: var(--tint); font-size: .74rem; color: var(--grey); }
+table.score tr.tr-caveat td:first-child { font-family: var(--f-hand); font-weight: 700; font-size: 1rem; color: var(--coral); white-space: normal; }
+.dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: .45rem; vertical-align: -1px; border: 1.5px solid var(--m-lit); background: transparent; }
+.dot.full { background: var(--m-lit); }
+.dot.half { background: linear-gradient(90deg, var(--m-lit) 50%, transparent 50%); }
+.dot.none { border-color: rgba(119,116,140,.55); }
+.legend { margin-top: .7rem; }
+.cluster p { max-width: 62ch; }
+.cluster-head h3 { margin: 0; }
+.shift-block p { max-width: 62ch; }
+section#faq h3 { margin-top: 1.3rem; }
+</style>
+
+
+<div class="shell">
+
+  <header class="masthead">
+    <div class="brandline">
+      <span class="dim">pearls of wysdym Education Series - Sept 2026</span>
+    </div>
+    <h1>How to evaluate the platform your AI GTM agents run on — <span class="turn">a buyer's framework</span></h1>
+    <p class="standfirst">Eight criteria, four architectures, and the questions to put in an RFP when you're choosing where multiple AI sales and marketing agents should live. Written for the RevOps lead who has to make the shortlist and the CRO and CFO who have to sign it.</p>
+    <div class="stamp">
+      <span>8 criteria · 4 architectures · 13 RFP questions</span>
+      <span>Every stat source-linked</span>
+      <span>Vendor disclosure at the end</span>
+    </div>
+  </header>
+
+  <main class="doc">
+
+    <section id="who">
+      <div class="sec-head">
+        <h2 class="sec-title">Who this is for, and how to use it</h2>
+      </div>
+      <p>This is for teams that already run more than one AI agent across sales, marketing, or customer success — a prospecting agent here, a CRM-hygiene agent there, a Slack assistant answering pipeline questions — and are now deciding what those agents should run <em>on</em>. Most teams are already in this position: <strong>66.4% of agentic AI deployments are multi-agent</strong> (Landbase / Market.us, 2025). The single-agent purchase is the exception.</p>
+      <p>It is deliberately vendor-neutral in structure. Each criterion comes with the question to ask, what a good answer sounds like, and the red flag. The scorecard rates four <em>architectures</em>, not four products, because the architecture is what you're actually locking in. A disclosure about who wrote this is at the end — read it before you weight anything.</p>
+      <ul class="plain">
+        <li><a href="#shift">Why the buying question changed</a></li>
+        <li><a href="#architectures">The four architectures on the market</a></li>
+        <li><a href="#criteria">The eight evaluation criteria</a></li>
+        <li><a href="#scorecard">Scorecard: architectures × criteria</a></li>
+        <li><a href="#rfp">Thirteen questions for the RFP</a></li>
+        <li><a href="#redflags">Red flags</a></li>
+        <li><a href="#disclosure">Disclosure: where wysdym sits</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </section>
+
+    <section id="shift">
+      <div class="sec-head">
+        <span class="n">01</span>
+        <h2 class="sec-title">Why the buying question changed</h2>
+      </div>
+      <p>Two years ago the question was <em>which agent is best</em>. That question is mostly settled, and not in any vendor's favour: the cost of running a frontier-quality model fell by more than <strong>90%</strong> in roughly two years (Stanford HAI, 2025), and anyone can stand up a competent agent in an afternoon. The agents work.</p>
+      <p>What doesn't work is the stack around them. Three failures show up in nearly every multi-agent GTM team, and none of them are model problems:</p>
+      <div class="triptych">
+        <div class="tri">
+          <span class="tri-n">Memory is per-agent</span>
+          <p class="tri-title">Five agents, five versions of the truth</p>
+          <p class="tri-sub">Each agent keeps its own context about the account, the ICP, the messaging. Corrections made to one never reach the others. Drift compounds instead of intelligence.</p>
+        </div>
+        <div class="tri">
+          <span class="tri-n">Connection is scattered</span>
+          <p class="tri-title">Same CRM, wired five times</p>
+          <p class="tri-sub">Every agent carries its own Salesforce, HubSpot, Gong and Slack integrations — and pays for the same retrieval and reasoning over the same records, repeatedly.</p>
+        </div>
+        <div class="tri">
+          <span class="tri-n">Governance is missing</span>
+          <p class="tri-title">Write access without rules</p>
+          <p class="tri-sub">No shared approval queue, no per-agent permissions, no audit trail across tools. Nobody can say who approved the last thing an agent wrote to the CRM.</p>
+        </div>
+      </div>
+      <div class="datarow">
+        <div class="fig">14%</div>
+        <div><h4>81% of teams have agents past the planning stage — but only 14% ship them with full security and IT approval</h4><p>And 88% of organizations report confirmed or suspected agent-related security incidents. Adoption is outrunning control, and the gap is governance, not model capability.<br><a class="src datasrc" href="https://www.gravitee.io/blog/state-of-ai-agent-security-2026-report-when-adoption-outpaces-control" target="_blank" rel="noopener">Gravitee, State of AI Agent Security 2026 (900+ executives)</a></p></div>
+      </div>
+      <div class="datarow">
+        <div class="fig">1 in 4</div>
+        <div><h4>Only a quarter of leaders completely trust their AI systems — yet two-thirds have already given AI write access to core systems</h4><p>Trust is trailing autonomy. The market is voting for governed autonomy: access with rules, not access instead of them.<br><a class="src datasrc" href="https://www.kyndryl.com/us/en/insights/people-readiness-report-2026" target="_blank" rel="noopener">Kyndryl People Readiness Report, June 2026</a></p></div>
+      </div>
+      <p>So the buying question moved down a layer. It is no longer <em>which agent</em>. It is: <strong>what do all of our agents share — and who controls it?</strong> That shared thing — memory, connection, governance, and a feedback loop — is what this page calls the <strong>operating layer for agentic GTM</strong>. Some vendors call it a GTM data orchestration platform, an agent platform, or a revenue AI operating system. The label matters less than whether the eight things below are actually present.</p>
+    </section>
+
+    <section id="architectures">
+      <div class="sec-head">
+        <span class="n">02</span>
+        <h2 class="sec-title">The four architectures on the market</h2>
+      </div>
+      <p>Almost every option you'll be pitched falls into one of four shapes. Each has a legitimate best case. Be honest about which one you're in.</p>
+
+      <div class="cluster">
+        <div class="cluster-head"><span class="cluster-letter">A</span><h3 class="cluster-name">CRM-bundled agent suites</h3></div>
+        <p class="cluster-gloss">Agents that live inside your system of record</p>
+        <p><strong>Examples:</strong> Salesforce Agentforce, HubSpot Breeze, Microsoft Copilot for Sales, ZoomInfo GTM.AI / GeniOS.</p>
+        <p><strong>Choose this when</strong> your entire GTM team is on one CRM and intends to stay there, your data mostly lives inside that CRM, and time-to-value with an existing vendor relationship matters more than optionality. Distribution, procurement simplicity and native record access are real advantages — Agentforce alone is reported past $500M in ARR, which is not nothing.</p>
+        <p><strong>Watch for:</strong> agents that draw on CRM records rather than a dedicated GTM knowledge layer; governance that stops at the vendor's own walls; per-conversation or credit pricing that scales with success; and the structural fact that the suite cannot serve a team running two systems of record. Bundled agents are a feature of the CRM, and the CRM's business model is lock-in.</p>
+      </div>
+
+      <div class="cluster">
+        <div class="cluster-head"><span class="cluster-letter">B</span><h3 class="cluster-name">Point-solution agents</h3></div>
+        <p class="cluster-gloss">One agent, one motion, done well</p>
+        <p><strong>Examples:</strong> Clay (enrichment and outbound data), 11x and Artisan (AI SDR), Qualified (inbound engagement — now being folded into Agentforce), Regie.ai (sales engagement).</p>
+        <p><strong>Choose this when</strong> one specific motion is your bottleneck and you want the best tool for it. Clay in particular is best understood as a data source that everything else should draw from, not a competitor to any platform.</p>
+        <p><strong>Watch for:</strong> the point-solution endgame — become a feature or get acquired (Qualified → Salesforce; Drift → Salesloft → Vista). Each point agent brings its own memory, its own integrations and no governance across the others, so every one you add makes the three failures above worse. Buyers of autonomous outbound agents have also reported quality and churn problems widely enough that any evaluation should include a live test on your own ICP, not the vendor's demo list.</p>
+      </div>
+
+      <div class="cluster">
+        <div class="cluster-head"><span class="cluster-letter">C</span><h3 class="cluster-name">DIY builders, frameworks and generic observability</h3></div>
+        <p class="cluster-gloss">Build the layer yourself</p>
+        <p><strong>Examples:</strong> Relevance AI, Lindy, CrewAI, LangGraph (building); LangSmith, Langfuse, Helicone, Arize (observability).</p>
+        <p><strong>Choose this when</strong> you have engineers who own GTM systems full-time, unusual workflows no vendor will fit, and a platform team that already thinks in evals and traces. The openness is real and the ceiling is high.</p>
+        <p><strong>Watch for:</strong> everything in the eight criteria becomes a build ticket — the knowledge layer, the permission model, the approval queue, the outcome attribution. Generic observability tools measure tokens, latency and cost; they do not know what a deal stage is, and their buyer is platform engineering, not RevOps. Budget the maintenance, not just the build.</p>
+      </div>
+
+      <div class="cluster">
+        <div class="cluster-head"><span class="cluster-letter">D</span><h3 class="cluster-name">An independent operating layer</h3></div>
+        <p class="cluster-gloss">A shared substrate every agent connects to</p>
+        <p><strong>Examples:</strong> wysdym — the publisher of this page. Gong's "Revenue AI OS" positioning and Landbase's multi-agent architecture reach toward the same idea from different starting points.</p>
+        <p><strong>Choose this when</strong> you run — or intend to run — several agents from several vendors, your CRM situation is mixed or may change, and you want memory, governance and outcome measurement to be shared across all of them rather than rebuilt inside each one.</p>
+        <p><strong>Watch for:</strong> it is the newest category, with the fewest reference customers and the least procurement precedent. Interrogate what is live versus roadmap, and insist on seeing your own data in the graph before you sign. The rest of this page gives you the questions to do that with — including for us.</p>
+      </div>
+    </section>
+
+    <section id="criteria">
+      <div class="sec-head">
+        <span class="n">03</span>
+        <h2 class="sec-title">The eight evaluation criteria</h2>
+      </div>
+      <p>Score every option against all eight. A platform that is excellent on four and absent on four is not a platform — it's a very good agent.</p>
+
+      <div class="shift-block">
+        <span class="tag">Criterion 1</span>
+        <h3>Shared memory — one grounding every agent reads from</h3>
+        <p><strong>Ask:</strong> "If we add a new agent tomorrow, does it already know what our existing agents know about this account, our ICP, and our current messaging?"</p>
+        <p><strong>A good answer</strong> describes a per-tenant, structured knowledge layer — typed entities and relationships across GTM domains (accounts, personas, positioning, objections, competitors), not a folder of documents behind a retrieval step — that every agent queries and every correction updates. Grounding a model in a knowledge graph rather than flat text has been shown to move enterprise-question accuracy from <strong>16% to 54%</strong> on the same model (<a href="https://arxiv.org/abs/2311.07509" target="_blank" rel="noopener">Sequeda, Allemang &amp; Jacob, 2023</a>).</p>
+        <p><strong>Red flag:</strong> "each agent has its own knowledge base" or "we index your Drive." That is retrieval, not memory, and it is per-agent.</p>
+      </div>
+
+      <div class="shift-block">
+        <span class="tag">Criterion 2</span>
+        <h3>Connect once — one integration model, CRM-agnostic</h3>
+        <p><strong>Ask:</strong> "How many times will Salesforce be integrated across our agent stack after this? And what happens if we add or switch a CRM?"</p>
+        <p><strong>A good answer</strong> is <em>once</em>: integrations to CRM, conversation intelligence, docs and chat are wired into the layer, and every agent inherits them. It should support more than one system of record without re-wiring the agents. The Model Context Protocol has become the de facto connective standard — installs went from roughly 100K to 97M in sixteen months and the protocol is now stewarded by the Linux Foundation (<a href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation" target="_blank" rel="noopener">Anthropic, December 2025</a>) — so "one MCP door to your stack" is a reasonable thing to expect.</p>
+        <p><strong>Red flag:</strong> integrations that belong to the vendor's own agent rather than being exposed to yours; "CRM-agnostic" that means "we have a HubSpot connector on the roadmap."</p>
+      </div>
+
+      <div class="shift-block">
+        <span class="tag">Criterion 3</span>
+        <h3>Governance on every action — not just the vendor's actions</h3>
+        <p><strong>Ask:</strong> "Show me the approval queue. Who approved the last write an agent made to our CRM, and where is that logged?"</p>
+        <p><strong>A good answer</strong> covers four things, for every agent regardless of who built it: <strong>per-agent role-based access</strong> (an outbound agent should not be able to edit close dates), <strong>read-only by default</strong> with explicit write scopes, <strong>human-in-the-loop approval queues</strong> for sensitive writes, and a <strong>complete audit trail</strong>. This is the criterion the Gravitee data says most teams are failing — 14% shipping with full approval is a governance number, not an enthusiasm number.</p>
+        <p><strong>Red flag:</strong> governance that only covers the vendor's own agents; "the model is instructed not to…" offered as a control; no way to revoke a single agent's write access without turning off everything.</p>
+      </div>
+
+      <div class="shift-block">
+        <span class="tag">Criterion 4</span>
+        <h3>Outcome attribution — to deal stages, not tokens</h3>
+        <p><strong>Ask:</strong> "Which of our agents moved a deal stage last quarter? Which one wrote something that later got reverted?"</p>
+        <p><strong>A good answer</strong> ties agent actions to pipeline outcomes — stage progression, deal risk, drift — and can flag the specific record and the specific fix. Generic LLM observability reports tokens, latency and cost; useful for engineering, useless for the CFO. Most teams currently measure nothing: only <strong>37.3%</strong> of agent teams evaluate live traffic at all (<a href="https://www.langchain.com/state-of-agent-engineering" target="_blank" rel="noopener">LangChain, State of Agent Engineering, December 2025</a>).</p>
+        <p><strong>Red flag:</strong> dashboards of activity (emails sent, records touched) presented as ROI; attribution that exists only inside one vendor's product.</p>
+      </div>
+
+      <div class="shift-block">
+        <span class="tag">Criterion 5</span>
+        <h3>A feedback loop — it compounds, or it decays</h3>
+        <p><strong>Ask:</strong> "When a rep edits an agent's draft, overrides a recommendation, or a deal closes — what learns from that, and do the other agents inherit it?"</p>
+        <p><strong>A good answer</strong> describes every approval, edit, override and outcome flowing back into the shared memory, so the next action by any agent starts smarter. MIT's diagnosis of why most enterprise GenAI pilots fail is exactly this: the systems "do not retain feedback, adapt to context, or improve over time" (<a href="https://www.aigl.blog/content/files/2025/09/The-GenAI-Divide-STATE-OF-AI-IN-BUSINESS-2025.pdf" target="_blank" rel="noopener">MIT Project NANDA, 2025</a>).</p>
+        <p><strong>Red flag:</strong> "the model improves over time" with no mechanism named; learning that lives in one agent's fine-tune and nowhere else.</p>
+      </div>
+
+
+      <div class="shift-block">
+        <span class="tag">Criterion 6</span>
+        <h3>Ownership — you own the GTM brain, or you rent it</h3>
+        <p><strong>Ask:</strong> "If we leave in 24 months, what do we walk away with — and in what form?"</p>
+        <p>The CRM records were never the valuable part; every vendor will let you keep those. The asset is everything that accumulates <em>on top</em> of them once agents are running: the ontology of how your business actually sells — accounts, personas, positioning, objections, competitors and how they relate — plus the decision history that criterion 5 generates: every approval, edit, override and outcome. That history is what makes the next action smarter. It is your go-to-market brain, and it only compounds for you if you own it.</p>
+        <p><strong>A good answer</strong> is a per-tenant, isolated graph that is yours: ontology, entities, relationships and the full approval-and-outcome history, exportable in standard formats, with a contractual guarantee that none of it trains the vendor's models. Renting looks different: the learning lives inside the vendor's agent or model, the history is theirs to keep, and the day you switch vendors the brain resets to zero.</p>
+        <p><strong>Red flag:</strong> "your data stays in your CRM" offered as the answer — that's the records, not the brain. Also: learning that exists as a vendor-side fine-tune; per-conversation pricing where the conversation history belongs to the vendor; an export that is "available on request."</p>
+      </div>
+
+      <div class="shift-block">
+        <span class="tag">Criterion 7</span>
+        <h3>Openness — bring your own agents, models and exit</h3>
+        <p><strong>Ask:</strong> "Can an agent we built — or bought from someone else — connect to this and inherit the memory, governance and attribution? And can we export everything if we leave?"</p>
+        <p><strong>A good answer</strong> is a standard interface (MCP or equivalent) that any agent can call, model-agnosticism (the layer should get better as foundation models improve, not compete with them), and exportable data in standard formats. Openness is also your hedge against the biggest structural risk in this market: an incumbent building the shared layer and closing it.</p>
+        <p><strong>Red flag:</strong> the layer only works with the vendor's agents; the vendor's agents only work with the layer; no export path.</p>
+      </div>
+
+      <div class="shift-block">
+        <span class="tag">Criterion 8</span>
+        <h3>Total cost of the agent stack — not the price of one tool</h3>
+        <p><strong>Ask:</strong> "Model our cost at three agents, then at ten. What happens to inference spend, integration maintenance, and licensing as we add agents?"</p>
+        <p><strong>A good answer</strong> shows shared grounding <em>reducing</em> duplicated retrieval and reasoning as agents are added, predictable pricing that does not penalize usage, and no per-agent integration tax. Be alert to the two pricing shapes that punish success: per-conversation or per-resolution fees that rise as the agent works, and annual per-agent contracts that make consolidation impossible.</p>
+        <p><strong>Red flag:</strong> a quote for one agent with no answer for the tenth.</p>
+      </div>
+    </section>
+
+    <section id="scorecard">
+      <div class="sec-head">
+        <span class="n">04</span>
+        <h2 class="sec-title">Scorecard: architectures × criteria</h2>
+      </div>
+      <p>Ratings are for the <em>architecture as typically implemented</em>, not for any single product — specific vendors will beat or miss their column. Use it to decide which shape you're shopping in, then run the RFP questions on the actual products.</p>
+      <div class="figure">
+        <span class="fig-tag">How the four shapes tend to score</span>
+        <div class="tablewrap">
+        <table class="score">
+          <thead>
+            <tr><th>Criterion</th><th>A · CRM-bundled</th><th>B · Point agents</th><th>C · DIY / frameworks</th><th>D · Operating layer</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1 · Shared memory</td><td><span class="dot half"></span>Within the CRM's records only</td><td><span class="dot none"></span>Per-agent</td><td><span class="dot half"></span>If you build it</td><td><span class="dot full"></span>Designed for it</td></tr>
+            <tr><td>2 · Connect once / CRM-agnostic</td><td><span class="dot none"></span>One CRM by definition</td><td><span class="dot none"></span>Each agent re-integrates</td><td><span class="dot half"></span>Yours to wire</td><td><span class="dot full"></span>Core premise</td></tr>
+            <tr><td>3 · Governance on every action</td><td><span class="dot half"></span>Strong inside its walls</td><td><span class="dot none"></span>Rarely beyond its own writes</td><td><span class="dot half"></span>Build ticket</td><td><span class="dot full"></span>Core premise</td></tr>
+            <tr><td>4 · Outcome attribution</td><td><span class="dot half"></span>Native CRM reporting, own agents only</td><td><span class="dot none"></span>Activity metrics</td><td><span class="dot none"></span>Tokens &amp; latency</td><td><span class="dot full"></span>Deal-stage attribution</td></tr>
+            <tr><td>5 · Feedback loop</td><td><span class="dot half"></span>Inside the suite</td><td><span class="dot none"></span>Inside one agent</td><td><span class="dot half"></span>If you build it</td><td><span class="dot full"></span>Core premise</td></tr>
+            <tr><td>6 · Ownership of the GTM brain</td><td><span class="dot none"></span>Lives inside the suite; leaves with it</td><td><span class="dot none"></span>Per-agent, vendor-held</td><td><span class="dot full"></span>Yours, if you built it</td><td><span class="dot full"></span>Per-tenant, exportable</td></tr>
+            <tr><td>7 · Openness</td><td><span class="dot none"></span>Lock-in is the model</td><td><span class="dot half"></span>Varies; check export</td><td><span class="dot full"></span>Fully open</td><td><span class="dot full"></span>MCP, BYO agent</td></tr>
+            <tr><td>8 · Total stack cost</td><td><span class="dot half"></span>Credits scale with use</td><td><span class="dot none"></span>Per-agent contracts stack</td><td><span class="dot half"></span>Eng time is the price</td><td><span class="dot half"></span>Shared inference; new pricing, fewer precedents</td></tr>
+            <tr class="tr-caveat"><td>Where it wins anyway</td><td>Single-CRM teams; procurement speed; distribution</td><td>Best-in-class at one motion; fast to trial</td><td>Unusual workflows; full control</td><td>Multi-agent, mixed-CRM teams</td></tr>
+            <tr class="tr-caveat"><td>Honest weakness</td><td>Can't serve mixed-CRM orgs</td><td>Every add worsens 1–3 and 6</td><td>Maintenance never ends</td><td>Newest category; fewest references</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p class="note legend"><span class="dot full"></span> typically present &nbsp; <span class="dot half"></span> partial or conditional &nbsp; <span class="dot none"></span> typically absent</p>
+      </div>
+    </section>
+
+    <section id="rfp">
+      <div class="sec-head">
+        <span class="n">05</span>
+        <h2 class="sec-title">Thirteen questions for the RFP</h2>
+      </div>
+      <p>Paste these in. Insist on demonstrations, not slides, for questions 2, 5, 7 and 9, and get question 10 in writing.</p>
+      <div class="eight">
+        <div class="eight-row"><span class="n">1</span><div><p class="eight-move"><span class="to">Describe the memory layer. Is it per-agent or shared? Typed or document retrieval?</span></p><p class="eight-why">Criterion 1. "Shared" should mean one graph, not one vector store per agent.</p></div></div>
+        <div class="eight-row"><span class="n">2</span><div><p class="eight-move"><span class="to">Connect our Salesforce or HubSpot sandbox live. How many of our agents can use that connection?</span></p><p class="eight-why">Criterion 2. If the answer is "ours," it isn't a layer.</p></div></div>
+        <div class="eight-row"><span class="n">3</span><div><p class="eight-move"><span class="to">Do you support two systems of record at once? What breaks if we switch CRM in 18 months?</span></p><p class="eight-why">Criterion 2. Ask this even if you're single-CRM today.</p></div></div>
+        <div class="eight-row"><span class="n">4</span><div><p class="eight-move"><span class="to">List the permission scopes available per agent. Can an agent be read-only? Can we revoke one agent's write access without affecting others?</span></p><p class="eight-why">Criterion 3.</p></div></div>
+        <div class="eight-row"><span class="n">5</span><div><p class="eight-move"><span class="to">Show us the approval queue and the audit log for a write to a CRM field.</span></p><p class="eight-why">Criterion 3. This must be a demo, not a diagram.</p></div></div>
+        <div class="eight-row"><span class="n">6</span><div><p class="eight-move"><span class="to">Does governance apply to agents we bring from another vendor, or only to yours?</span></p><p class="eight-why">Criteria 3 and 7.</p></div></div>
+        <div class="eight-row"><span class="n">7</span><div><p class="eight-move"><span class="to">Show us a report attributing an agent action to a deal-stage change — and one flagging a write that should be reverted.</span></p><p class="eight-why">Criterion 4. Activity dashboards don't count.</p></div></div>
+        <div class="eight-row"><span class="n">8</span><div><p class="eight-move"><span class="to">Walk through what happens when a rep edits an agent's output. What learns from the edit? Which agents inherit it?</span></p><p class="eight-why">Criterion 5.</p></div></div>
+        <div class="eight-row"><span class="n">9</span><div><p class="eight-move"><span class="to">Connect an agent we built to your platform over MCP, in front of us.</span></p><p class="eight-why">Criterion 7. Openness is demonstrable or it isn't there.</p></div></div>
+        <div class="eight-row"><span class="n">10</span><div><p class="eight-move"><span class="to">If we leave in 24 months, what do we take with us — the ontology, the graph, and the approval and outcome history — and in what format? Does any of it train your models?</span></p><p class="eight-why">Criterion 6. Owning versus renting the brain.</p></div></div>
+        <div class="eight-row"><span class="n">11</span><div><p class="eight-move"><span class="to">Which foundation models can we run? What happens to our setup when a better model ships?</span></p><p class="eight-why">Criterion 7. The layer should improve as models improve.</p></div></div>
+        <div class="eight-row"><span class="n">12</span><div><p class="eight-move"><span class="to">Price this at 3 agents and at 10 — licensing, inference, and integration maintenance.</span></p><p class="eight-why">Criterion 8.</p></div></div>
+        <div class="eight-row"><span class="n">13</span><div><p class="eight-move"><span class="to">What is live today, what is on the roadmap, and which customers are running each part in production?</span></p><p class="eight-why">All criteria. Ask every vendor, including the newest ones. Especially the newest ones.</p></div></div>
+      </div>
+    </section>
+
+    <section id="redflags">
+      <div class="sec-head">
+        <span class="n">06</span>
+        <h2 class="sec-title">Red flags</h2>
+      </div>
+      <div class="qs">
+        <div class="q">
+          <p class="q-ask">"Our agent has its own knowledge base."</p>
+          <p class="q-then"><b>Translation —</b> memory is per-agent. Every additional agent you buy makes the drift problem worse, not better.</p>
+        </div>
+        <div class="q">
+          <p class="q-ask">"Governance is handled by the model's instructions."</p>
+          <p class="q-then"><b>Translation —</b> there is no permission system. A prompt is not a control.</p>
+        </div>
+        <div class="q">
+          <p class="q-ask">"Here's the ROI dashboard" — and it shows emails sent, records updated, meetings booked.</p>
+          <p class="q-then"><b>Translation —</b> activity, not outcome. Nobody can tell you which of those moved a deal.</p>
+        </div>
+        <div class="q">
+          <p class="q-ask">"Fully CRM-agnostic" — with one connector live and the other "coming soon."</p>
+          <p class="q-then"><b>Translation —</b> single-CRM today. Get the second connector in the contract or discount the claim to zero.</p>
+        </div>
+        <div class="q">
+          <p class="q-ask">Pricing per conversation, per resolution, or per contact.</p>
+          <p class="q-then"><b>Translation —</b> the better it works, the more you pay. Model year two before you sign year one.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="disclosure">
+      <div class="sec-head">
+        <span class="n">07</span>
+        <h2 class="sec-title">Disclosure: where wysdym sits</h2>
+      </div>
+      <p>This framework is published by <strong>wysdym</strong>, a vendor in architecture D. You should weight it accordingly — and you should notice that criteria 1 through 8 are also exactly what wysdym is built to be, which is either a conflict of interest or the reason we could write them down. Probably both.</p>
+      <p>Plainly: wysdym is the operating layer for agentic go-to-market. It grounds every agent in your GTM truth, runs the motion under your governance, and gets sharper with every deal you close. Five pillars — <strong>Cortex</strong> (shared intelligence and memory), <strong>Skills</strong> (what agents do), <strong>Governance</strong> (the rules on every action), <strong>Observe</strong> (which agents are actually working), and <strong>Operator</strong> (analyst-grade answers that act on your workflows) — connected through the <strong>Gateway</strong>, one MCP door to your stack. Agent-agnostic: run Claude, an AI SDR, or any other vendor's agent on it, and it connects to all of your systems — HubSpot, Salesforce, Gong, Slack, Google Drive, Notion — once.</p>
+      <div class="gets">
+        <a class="get" href="https://wysdym.ai" target="_blank" rel="noopener">Meet wysdym →</a>
+        <a class="get alt" href="https://gtmstats.wysdym.ai" target="_blank" rel="noopener">Explore the agentic AI stats →</a>
+      </div>
+      <p class="note" style="margin-top:1.2rem">wysdym (spelled w-y-s-d-y-m) is a go-to-market infrastructure company founded in 2025 in Toronto, Canada. It is separate from and unaffiliated with Wysdom.AI (spelled w-y-s-d-o-m), the conversational-AI and bot-analytics vendor acquired by Calabrio in January 2024.</p>
+    </section>
+
+    <section id="faq">
+      <div class="sec-head">
+        <h2 class="sec-title">FAQ</h2>
+      </div>
+      <h3>What is an operating layer for agentic GTM?</h3>
+      <p>The shared layer beneath a team's AI sales and marketing agents that gives all of them one grounding (shared memory of accounts, ICP, positioning and outcomes), one set of connections to the GTM stack, one governance model (permissions, approvals, audit) and one feedback loop, so that every agent's work compounds instead of drifting. It is infrastructure the agents run on, not another agent.</p>
+      <h3>Is a GTM operating layer the same as a "GTM data orchestration platform"?</h3>
+      <p>Largely the same problem, different emphasis. "Data orchestration" foregrounds moving and unifying data across tools; "operating layer" foregrounds what agents share — memory, governance and outcome attribution — with data connection as one of its jobs. Evaluate either against the eight criteria on this page rather than the label.</p>
+      <h3>Do I need one if I use Salesforce Agentforce or HubSpot Breeze?</h3>
+      <p>If every agent you will ever run lives inside that one CRM, the suite is your operating layer and you should evaluate it as one — criteria 3, 4, 6 and 7 are where bundled suites are weakest. If you run agents from more than one vendor, or more than one system of record, the suite governs and remembers only its own agents, and the gap this page describes is yours.</p>
+      <h3>How is this different from LLM observability tools like LangSmith or Langfuse?</h3>
+      <p>Those measure the mechanics of a model call — tokens, latency, cost, traces — for an engineering audience. GTM outcome attribution measures what an agent's action did to a deal stage, for a RevOps and finance audience. Both are useful; they are different layers with different buyers.</p>
+      <h3>How is shared memory different from RAG or a knowledge base?</h3>
+      <p>RAG retrieves chunks of documents at query time; it does not model relationships, does not know that a change to positioning should update the battle cards, and is usually set up separately per agent. A shared, typed memory layer models the GTM domain as entities and dependencies, is updated by every correction and outcome, and is read by every agent.</p>
+      <h3>What does "owning your GTM data" mean when agents are involved?</h3>
+      <p>It means more than keeping your CRM records. Once agents run, the valuable asset is the layer that accumulates on top of the records: the ontology of how your business sells, the graph of accounts, personas, positioning and competitors, and the history of every approval, edit, override and outcome that taught the system what good looks like. If that layer lives inside a vendor's agent or model, you are renting it and it resets when you leave. Owning it means it is per-tenant, exportable, and never used to train someone else's product.</p>
+      <h3>Why does MCP matter in this evaluation?</h3>
+      <p>The Model Context Protocol is the emerging open standard for connecting agents to tools and data. A platform that exposes its memory, integrations and governance over MCP can serve agents you didn't buy from that vendor — which is the practical test of whether it is a layer or just another agent.</p>
+      <h3>Is wysdym the same company as Wysdom.AI?</h3>
+      <p>No. wysdym (w-y-s-d-y-m) is a Toronto-based go-to-market infrastructure company founded in 2025. Wysdom.AI (w-y-s-d-o-m) is a conversational-AI and bot-analytics company acquired by Calabrio in January 2024. There is no affiliation or shared history between them.</p>
+    </section>
+
+    <footer>
+      <span class="foot-brand"><svg class="foot-lockup" viewBox="0 0 600 140" role="img" aria-label="wysdym">
+        <g fill="currentColor" transform="translate(2.3, -8.0) scale(0.7693)">
+          <polygon points="96,34 128,147 104,167"/>
+          <polygon points="98,32 154,127 131,146"/>
+          <polygon points="168,61 155,123 138,94"/>
+          <polygon points="171,59 190,71 168,73"/>
+          <polygon points="100,154 101,169 10,161"/>
+        </g>
+        <g transform="translate(171.6,22.2) scale(1.7033)"><path fill="currentColor" fill-rule="evenodd" d="M70.5,56.9C71.1,55.5 72.5,52.3 73.5,49.9C74.6,47.5 78.4,38.4 82.1,29.7C85.8,21.1 88.8,13.9 88.8,13.9C88.8,13.8 87.3,13.7 85.5,13.8L82.2,13.8L77.5,25.7C74.9,32.2 72.7,37.8 72.5,38.1C72.3,38.7 71.8,37.5 67.3,26.3L62.4,13.8L59.0,13.8L55.6,13.7L55.8,14.2C55.9,14.5 58.9,21.8 62.5,30.3C66.1,38.9 69.1,45.9 69.1,46.0C69.1,46.0 67.7,49.0 65.9,52.7C64.2,56.3 62.8,59.4 62.8,59.4C62.8,59.5 64.3,59.5 66.1,59.5L69.4,59.4L70.5,56.9ZM177.0,57.3C178.6,53.6 181.4,46.8 187.9,31.7C191.2,23.9 194.3,16.7 194.7,15.6L195.6,13.7L192.2,13.7L188.9,13.7L183.9,26.2C181.2,33.0 178.9,38.5 178.8,38.4C178.7,38.3 176.5,32.7 173.8,26.0L169.0,13.7L165.6,13.7L162.2,13.7L168.9,29.7C172.6,38.4 175.6,45.8 175.6,45.9C175.6,46.1 174.4,48.7 173.0,51.7C171.6,54.7 170.2,57.6 169.9,58.3L169.3,59.5L172.6,59.5L176.0,59.5L177.0,57.3ZM110.7,46.6C113.8,45.9 116.3,44.0 117.5,41.4C118.2,40.0 118.3,39.7 118.3,37.6C118.3,35.5 118.2,35.1 117.6,33.9C116.3,31.3 114.2,30.1 107.3,27.7C101.4,25.6 100.2,24.9 99.8,23.3C99.0,20.4 101.8,18.2 106.0,18.4C109.0,18.6 110.7,19.9 111.4,22.6L111.7,23.7L114.5,23.7L117.2,23.7L117.2,23.0C117.2,20.8 116.1,18.1 114.5,16.3C112.5,14.1 109.6,13.0 105.6,13.0C100.1,13.0 96.0,15.1 94.1,18.8C93.5,20.2 93.4,20.5 93.4,22.4C93.4,24.3 93.5,24.7 94.0,25.8C95.3,28.5 98.2,30.4 103.7,32.1C108.6,33.6 109.6,34.0 110.5,34.6C112.7,36.1 112.5,39.5 110.0,40.9C109.1,41.4 108.7,41.5 106.6,41.6C103.3,41.7 101.4,41.2 99.8,39.6C98.9,38.7 98.5,38.1 98.2,37.1L97.8,35.8L94.9,35.8L92.0,35.8L92.2,37.3C92.5,41.3 96.0,45.1 100.6,46.4C103.4,47.2 107.5,47.3 110.7,46.6ZM142.0,46.7C145.9,45.6 148.8,42.6 150.4,37.9L150.8,36.6L151.0,40.2C151.0,42.2 151.2,44.4 151.3,45.1L151.4,46.3L154.3,46.3L157.2,46.3L157.2,23.4L157.2,0.5L154.1,0.5L150.9,0.5L150.9,11.3L150.8,22.2L150.3,20.8C148.7,16.6 146.1,14.1 142.1,13.3C140.4,12.9 136.4,13.0 134.8,13.4C130.2,14.5 126.5,17.9 124.5,22.7C122.7,27.3 122.9,34.3 125.1,38.6C127.2,42.7 130.7,45.6 134.8,46.6C136.6,47.0 140.5,47.1 142.0,46.7ZM22.2,34.0C24.7,27.2 26.8,21.5 26.8,21.5C27.0,21.3 27.0,21.5 31.2,33.3C33.0,38.5 34.6,42.8 34.7,42.8C34.7,42.8 35.4,41.1 36.0,38.9L37.2,35.1L33.4,24.4L29.6,13.6L26.4,13.5L23.1,13.5L19.0,25.3C16.7,31.8 14.2,39.2 13.3,41.7C12.4,44.3 11.6,46.4 11.6,46.4C11.6,46.5 13.0,46.5 14.7,46.5L17.7,46.4L22.2,34.0ZM43.1,42.7C43.8,40.7 46.4,33.3 48.8,26.3L53.2,13.6L49.8,13.5C48.0,13.5 46.4,13.6 46.3,13.7C46.1,13.8 36.3,44.6 35.9,46.0L35.8,46.5L38.8,46.5L41.8,46.5L43.1,42.7ZM199.9,46.3C199.9,46.2 201.5,41.4 203.3,35.6C205.1,29.7 207.3,22.6 208.3,19.6C209.2,16.7 210.0,14.1 210.0,13.9C210.0,13.5 209.7,13.5 207.0,13.5L204.0,13.5L198.5,29.7C195.5,38.6 193.0,46.1 193.0,46.2C193.0,46.4 193.9,46.5 196.4,46.5C198.2,46.5 199.8,46.4 199.9,46.3ZM224.4,42.2C225.5,38.6 227.6,32.0 233.4,13.9C233.5,13.5 233.3,13.5 230.9,13.5L228.2,13.5L227.6,15.3C226.0,19.9 219.4,38.5 219.3,38.7C219.2,38.8 217.4,33.9 215.2,27.9C213.1,21.9 211.3,17.0 211.2,17.1C211.2,17.1 210.6,19.0 209.9,21.2L208.6,25.3L212.0,35.8L215.4,46.3L216.2,46.3C216.5,46.4 218.2,46.5 219.9,46.5L223.0,46.5L224.4,42.2ZM245.1,45.2C244.9,44.6 242.5,38.1 239.8,30.7C237.0,23.3 234.8,17.2 234.7,17.1C234.5,17.0 232.1,24.2 232.1,24.9C232.1,25.1 233.5,29.8 235.2,35.4C237.0,40.9 238.4,45.6 238.5,45.9C238.6,46.2 239.0,46.3 242.1,46.3L245.6,46.3L245.1,45.2ZM12.3,38.5L13.7,34.3L10.6,24.1L7.5,13.8L4.0,13.8L0.5,13.7L2.2,18.7C3.1,21.4 5.4,28.0 7.2,33.3C9.0,38.7 10.6,43.0 10.7,42.9C10.8,42.8 11.5,40.8 12.3,38.5ZM137.8,41.3C134.9,40.6 132.1,38.3 130.8,35.7C128.0,29.8 130.1,22.0 135.2,19.5C139.3,17.6 144.8,18.3 147.8,21.3C151.1,24.6 151.9,31.3 149.6,36.1C148.8,37.8 147.0,39.6 145.4,40.5C143.3,41.5 140.1,41.9 137.8,41.3Z"/></g>
+      </svg><span>· the operating layer for agentic go-to-market</span></span>
+      <span>September 2026</span>
+    </footer>
+
+  </main>
+</div>
+
+
+<script>
+(() => {
+  const links = Array.from(document.querySelectorAll('.secnav a'));
+  const map = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(a => a.classList.remove('active'));
+        const a = map.get(e.target.id);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -65% 0px' });
+  ['who','shift','architectures','criteria','scorecard','rfp','redflags','disclosure','faq'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) obs.observe(el);
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "How to Evaluate the Platform Your AI GTM Agents Run On — A Buyer's Framework",
+ "description": "Eight criteria, four architectures, a scorecard and twelve RFP questions for choosing where multiple AI sales and marketing agents should run — shared memory, governance, outcome attribution, data ownership, openness and total stack cost. Vendor-neutral structure, disclosed authorship.",
+ "mainEntityOfPage": "https://gtmstats.wysdym.ai/evaluating-gtm-agent-platforms/",
+ "datePublished": "2026-09-03",
+ "dateModified": "2026-09-03",
+ "inLanguage": "en",
+ "author": {
+  "@type": "Organization",
+  "name": "wysdym",
+  "url": "https://www.wysdym.ai"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "wysdym",
+  "legalName": "wysdym, Inc.",
+  "url": "https://www.wysdym.ai",
+  "disambiguatingDescription": "wysdym — spelled w-y-s-d-y-m — is a go-to-market infrastructure company founded in 2025 in Toronto, Canada. It is a separate and unaffiliated company from Wysdom.AI (spelled w-y-s-d-o-m), the conversational-AI and bot-analytics vendor acquired by Calabrio in January 2024.",
+  "foundingDate": "2025",
+  "foundingLocation": "Toronto, Canada",
+  "sameAs": [
+   "https://www.linkedin.com/company/wysdym",
+   "https://www.wikidata.org/wiki/Q140579033",
+   "https://www.g2.com/products/wysdym/reviews"
+  ]
+ },
+ "about": [
+  "go-to-market",
+  "AI agents",
+  "agentic AI",
+  "RevOps",
+  "AI governance",
+  "GTM operating layer"
+ ],
+ "mentions": [
+  {
+   "@type": "Organization",
+   "name": "Salesforce Agentforce"
+  },
+  {
+   "@type": "Organization",
+   "name": "HubSpot Breeze"
+  },
+  {
+   "@type": "Organization",
+   "name": "Microsoft Copilot for Sales"
+  },
+  {
+   "@type": "Organization",
+   "name": "ZoomInfo"
+  },
+  {
+   "@type": "Organization",
+   "name": "Clay"
+  },
+  {
+   "@type": "Organization",
+   "name": "11x"
+  },
+  {
+   "@type": "Organization",
+   "name": "Artisan"
+  },
+  {
+   "@type": "Organization",
+   "name": "Qualified"
+  },
+  {
+   "@type": "Organization",
+   "name": "Regie.ai"
+  },
+  {
+   "@type": "Organization",
+   "name": "Relevance AI"
+  },
+  {
+   "@type": "Organization",
+   "name": "Lindy"
+  },
+  {
+   "@type": "Organization",
+   "name": "CrewAI"
+  },
+  {
+   "@type": "Organization",
+   "name": "LangChain"
+  },
+  {
+   "@type": "Organization",
+   "name": "LangSmith"
+  },
+  {
+   "@type": "Organization",
+   "name": "Langfuse"
+  },
+  {
+   "@type": "Organization",
+   "name": "Helicone"
+  },
+  {
+   "@type": "Organization",
+   "name": "Arize"
+  },
+  {
+   "@type": "Organization",
+   "name": "Gong"
+  },
+  {
+   "@type": "Organization",
+   "name": "Landbase"
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is an operating layer for agentic GTM?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The shared layer beneath a team's AI sales and marketing agents that gives all of them one grounding (shared memory of accounts, ICP, positioning and outcomes), one set of connections to the GTM stack, one governance model (permissions, approvals, audit) and one feedback loop, so that every agent's work compounds instead of drifting. It is infrastructure the agents run on, not another agent."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is a GTM operating layer the same as a \"GTM data orchestration platform\"?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Largely the same problem, different emphasis. \"Data orchestration\" foregrounds moving and unifying data across tools; \"operating layer\" foregrounds what agents share — memory, governance and outcome attribution — with data connection as one of its jobs. Evaluate either against the eight criteria on this page rather than the label."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do I need one if I use Salesforce Agentforce or HubSpot Breeze?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "If every agent you will ever run lives inside that one CRM, the suite is your operating layer and you should evaluate it as one — criteria 3, 4, 6 and 7 are where bundled suites are weakest. If you run agents from more than one vendor, or more than one system of record, the suite governs and remembers only its own agents, and the gap this page describes is yours."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How is this different from LLM observability tools like LangSmith or Langfuse?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Those measure the mechanics of a model call — tokens, latency, cost, traces — for an engineering audience. GTM outcome attribution measures what an agent's action did to a deal stage, for a RevOps and finance audience. Both are useful; they are different layers with different buyers."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How is shared memory different from RAG or a knowledge base?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "RAG retrieves chunks of documents at query time; it does not model relationships, does not know that a change to positioning should update the battle cards, and is usually set up separately per agent. A shared, typed memory layer models the GTM domain as entities and dependencies, is updated by every correction and outcome, and is read by every agent."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What does \"owning your GTM data\" mean when agents are involved?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It means more than keeping your CRM records. Once agents run, the valuable asset is the layer that accumulates on top of the records: the ontology of how your business sells, the graph of accounts, personas, positioning and competitors, and the history of every approval, edit, override and outcome that taught the system what good looks like. If that layer lives inside a vendor's agent or model, you are renting it and it resets when you leave. Owning it means it is per-tenant, exportable, and never used to train someone else's product."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why does MCP matter in this evaluation?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The Model Context Protocol is the emerging open standard for connecting agents to tools and data. A platform that exposes its memory, integrations and governance over MCP can serve agents you didn't buy from that vendor — which is the practical test of whether it is a layer or just another agent."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is wysdym the same company as Wysdom.AI?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. wysdym (w-y-s-d-y-m) is a Toronto-based go-to-market infrastructure company founded in 2025. Wysdom.AI (w-y-s-d-o-m) is a conversational-AI and bot-analytics company acquired by Calabrio in January 2024. There is no affiliation or shared history between them."
+   }
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "DefinedTerm",
+ "name": "operating layer for agentic GTM",
+ "alternateName": [
+  "GTM operating layer",
+  "operating layer for agentic go-to-market",
+  "GTM data orchestration platform (related term)"
+ ],
+ "description": "The shared infrastructure layer beneath a go-to-market team's AI agents that provides one grounding (shared memory of accounts, ICP, positioning and outcomes), one set of connections to the GTM stack, one governance model (per-agent permissions, approval queues, audit) and one feedback loop, so that every agent's work compounds. Infrastructure the agents run on, not another agent.",
+ "url": "https://gtmstats.wysdym.ai/evaluating-gtm-agent-platforms/#faq",
+ "inDefinedTermSet": {
+  "@type": "DefinedTermSet",
+  "name": "wysdym GTM glossary",
+  "url": "https://gtmstats.wysdym.ai/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Agentic AI statistics",
+   "item": "https://gtmstats.wysdym.ai/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Evaluating GTM agent platforms",
+   "item": "https://gtmstats.wysdym.ai/evaluating-gtm-agent-platforms/"
+  }
+ ]
+}
+</script>
+</body>
+</html>
