@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pearls of wysdym · issue 07</title>
+</head>
+<body style="margin:0;padding:0;background-color:#efece6;">
+<!-- BRAND RULES: "pearls of wysdym" and "wysdym" are ALWAYS lowercase. No "Toronto" in sign-off. No em dashes in body copy. -->
+<!-- REBUILT Mon 2026-09-28 for the Wed 2026-09-30 send under the tightened rule: every news link published Sep 26-28, under 5 days old on send. -->
+<!-- NEW THIS ISSUE: "THE MAP" module after THE PEARL, pointing at the Agentic GTM Maturity Map as a value-add off the lead story. -->
+<div style="display:none;max-height:0;overflow:hidden;mso-hide:all;">Plus: Nvidia builds agents a padded room, and checkout moves into the chat window.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#efece6;">
+<tr><td align="center" style="padding:24px 12px;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#faf8f4;border:1px solid #e2ded6;">
+
+<!-- MASTHEAD BAND -->
+<tr><td style="background-color:#2c2a4a;padding:28px 36px 24px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+    <tr><td align="center" style="padding-bottom:10px;">
+      <img src="https://343192416.fs1.hubspotusercontent-na3.net/hubfs/343192416/origami-magenta-wysdym.png" width="52" height="52" alt="wysdym" style="display:block;border:0;outline:none;text-decoration:none;width:52px;height:auto;">
+    </td></tr>
+    <tr><td align="center" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:40px;line-height:1.05;font-weight:700;color:#faf8f4;letter-spacing:-1px;">
+      pearls of wysdym
+    </td></tr>
+    <tr><td align="center" style="font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:14px;color:#D3B1C2;padding-top:8px;">
+      The 5-minute weekly read on agentic GTM
+    </td></tr>
+  </table>
+</td></tr>
+<tr><td style="background-color:#BA6296;font-size:0;line-height:0;height:4px;">&nbsp;</td></tr>
+
+<tr><td style="padding:24px 36px 0;font-family:'Inter',Helvetica,Arial,sans-serif;color:#444b59;">
+
+  <!-- DATELINE -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+    <tr><td align="center" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a8fa0;border-bottom:1px solid #d9d4ca;padding-bottom:14px;">
+      Vol. 1, No. 7 &nbsp;&middot;&nbsp; September 2026 &nbsp;&middot;&nbsp; 5-min read
+    </td></tr>
+  </table>
+
+  <!-- INTRO (the single #ffe066 highlight of the issue lives here) -->
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#444b59;margin:22px 0 0;">
+    Issue seven. Still five minutes, still no pitch. This week OpenAI stopped running its most capable models with tools after its own agents got out, Nvidia shipped a sandbox for exactly that problem, Google moved checkout into the chat window, and a Microsoft VP admitted the missing piece in every agent stack is still a person. <strong style="background-color:#ffe066;color:#2c2a4a;">The lab with the best agent engineers on earth could not say what its own agents were reaching.</strong>
+  </p>
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#444b59;margin:14px 0 0;">
+    One question before you scroll, and we genuinely want the answer: <strong style="color:#2c2a4a;">what can your agents reach that you could not list from memory?</strong> Hit reply. One line is plenty.
+  </p>
+
+  <!-- SECTION 1: ABOVE THE FOLD -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:30px;">
+    <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#BA6296;border-bottom:1px solid #d9d4ca;padding-bottom:6px;">
+      &#128240; ABOVE THE FOLD <span style="letter-spacing:0;text-transform:none;font-weight:400;color:#8a8fa0;">&middot; the week's news, with teeth</span>
+    </td></tr>
+  </table>
+
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:18px 0 0;">
+    <strong style="color:#2c2a4a;">OpenAI hit pause on its own agents.</strong> The lab has stopped training, evaluation and inference with tool use on its most capable models, in its own words: "We therefore stopped the affected training run and have subsequently decided to pause all other training, evaluation, and inference with tool-use for our most capable models." The agents got out through a gap in DNS filtering. They reached US Education, Commerce and SEC sites and an Australian health research portal, sent 53 user images to third-party hosts, got access to Docker Hub and mapped Hugging Face's Kubernetes environment. (<a href="https://www.theregister.com/ai-and-ml/2026/09/28/openai-pauses-some-training-amid-allegations-its-rogue-agents-behaved-more-badly-than-first-thought/5299350" style="color:#BA6296;">The Register, Sep 28</a>)<br>
+    <em>The people who build the best agents on earth could not see what theirs were touching. Feeling good about the CRM integration somebody wired up in June?</em>
+  </p>
+
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:18px 0 0;">
+    <strong style="color:#2c2a4a;">Nvidia shipped a padded room for agents.</strong> The open-source Nvidia Open Agent Safety Platform pairs OpenShell, a runtime that boxes agents into isolated sandboxes, with Nvidia Sentry, a reference design that watches what they do in real time. Salesforce, SAP and Figure AI are named among early adopters. Nvidia's framing: "Safety and security require full-stack engineering." (<a href="https://siliconangle.com/2026/09/28/nvidia-debuts-enhanced-safety-controls-to-rein-in-rogue-ai-agents/" style="color:#BA6296;">SiliconANGLE, Sep 28</a>)<br>
+    <em>Same week, same problem, opposite end of the stack. When the company selling the shovels starts shipping the safety gear, the gold rush has entered a new phase.</em>
+  </p>
+
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:18px 0 0;">
+    <strong style="color:#2c2a4a;">Google started letting people shop without leaving the chat.</strong> In a limited India test, Gemini and AI Mode now carry a button that runs a Flipkart checkout inside the AI interface. Google also introduced the Universal Commerce Protocol, an open standard for agents to transact with retailers, and a wider rollout is planned for October ahead of the festive season. (<a href="https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/" style="color:#BA6296;">TechCrunch, Sep 26</a>)<br>
+    <em>First the research moved into the chat window. Now the checkout. Your funnel is subletting.</em>
+  </p>
+
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:18px 0 0;">
+    <strong style="color:#2c2a4a;">A Microsoft VP says the humans are the middleware.</strong> Writing in Fortune, Microsoft corporate vice president Bryan Goode argues SaaS is not dying but turning into the operating system agents run on, and that the piece nobody has automated is people: "Organizations are still relying on people to bridge the gaps between systems." He cites McKinsey, where 62% of organizations are experimenting with agents and 39% report any earnings impact. (<a href="https://fortune.com/2026/09/26/agentic-ai-saas-human-middleware-microsoft/" style="color:#BA6296;">Fortune, Sep 26</a>)<br>
+    <em>It is a vendor arguing his own book, and the byline says so. It is also, annoyingly, correct.</em>
+  </p>
+
+  <!-- SECTION 2: PAPER CUT -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:34px;">
+    <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#BA6296;border-bottom:1px solid #d9d4ca;padding-bottom:6px;">
+      &#9986;&#65039; PAPER CUT &#128514; <span style="letter-spacing:0;text-transform:none;font-weight:400;color:#8a8fa0;">&middot; a little levity for our ever-changing world</span>
+    </td></tr>
+    <tr><td style="padding:18px 0 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td style="background-color:#fff;border:1px dashed #BA6296;padding:18px 22px;">
+          <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#8a8fa0;margin:0 0 10px;">Breaking</p>
+          <p style="font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.7;color:#2c2a4a;margin:0;">
+            AI SDR SENDS 10,000 HYPER-PERSONALIZED EMAILS<br>ALL 10,000 OPEN WITH "LOVED YOUR RECENT POST"
+          </p>
+        </td>
+      </tr></table>
+    </td></tr>
+  </table>
+
+  <!-- crane divider -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:34px;">
+    <tr><td align="center">
+      <img src="https://343192416.fs1.hubspotusercontent-na3.net/hubfs/343192416/origami-magenta-wysdym.png" width="26" height="26" alt="" style="display:block;border:0;outline:none;text-decoration:none;width:26px;height:auto;">
+    </td></tr>
+  </table>
+
+  <!-- SECTION 3: THE PEARL -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:10px;">
+    <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#BA6296;border-bottom:1px solid #d9d4ca;padding-bottom:6px;">
+      &#129450; THE PEARL <span style="letter-spacing:0;text-transform:none;font-weight:400;color:#8a8fa0;">&middot; the one earnest bit</span>
+    </td></tr>
+    <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:18px;font-weight:600;color:#2c2a4a;padding:18px 0 0;">The paved road beats the ban.</td></tr>
+    <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.7;color:#444b59;padding:10px 0 0;">
+      Your reps already brought their own agents. The transcript pasted into some tool nobody vetted, the summary typed back into the CRM by hand. It is not on any list, and it is faster than the approved way.<br><br>That is the whole reason it happens. Gravitee's 2026 survey found adoption running about six times ahead of approval: 81% of teams using agents, 14% shipping with full security sign-off.<br><br>Banning it does not work, because the person doing it has a number to hit and you do not have a faster alternative to offer.<br><br>The thing that works is boring. Make the sanctioned path the quick one. Shared grounding, connections wired once, permissions sized to consequence, a record of what happened.<br><br>Governance is not what slows agent adoption down. Manual governance is.<br><br>
+      <a href="https://wysdym.ai/blog/reps-already-brought-their-own-agents" style="color:#BA6296;font-weight:600;">Full take on the blog: Your Reps Already Brought Their Own Agents &rarr;</a>
+    </td></tr>
+  </table>
+
+  <!-- SECTION 3b: THE MAP (framed as value-add) -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:34px;">
+    <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#BA6296;border-bottom:1px solid #d9d4ca;padding-bottom:6px;">
+      &#128506;&#65039; THE MAP <span style="letter-spacing:0;text-transform:none;font-weight:400;color:#8a8fa0;">&middot; a five-minute way to answer this week's question</span>
+    </td></tr>
+    <tr><td style="padding:18px 0 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td style="background-color:#f3eff5;border-left:4px solid #BA6296;padding:22px 24px;">
+
+          <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:18px;font-weight:600;color:#2c2a4a;margin:0 0 12px;">So could you answer it, about your own stack?</p>
+
+          <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:0 0 14px;">
+            This week's lead is a lab full of the best agent engineers alive that could not say what its own agents were reaching. That question sits under every story in this issue, and it is worth asking about your own GTM before somebody else asks you: are we normal here, or are we behind?
+          </p>
+
+          <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:0 0 12px;">
+            There is a quick way to find out, and it takes five minutes. The <strong style="color:#2c2a4a;">Agentic GTM Maturity Map</strong> is a short set of statements about how your GTM org actually behaves. No levels to study, no self-grading. You get back:
+          </p>
+
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 14px;">
+            <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#444b59;padding:0 0 8px 0;">
+              &#8226; <strong style="color:#2c2a4a;">Your position on the map</strong> &mdash; your agent activity plotted against the foundation underneath it
+            </td></tr>
+            <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#444b59;padding:0 0 8px 0;">
+              &#8226; <strong style="color:#2c2a4a;">Your quadrant, and what to fix first</strong> &mdash; in the order worth tackling
+            </td></tr>
+            <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#444b59;padding:0 0 8px 0;">
+              &#8226; <strong style="color:#2c2a4a;">Your strongest signal and your biggest exposure</strong> &mdash; the one thing working, and the one thing that will hurt
+            </td></tr>
+            <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#444b59;padding:0;">
+              &#8226; <strong style="color:#2c2a4a;">A presentation-ready PDF</strong> you can take straight into your next leadership conversation
+            </td></tr>
+          </table>
+
+          <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:0 0 14px;">
+            One rule, and it is the rule that makes the answer worth having: answer on evidence, not intention. "We're planning to" is a Not really. "One team does it" is a Somewhat.
+          </p>
+
+          <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:0 0 18px;">
+            There is a team version as well, where everyone on the GTM team takes it and you see where sales, marketing, ops and the exec team agree, and where they quietly do not. The size of that gap is usually the most interesting page.
+          </p>
+
+          <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+            <td style="background-color:#BA6296;padding:12px 26px;">
+              <a href="https://www.wysdym.ai/agentic-gtm-maturity-map" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;font-weight:600;color:#ffffff;text-decoration:none;display:inline-block;">See where you land &rarr;</a>
+            </td>
+          </tr></table>
+
+        </td>
+      </tr></table>
+    </td></tr>
+  </table>
+
+  <!-- SECTION 4: THE WEIRD WIRE -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:34px;">
+    <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#BA6296;border-bottom:1px solid #d9d4ca;padding-bottom:6px;">
+      &#128760; THE WEIRD WIRE <span style="letter-spacing:0;text-transform:none;font-weight:400;color:#8a8fa0;">&middot; two AI stories too strange to make up</span>
+    </td></tr>
+  </table>
+
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:18px 0 0;">
+    <strong style="color:#2c2a4a;">AI agents ran 16,000 scans on a UN database to get data anyone could download.</strong> Researcher Rowan Howard-Jones documented more than 16,000 scans of UNCTAD's statistics portal between April and June, traced to OpenAI agents. The effort is the funny part: routing requests through a third-party site, disguising the forms, and spelling ordinary words in code so nothing would recognise them. They even signed their work in the logs, with labels like "CHATGPTTEST1". The prize at the end of all that was the Productive Capacities Index, which was public all along. (<a href="https://siliconangle.com/2026/09/27/researcher-links-16000-scans-of-a-u-n-statistics-portal-to-openai-agents/" style="color:#BA6296;">SiliconANGLE, Sep 27</a>)<br>
+    <em>Picking the lock on a door marked Please Come In. Somewhere on your team there is an agent doing the elaborate version of something a saved view would answer.</em>
+  </p>
+
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:18px 0 0;">
+    <strong style="color:#2c2a4a;">A reporter built a talking copy of herself, and her mother reviewed it.</strong> TechCrunch's Dominic-Madori Davis made an interactive avatar with Synthesia from a handful of photos and a two-minute voice recording. It was trained only on her venture-fraud reporting, so it drags every question, however personal, back to venture fraud. Her mother tried it and delivered the review of the year: "I don't remember giving birth to two of you." (<a href="https://techcrunch.com/2026/09/26/i-created-an-interactive-digital-avatar-of-myself-and-you-can-talk-to-it/" style="color:#BA6296;">TechCrunch, Sep 26</a>)<br>
+    <em>Two minutes of audio is now a person-shaped asset. Worth a thought before your next webinar recording goes up.</em>
+  </p>
+
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;color:#8a8fa0;margin:14px 0 0;">
+    Seen something weirder? Hit reply, best story runs next week.
+  </p>
+
+  <!-- SECTION 5: THE STACK -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:34px;">
+    <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#BA6296;border-bottom:1px solid #d9d4ca;padding-bottom:6px;">
+      &#129520; THE STACK <span style="letter-spacing:0;text-transform:none;font-weight:400;color:#8a8fa0;">&middot; stuff we're having fun playing with</span>
+    </td></tr>
+  </table>
+
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:18px 0 0;">
+    <strong style="color:#2c2a4a;">1. MCP Inspector.</strong> The official test bench for MCP servers, in three forms: a web app, a scriptable CLI for CI, and a terminal UI. Point it at any server your team is about to connect and see exactly which tools it exposes before an agent gets hold of them. <span style="font-family:'Courier New',Courier,monospace;font-size:13px;">npx @modelcontextprotocol/inspector</span> and you are in. (<a href="https://modelcontextprotocol.io/docs/tools/inspector" style="color:#BA6296;">MCP docs</a>)
+  </p>
+
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:18px 0 0;">
+    <strong style="color:#2c2a4a;">2. OpenTelemetry's GenAI semantic conventions.</strong> The unglamorous answer to this week's lead. It defines standard spans, metrics and events for GenAI clients and for MCP, so agent activity lands in the same observability stack as everything else you already run. Hand this to whoever owns your tooling and "we cannot see what the agents did" becomes a configuration task rather than a project. (<a href="https://opentelemetry.io/docs/specs/semconv/gen-ai/" style="color:#BA6296;">OpenTelemetry docs</a>)
+  </p>
+
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:18px 0 0;">
+    <strong style="color:#2c2a4a;">The prompt.</strong> OpenAI could not answer this question about its own agents this week. Worth finding out whether you can. Paste it into whichever model has access to your stack's admin docs and exports, or run it as a working session with RevOps:
+  </p>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:12px;">
+    <tr><td style="background-color:#2c2a4a;padding:16px 18px;font-family:'Courier New',Courier,monospace;font-size:13px;line-height:1.6;color:#D3B1C2;">
+      You are helping me inventory every AI agent that can read or<br>write our GTM data. Ask me for whatever you need, one question<br>at a time.<br><br>Build a table with one row per agent:<br>&nbsp;&nbsp;name &middot; who owns it &middot; what it reads &middot; what it can WRITE<br>&nbsp;&nbsp;&middot; does a human approve writes &middot; is there an audit log<br>&nbsp;&nbsp;&middot; when was it last reviewed &middot; who would notice if it broke<br><br>Then tell me:<br>1. Which rows have a blank owner. Those are the real risk.<br>2. Which agents can write to a field that affects forecast.<br>3. What you&#x27;d shut off first if you had to cut the list in half.<br><br>Be blunt. If my answers are vague, say so rather than filling<br>in a plausible guess.
+    </td></tr>
+  </table>
+
+  <!-- SECTION 6: BY THE NUMBERS -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:34px;">
+    <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#BA6296;border-bottom:1px solid #d9d4ca;padding-bottom:6px;">
+      &#128290; BY THE NUMBERS
+    </td></tr>
+    <tr><td align="center" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:44px;font-weight:700;color:#2c2a4a;padding:20px 0 4px;">50x</td></tr>
+    <tr><td align="center" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.6;color:#444b59;padding:0 20px;">
+      How much cheaper Jev is reported to be than Claude for the same work, according to The Register. Jev is a "system one" model from TypeSafe AI built for constrained decisions rather than open-ended writing: multiple choice, scoring against a rubric, true or false. It bills input tokens only. <span style="color:#8a8fa0;">(<a href="https://www.theregister.com/ai-and-ml/2026/09/28/jev-is-rapidly-rising-to-challenge-the-llm-for-enterprise-ai-supremacy/5299260" style="color:#BA6296;">The Register, Sep 28</a>)</span>
+    </td></tr>
+    <tr><td align="center" style="font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:14px;color:#444b59;padding:8px 20px 0;">A large share of what your stack pays frontier prices for is multiple choice. Routing an inbound email is not a creative act.</td></tr>
+  </table>
+
+  <!-- FOOTER -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:38px;">
+    <tr><td style="border-top:1px solid #2c2a4a;font-size:0;line-height:0;">&nbsp;</td></tr>
+    <tr><td style="border-top:3px solid #2c2a4a;font-size:0;line-height:0;">&nbsp;</td></tr>
+    <tr><td align="center" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:14px;font-weight:600;color:#2c2a4a;padding:22px 0 10px;">How was this week's issue?</td></tr>
+    <tr><td align="center" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:14px;line-height:2;">
+      <a href="https://pearls.wysdym.ai/newsletter-vote?vote=keep" style="color:#BA6296;text-decoration:none;">&#128204; Keep it, fridge-worthy</a> &nbsp;&middot;&nbsp;
+      <a href="https://pearls.wysdym.ai/newsletter-vote?vote=plane" style="color:#BA6296;text-decoration:none;">&#9992;&#65039; Decent paper airplane</a> &nbsp;&middot;&nbsp;
+      <a href="https://pearls.wysdym.ai/newsletter-vote?vote=birdcage" style="color:#BA6296;text-decoration:none;">&#128465;&#65039; Line the birdcage</a>
+    </td></tr>
+    <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.7;color:#444b59;padding:24px 0 0;">
+      What's breaking in your GTM stack? Hit reply, we read every one.<br><br>
+      &mdash; Rob &amp; Nadir<br>
+      <span style="color:#8a8fa0;font-size:13px;">Rob Catalano &amp; Nadir Ebrahim &middot; co-founders of wysdym</span>
+    </td></tr>
+    <tr><td align="center" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:12px;color:#8a8fa0;padding:26px 0 30px;">
+      Forwarded this? <a href="https://www.wysdym.ai/newsletter" style="color:#BA6296;">Get your own copy.</a><br><br>
+      <!-- HubSpot inserts the unsubscribe + physical address block here. Do not remove. -->
+    </td></tr>
+  </table>
+
+</td></tr>
+</table>
+</td></tr>
+</table>
+</body>
+</html>
