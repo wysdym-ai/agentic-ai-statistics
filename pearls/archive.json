@@ -1,7 +1,8 @@
 {
   "_readme": "pearls of wysdym issue archive. Read by the 'Issue Archive' embed on https://www.wysdym.ai/newsletter. Newest first. A row shows once visibleAfter <= today (UTC). Updated by the Thursday 'pearls-archive-publisher' routine.",
-  "updated": "2026-10-06",
+  "updated": "2026-10-08",
   "issues": [
+    {"no": 8, "title": "80% say AI works. 6% can find the money.", "sent": "2026-10-07", "visibleAfter": "2026-10-08", "url": "https://gtmstats.wysdym.ai/pearls/issue-08.html"},
     {"no": 7, "title": "OpenAI hit pause on its own agents", "sent": "2026-09-30", "visibleAfter": "2026-10-01", "url": "https://gtmstats.wysdym.ai/pearls/issue-07.html"},
     {"no": 6, "title": "The chatbot talked your buyer out of it", "sent": "2026-09-23", "visibleAfter": "2026-09-24", "url": "https://pearls.wysdym.ai/the-chatbot-talked-your-buyer-out-of-it"},
     {"no": 5, "title": "The AI bosses asked everyone to slow down", "sent": "2026-09-16", "visibleAfter": "2026-09-17", "url": "https://pearls.wysdym.ai/the-ai-bosses-asked-everyone-to-slow-down"},
