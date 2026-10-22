@@ -1,7 +1,8 @@
 {
   "_readme": "pearls of wysdym issue archive. Read by the 'Issue Archive' embed on https://www.wysdym.ai/newsletter. Newest first. A row shows once visibleAfter <= today (UTC). Updated by the Thursday 'pearls-archive-publisher' routine.",
-  "updated": "2026-10-15",
+  "updated": "2026-10-22",
   "issues": [
+    {"no": 10, "title": "Microsoft just called your agents insiders", "sent": "2026-10-21", "visibleAfter": "2026-10-22", "url": "https://gtmstats.wysdym.ai/pearls/issue-10.html"},
     {"no": 9, "title": "Your next candidate is sending their twin", "sent": "2026-10-14", "visibleAfter": "2026-10-15", "url": "https://gtmstats.wysdym.ai/pearls/issue-09.html"},
     {"no": 8, "title": "80% say AI works. 6% can find the money.", "sent": "2026-10-07", "visibleAfter": "2026-10-08", "url": "https://gtmstats.wysdym.ai/pearls/issue-08.html"},
     {"no": 7, "title": "OpenAI hit pause on its own agents", "sent": "2026-09-30", "visibleAfter": "2026-10-01", "url": "https://gtmstats.wysdym.ai/pearls/issue-07.html"},
