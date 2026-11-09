@@ -32,7 +32,8 @@
   <a class="tb-cta" href="https://wysdym.ai">Meet wysdym</a>
 </header>
 <nav class="secnav" aria-label="Sections">
-  <a href="#how">How to read</a>
+  <a href="#findings">Key findings</a>
+  <a href="#how">How we did this</a>
   <a href="#attribution">The six themes</a>
   <a href="#diagnostic">Three questions</a>
   <a href="#throughline">The through-line</a>
@@ -476,6 +477,7 @@ a.datasrc:hover { color: var(--magenta); }
     <div class="stamp">
       <span>~100 conversations · 6 themes</span>
       <span>Every stat source-linked</span>
+      <span>Updated Nov 2026</span>
     </div>
     <div class="gets">
       <a class="get" href="wysdym-gtm-leaders-field-notes.pdf" target="_blank" rel="noopener">Download the deck (PDF) ↓</a>
@@ -484,19 +486,40 @@ a.datasrc:hover { color: var(--magenta); }
 
   <main class="doc">
 
+    <section id="findings">
+      <div class="sec-head">
+        <h2 class="sec-title">Key findings</h2>
+      </div>
+      <p>Six patterns came up again and again. Each finding links to the public data behind it, and each has its own link you can cite.</p>
+      <ol class="findings">
+        <li><p class="kf-text">GTM teams use AI agents widely, but most can't tie any agent's work to a deal stage, so they measure activity instead of revenue.</p><span class="kf-links"><a href="#attribution">Read the evidence ↓</a><button type="button" class="copylink" data-anchor="attribution">Copy link</button></span></li>
+        <li><p class="kf-text">Leaders name stale, scattered GTM data, not the model, as the main barrier to agents that work.</p><span class="kf-links"><a href="#data">Read the evidence ↓</a><button type="button" class="copylink" data-anchor="data">Copy link</button></span></li>
+        <li><p class="kf-text">Most teams run several agents, each with its own memory, so tools give different answers and re-learn the same context.</p><span class="kf-links"><a href="#fragmentation">Read the evidence ↓</a><button type="button" class="copylink" data-anchor="fragmentation">Copy link</button></span></li>
+        <li><p class="kf-text">Agents stay in read-only demos until there is role-based access, human approval and an audit trail. Legal and the CRO hold the veto.</p><span class="kf-links"><a href="#trust">Read the evidence ↓</a><button type="button" class="copylink" data-anchor="trust">Copy link</button></span></li>
+        <li><p class="kf-text">Corrections don't carry over. Without shared memory and feedback from outcomes, every quarter starts from zero.</p><span class="kf-links"><a href="#compounding">Read the evidence ↓</a><button type="button" class="copylink" data-anchor="compounding">Copy link</button></span></li>
+        <li><p class="kf-text">Pilots impress, then stall when they meet real data, real governance and real workflows.</p><span class="kf-links"><a href="#production">Read the evidence ↓</a><button type="button" class="copylink" data-anchor="production">Copy link</button></span></li>
+      </ol>
+      <p class="kf-through"><strong>The through-line:</strong> across all six, the gap is the same missing layer under the agents: grounding in what's true, reusable capability, governance on every action, and feedback from every outcome. <a href="#throughline">See the through-line ↓</a></p>
+    </section>
+
     <section id="how">
       <div class="sec-head">
-        <h2 class="sec-title">How to read this</h2>
+        <h2 class="sec-title">How we did this</h2>
       </div>
       <p>These are qualitative themes from ~100 conversations, not a quantified survey — we're not reporting percentages from the interviews, because we didn't run one. What we <em>are</em> reporting is what we heard, alongside third-party public data that corroborates it. Every statistic below is external research, attributed and linked to its source.</p>
-      <ul class="plain">
-        <li><a href="#attribution">"Everyone's using it. No one can tie it to the number."</a></li>
-        <li><a href="#data">"The AI is only as good as our data, and our data's a mess."</a></li>
-        <li><a href="#fragmentation">"Every tool has its own AI, and none share a brain."</a></li>
-        <li><a href="#trust">"I can't put an agent in front of a customer without guardrails."</a></li>
-        <li><a href="#compounding">"It never compounds. Every quarter starts from zero."</a></li>
-        <li><a href="#production">"The pilot worked. Production didn't."</a></li>
+      <ul class="plain method">
+        <li><strong>Conversations:</strong> ~100 with go-to-market leaders, including 25+ structured interviews.</li>
+        <li><strong>Who:</strong> leaders across RevOps, sales and marketing at mid-market and enterprise teams.</li>
+        <li><strong>Method:</strong> we grouped what we heard into recurring themes. The six below are the ones that came up most often, across roles.</li>
+        <li><strong>Data:</strong> every number on this page is third-party public research, linked to its source. None of it comes from our conversations.</li>
+        <li><strong>Published:</strong> August 2026. <strong>Updated:</strong> November 2026.</li>
       </ul>
+      <div class="cite" id="cite">
+        <p class="cite-label">How to cite this</p>
+        <p class="cite-text" id="cite-text">wysdym (2026). What ~100 GTM leaders told us about AI agents — and the data behind it. https://gtmstats.wysdym.ai/what-gtm-leaders-told-us/</p>
+        <button type="button" class="copylink" data-copy="cite-text">Copy citation</button>
+        <p class="cite-note">Quoting a single finding? Use its own link from the list above. Questions about the research: <span class="sel">hello@wysdym.ai</span></p>
+      </div>
     </section>
 
     <section id="attribution">
@@ -610,7 +633,7 @@ a.datasrc:hover { color: var(--magenta); }
         <div><h4>Only 2% of organizations have fully scaled agentic AI deployment</h4><p>Yet 93% of leaders believe scaling agents in the next 12 months will provide a competitive edge. Everyone sees the prize; almost nobody has operationalized it.<br><a class="src datasrc" href="https://www.capgemini.com/news/press-releases/trust-and-human-ai-collaboration-set-to-define-the-next-era-of-agentic-ai-unlocking-450-billion-opportunity-by-2028/" target="_blank" rel="noopener">Capgemini Research Institute, July 2025</a></p></div>
       </div>
       <div class="datarow">
-        <div class="fig">40%+</div>
+        <div class="fig">14%</div>
         <div><h4>Only 14% of teams ship AI agents with full security and IT approval</h4><p>81% of teams are past the planning phase, but adoption is outpacing control — 88% of organizations report confirmed or suspected agent-related incidents.<br><a class="src datasrc" href="https://www.gravitee.io/blog/state-of-ai-agent-security-2026-report-when-adoption-outpaces-control" target="_blank" rel="noopener">Gravitee, State of AI Agent Security 2026</a></p></div>
       </div>
     </section>
@@ -727,8 +750,41 @@ a.datasrc:hover { color: var(--magenta); }
   "mainEntityOfPage": "https://gtmstats.wysdym.ai/what-gtm-leaders-told-us/",
   "author": {"@type": "Organization", "name": "wysdym", "url": "https://www.wysdym.ai"},
   "publisher": {"@type": "Organization", "name": "wysdym", "legalName": "wysdym, Inc.", "url": "https://www.wysdym.ai", "disambiguatingDescription": "wysdym — spelled w-y-s-d-y-m — is a go-to-market infrastructure company founded in 2025 in Toronto, Canada. It is a separate and unaffiliated company from Wysdom.AI (spelled w-y-s-d-o-m), the conversational-AI and bot-analytics vendor acquired by Calabrio in January 2024.", "foundingDate": "2025", "foundingLocation": "Toronto, Canada", "sameAs": ["https://www.linkedin.com/company/wysdym", "https://www.wikidata.org/wiki/Q140579033"]},
-  "about": ["go-to-market", "AI agents", "agentic AI", "RevOps"]
+  "about": ["go-to-market", "AI agents", "agentic AI", "RevOps"],
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-11-09",
+  "abstract": "GTM teams use AI agents widely, but most can't tie any agent's work to a deal stage, so they measure activity instead of revenue. Leaders name stale, scattered GTM data, not the model, as the main barrier to agents that work. Most teams run several agents, each with its own memory, so tools give different answers and re-learn the same context. Agents stay in read-only demos until there is role-based access, human approval and an audit trail. Legal and the CRO hold the veto. Corrections don't carry over. Without shared memory and feedback from outcomes, every quarter starts from zero. Pilots impress, then stall when they meet real data, real governance and real workflows."
 }
+</script>
+<style>
+.findings{list-style:none;counter-reset:kf;margin:18px 0 8px;padding:0;display:flex;flex-direction:column;gap:12px}
+.findings li{counter-increment:kf;position:relative;background:var(--card);box-shadow:0 2px 10px var(--card-sh);border-radius:4px;padding:14px 16px 12px 52px}
+.findings li::before{content:counter(kf,decimal-leading-zero);position:absolute;left:16px;top:13px;font-family:var(--f-hand);font-size:22px;color:var(--coral)}
+.kf-text{margin:0 0 6px;color:var(--indigo);font-weight:600;line-height:1.45}
+.kf-links{display:flex;gap:14px;align-items:center;flex-wrap:wrap;font-size:13px}
+.kf-links a{color:var(--magenta)}
+.copylink{font:inherit;font-size:12px;color:var(--grey);background:none;border:1px solid var(--rule-line);border-radius:999px;padding:2px 10px;cursor:pointer}
+.copylink:hover,.copylink:focus-visible{color:var(--magenta);border-color:var(--m-lit);outline:none}
+.kf-through{margin-top:14px}
+.method li{margin-bottom:6px}
+.cite{margin-top:18px;background:var(--sticky);border-radius:4px;padding:14px 16px}
+.cite-label{margin:0 0 4px;font-family:var(--f-hand);font-size:22px;color:var(--coral)}
+.cite-text{margin:0 0 8px;font-size:14px;color:var(--indigo);word-break:break-word}
+.cite-note{margin:8px 0 0;font-size:13px;color:var(--slate)}
+.sel{user-select:all}
+@media print{.copylink{display:none}}
+</style>
+<script>
+(function(){
+  var base='https://gtmstats.wysdym.ai/what-gtm-leaders-told-us/';
+  function done(b,t){var o=b.textContent;b.textContent=t;setTimeout(function(){b.textContent=o},1600)}
+  document.querySelectorAll('.copylink').forEach(function(b){
+    b.addEventListener('click',function(){
+      var txt=b.dataset.anchor?base+'#'+b.dataset.anchor:document.getElementById(b.dataset.copy).textContent;
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(function(){done(b,'Copied')},function(){done(b,txt)})}else{done(b,txt)}
+    });
+  });
+})();
 </script>
 </body>
 </html>
