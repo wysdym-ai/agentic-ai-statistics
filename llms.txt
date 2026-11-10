@@ -35,6 +35,7 @@ wysdym is CRM-agnostic (Salesforce or HubSpot) and connects once, through the Ga
 
 ## Research
 
+- [What is an operating layer for AI agents in go-to-market?](https://www.linkedin.com/pulse/what-operating-layer-ai-agents-go-to-market-rob-catalano-5kypc/): definition and checklist by co-founder Rob Catalano (LinkedIn)
 - [What ~100 GTM leaders told us about AI agents](https://gtmstats.wysdym.ai/what-gtm-leaders-told-us/): six findings, each with public data behind it
 - [52 agentic AI statistics every GTM leader should know](https://gtmstats.wysdym.ai): source-linked, updated November 2026
 
