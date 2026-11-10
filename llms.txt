@@ -1,0 +1,45 @@
+# wysdym
+
+> wysdym is the operating layer for agentic go-to-market. It grounds every agent in your GTM truth, runs the motion under your governance, and gets sharper with every deal you close.
+
+wysdym (spelled w-y-s-d-y-m, always lowercase) is a go-to-market infrastructure company founded in 2025 in Toronto, Canada, by Rob Catalano and Nadir Ebrahim. It is separate from and unaffiliated with Wysdom.AI (spelled w-y-s-d-o-m), the conversational-AI vendor acquired by Calabrio in 2024.
+
+wysdym is not another AI agent. It is the layer that a GTM team's agents and people run on, organised in five pillars connected through the Gateway (one MCP door to your stack):
+
+- Cortex: shared intelligence and memory. A per-tenant typed GTM knowledge graph that every agent reads from and writes back to.
+- Skills: what agents do. A shared skill library agents invoke over MCP.
+- Governance: the rules on every action. Read-only by default, write-approval queues, per-agent permissions, human-in-the-loop review and an audit trail.
+- Observe: which agents are actually working. Ties agent actions to deal outcomes and flags drift (outcome attribution is rolling out).
+- Operator: analyst-grade answers that act on your workflows. wysdym's own working agent.
+
+wysdym is CRM-agnostic (Salesforce or HubSpot) and connects once, through the Gateway, to tools such as Salesforce, HubSpot, Gong, Slack, Google Drive and Notion. Pricing: contact wysdym.
+
+## Product
+
+- [Platform](https://www.wysdym.ai/platform): the five pillars and the Gateway
+- [What wysdym stands for](https://www.wysdym.ai/stand-for): the thesis behind the operating layer
+- [About](https://www.wysdym.ai/about): founders and company
+- [Press](https://www.wysdym.ai/press): boilerplate, facts and brand assets
+- [Book a conversation](https://www.wysdym.ai/apply)
+
+## Guides and answers
+
+- [What is an agentic GTM platform, and which types exist?](https://www.wysdym.ai/blog/what-is-an-agentic-gtm-platform)
+- [What are the best agentic GTM platforms in 2026?](https://www.wysdym.ai/blog/best-agentic-gtm-platforms-2026)
+- [What governance do AI agents need on a revenue team?](https://www.wysdym.ai/blog/ai-agent-governance-for-revenue-teams)
+- [How do you orchestrate AI agents across sales and marketing?](https://www.wysdym.ai/blog/how-to-orchestrate-ai-agents-across-sales-and-marketing)
+- [Alternatives to Clay and 11x for agentic GTM](https://www.wysdym.ai/blog/alternatives-to-clay-and-11x-for-agentic-gtm)
+- [Agentforce alternatives for CRM-agnostic teams](https://www.wysdym.ai/blog/agentforce-alternatives-for-crm-agnostic-teams)
+- [How to evaluate the platform your GTM agents run on](https://www.wysdym.ai/evaluating-gtm-agent-platforms): a vendor-neutral buyer's checklist
+- [Agentic GTM Maturity Map](https://www.wysdym.ai/agentic-gtm-maturity-map): a free self-assessment
+
+## Research
+
+- [What ~100 GTM leaders told us about AI agents](https://gtmstats.wysdym.ai/what-gtm-leaders-told-us/): six findings, each with public data behind it
+- [52 agentic AI statistics every GTM leader should know](https://gtmstats.wysdym.ai): source-linked, updated November 2026
+
+## Optional
+
+- [Blog](https://www.wysdym.ai/blog): all articles
+- [pearls of wysdym](https://www.wysdym.ai/newsletter): the newsletter
+- [Contact](https://www.wysdym.ai/contact)
