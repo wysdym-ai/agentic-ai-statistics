@@ -1,7 +1,8 @@
 {
   "_readme": "pearls of wysdym issue archive. Read by the 'Issue Archive' embed on https://www.wysdym.ai/newsletter. Newest first. A row shows once visibleAfter <= today (UTC). Updated by the Thursday 'pearls-archive-publisher' routine.",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "issues": [
+    {"no": 13, "title": "Outlook bounced your best email. Nobody told you.", "sent": "2026-11-11", "visibleAfter": "2026-11-12", "url": "https://gtmstats.wysdym.ai/pearls/issue-13.html"},
     {"no": 12, "title": "90% of agent work doesn't need the big model", "sent": "2026-11-04", "visibleAfter": "2026-11-05", "url": "https://gtmstats.wysdym.ai/pearls/issue-12.html"},
     {"no": 11, "title": "The model made $16B. The buyer made $0.", "sent": "2026-10-28", "visibleAfter": "2026-10-29", "url": "https://gtmstats.wysdym.ai/pearls/issue-11.html"},
     {"no": 10, "title": "Microsoft just called your agents insiders", "sent": "2026-10-21", "visibleAfter": "2026-10-22", "url": "https://gtmstats.wysdym.ai/pearls/issue-10.html"},
