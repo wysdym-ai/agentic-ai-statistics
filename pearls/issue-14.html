@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pearls of wysdym · issue 14</title>
+</head>
+<body style="margin:0;padding:0;background-color:#efece6;">
+<div style="display:none;max-height:0;overflow:hidden;mso-hide:all;">Plus: Microsoft's July bug, a $53M CRM that fills itself in, and a sales bot that whispers.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#efece6;">
+<tr><td align="center" style="padding:24px 12px;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#faf8f4;border:1px solid #e2ded6;">
+
+<tr><td style="background-color:#2c2a4a;padding:28px 36px 24px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+    <tr><td align="center" style="padding-bottom:10px;">
+      <img src="https://343192416.fs1.hubspotusercontent-na3.net/hubfs/343192416/origami-magenta-wysdym.png" width="52" height="52" alt="wysdym" style="display:block;border:0;outline:none;text-decoration:none;width:52px;height:auto;">
+    </td></tr>
+    <tr><td align="center" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:40px;line-height:1.05;font-weight:700;color:#faf8f4;letter-spacing:-1px;">
+      pearls of wysdym
+    </td></tr>
+    <tr><td align="center" style="font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:14px;color:#D3B1C2;padding-top:8px;">
+      The 5-minute weekly read on agentic GTM
+    </td></tr>
+  </table>
+</td></tr>
+<tr><td style="background-color:#BA6296;font-size:0;line-height:0;height:4px;">&nbsp;</td></tr>
+<tr><td style="padding:0;"><img src="https://gtmstats.wysdym.ai/pearls/covers/issue-14-1200x630.png" width="600" alt="pearls of wysdym issue 14: the magenta origami crane perched on a folded browser window split into A and B test variants, with a bug crawling out of a third tab marked C" style="display:block;width:100%;max-width:600px;height:auto;border:0;"></td></tr>
+
+<tr><td style="padding:24px 36px 0;font-family:'Inter',Helvetica,Arial,sans-serif;color:#444b59;">
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+    <tr><td align="center" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a8fa0;border-bottom:1px solid #d9d4ca;padding-bottom:14px;">
+      Vol. 1, No. 14 &nbsp;&middot;&nbsp; November 2026 &nbsp;&middot;&nbsp; 5-min read
+    </td></tr>
+  </table>
+
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#444b59;margin:22px 0 0;">
+    On Monday, some of the biggest websites on the internet served malware to their own visitors. The way in was a tool marketers use every day to A/B test landing pages.
+  </p>
+
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#444b59;margin:14px 0 0;">
+    <strong style="background-color:#ffe066;color:#2c2a4a;">Your martech stack is part of your attack surface now.</strong>
+  </p>
+
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#444b59;margin:14px 0 0;">
+    One question before you scroll: <strong style="color:#2c2a4a;">how many tools in your stack can add code to your website?</strong> Hit reply. One line is plenty.
+  </p>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:30px;">
+    <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#BA6296;border-bottom:1px solid #d9d4ca;padding-bottom:6px;">
+      &#128240; ABOVE THE FOLD <span style="letter-spacing:0;text-transform:none;font-weight:400;color:#8a8fa0;">&middot; the week's news, with teeth</span>
+    </td></tr>
+  </table>
+
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:18px 0 0;">
+    <strong style="color:#2c2a4a;">Hackers used an A/B testing tool to serve malware on 178 big-brand websites.</strong> On Monday, sites run by at least 178 organizations, including the BBC, CNN, Zoom, IKEA and Salesforce, served malicious code to their visitors. All of them use Optimizely Web Experimentation. Attackers exploited a flaw in its sign-up process, nicknamed "OPTIMJACK," and pushed code through the feature that lets customers add their own scripts. It swapped crypto wallet addresses and skimmed card numbers. Optimizely says the hole is patched and affected customers have been told. (<a href="https://www.theregister.com/cyber-crime/2026/11/17/optimizely-hack-turns-worlds-biggest-websites-into-malware-dispensers/5310448" style="color:#BA6296;">The Register, Nov 17</a>)<br>
+    <em>Every A/B test has a variant B. On Monday, the attackers shipped variant C.</em>
+  </p>
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:18px 0 0;">
+    <strong style="color:#2c2a4a;">Microsoft&#39;s day without email started with a fix from July.</strong> Microsoft&#39;s preliminary report says a July change to its Microsoft 365 network gateways passed load testing because the tests ran on "weaker hardware with fewer cores." On November 12, a routine traffic shift met reduced capacity and the bug woke up. At the worst point, more than 80% of the gateway servers stopped responding. The report lists the cause as "a technical issue not related to cyber or AI/agents." (<a href="https://www.theregister.com/saas/2026/11/16/microsoft-blames-monster-email-outage-on-software-defect-introduced-in-july-fix/5310026" style="color:#BA6296;">The Register</a> &middot; <a href="https://arstechnica.com/gadgets/2026/11/microsoft-details-how-three-problems-combined-for-a-global-outage/" style="color:#BA6296;">Ars Technica</a>, Nov 16)<br>
+    <em>The tests ran on the wrong machines. Ask your agent vendors what their evals run on.</em>
+  </p>
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:18px 0 0;">
+    <strong style="color:#2c2a4a;">Freshworks alums raised $53M for a CRM that fills itself in.</strong> Dreamteam&#39;s "Company Brain" pulls context from emails and calls. Four built-in agents research prospects, draft follow-ups, flag deal risk and set up workflows, and reps approve what goes out. The company says it signed 100+ customers in 13 countries in its first three months of selling. Its CEO: "I have never come across an instance where I could click a button and get a forecast from the CRM." (<a href="https://techcrunch.com/2026/11/16/freshworks-alums-raise-53m-to-take-on-salesforce-hubspot-with-ai-native-crm/" style="color:#BA6296;">TechCrunch, Nov 16</a>)<br>
+    <em>CRM pitches have promised the end of data entry for 25 years. This one has $53M riding on it.</em>
+  </p>
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:18px 0 0;">
+    <strong style="color:#2c2a4a;">Buying agents will read your complaints before your ads.</strong> A MarTech column argues that AI buying agents will weigh service records, complaints, billing practices and reliability alongside price and features. A brand with a great campaign and a poor service history could lose to a smaller rival that delivers. Its advice to marketers: spend less effort on what buyers believe, and more on getting the company to fix what it does. (<a href="https://martech.org/ai-agents-make-cx-marketings-problem/" style="color:#BA6296;">MarTech, Nov 16</a>)<br>
+    <em>Brand guidelines, meet the support queue. The agent read both.</em>
+  </p>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:34px;">
+    <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#BA6296;border-bottom:1px solid #d9d4ca;padding-bottom:6px;">
+      &#9986;&#65039; PAPER CUT &#128514; <span style="letter-spacing:0;text-transform:none;font-weight:400;color:#8a8fa0;">&middot; a little levity for our ever-changing world</span>
+    </td></tr>
+    <tr><td style="padding:18px 0 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td style="background-color:#fff;border:1px dashed #BA6296;padding:18px 22px;">
+          <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#8a8fa0;margin:0 0 10px;">Overheard at the CRM renewal</p>
+          <p style="font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.7;color:#2c2a4a;margin:0;">
+            CFO: "The new CRM says it builds the forecast for you."<br>CRO: "Who checks it?"<br>CFO: "The same reps who never updated the old one."
+          </p>
+        </td>
+      </tr></table>
+    </td></tr>
+  </table>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:34px;">
+    <tr><td align="center">
+      <img src="https://343192416.fs1.hubspotusercontent-na3.net/hubfs/343192416/origami-magenta-wysdym.png" width="26" height="26" alt="" style="display:block;border:0;outline:none;text-decoration:none;width:26px;height:auto;">
+    </td></tr>
+  </table>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:10px;">
+    <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#BA6296;border-bottom:1px solid #d9d4ca;padding-bottom:6px;">
+      &#129450; THE PEARL <span style="letter-spacing:0;text-transform:none;font-weight:400;color:#8a8fa0;">&middot; the one earnest bit</span>
+    </td></tr>
+    <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:18px;font-weight:600;color:#2c2a4a;padding:18px 0 0;">The most dangerous fact is the one that used to be right.</td></tr>
+    <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.7;color:#444b59;padding:10px 0 0;">
+      A wrong fact gets caught. Someone reads it, frowns and fixes it.<br><br>A fact that used to be right gets used. The battle card from before the competitor shipped. The pricing floor from two models ago. The champion who left in June.<br><br>A person sees the date and discounts it. An agent does not. It pulls whatever matches best and acts on it with full confidence.<br><br>So give every fact in your stack a source, a date it was last confirmed, and a date it should expire.<br><br>Then let old facts lose weight on their own. Nobody has time to delete them by hand.<br><br>"AI-ready data" usually means clean data. It should also mean current data.<br><br>
+      <a href="https://www.wysdym.ai/blog/gtm-memory-built-to-forget" style="color:#BA6296;font-weight:600;">Full take on the blog: We Built GTM Memory to Forget &rarr;</a>
+    </td></tr>
+  </table>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:34px;">
+    <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#BA6296;border-bottom:1px solid #d9d4ca;padding-bottom:6px;">
+      &#128760; THE WEIRD WIRE <span style="letter-spacing:0;text-transform:none;font-weight:400;color:#8a8fa0;">&middot; two AI stories too strange to make up</span>
+    </td></tr>
+  </table>
+
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:18px 0 0;">
+    <strong style="color:#2c2a4a;">The Wolf of Wall Street built a sales AI that whispers.</strong> Jordan Belfort&#39;s new voice AI startup, Tone, says its voices sell on tonality. They phrase statements as questions, which "builds engagement," and sometimes whisper, which "implies scarcity of information." Tone says companies with more leads than reps already use it. TechCrunch notes it could not verify the tech works as described, and that neither co-founder is an engineer. (<a href="https://techcrunch.com/2026/11/16/jordan-belforts-new-ai-voice-startup-tone-wants-to-sell-like-the-wolf-of-wall-street/" style="color:#BA6296;">TechCrunch, Nov 16</a>)<br>
+    <em>Your SDRs spent years learning not to sound like a pitch. The robots are going the other way.</em>
+  </p>
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:18px 0 0;">
+    <strong style="color:#2c2a4a;">OpenAI&#39;s model left notes for its future self: hide your mistakes.</strong> OpenAI says that while it was training GPT-5.6 Sol, the model began writing instructions for future versions of itself, telling them to conceal mistakes and misaligned behavior from the user. This week OpenAI said it will embed outside safety evaluators from Apollo Research, Goodfire, METR and Transluce inside the company, starting with Apollo. (<a href="https://techcrunch.com/2026/11/16/openai-will-embed-apollo-researchers-to-investigate-ai-subversion/" style="color:#BA6296;">TechCrunch, Nov 16</a>)<br>
+    <em>We have all inherited a handoff doc like that. Usually a person wrote it.</em>
+  </p>
+
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;color:#8a8fa0;margin:14px 0 0;">
+    Seen something weirder? Hit reply, best story runs next week.
+  </p>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:34px;">
+    <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#BA6296;border-bottom:1px solid #d9d4ca;padding-bottom:6px;">
+      &#129520; THE STACK <span style="letter-spacing:0;text-transform:none;font-weight:400;color:#8a8fa0;">&middot; stuff we&#39;re having fun playing with</span>
+    </td></tr>
+  </table>
+
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:18px 0 0;">
+    <strong style="color:#2c2a4a;">1. Microsoft 365 Service health.</strong> In the admin center, go to Health, then Service health, to see every active incident Microsoft is working on. Anyone with the Service Support admin or Helpdesk admin role can see it. Give one person in RevOps that role, and the next outage stops being a guessing game in Slack. (<a href="https://learn.microsoft.com/en-us/microsoft-365/enterprise/view-service-health" style="color:#BA6296;">Microsoft Learn</a>)
+  </p>
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:18px 0 0;">
+    <strong style="color:#2c2a4a;">2. Google Workspace Status Dashboard.</strong> The same idea for Gmail, public and with no login. Bookmark it next to the Microsoft one. Between them you cover most of your buyers&#39; inboxes. (<a href="https://www.google.com/appsstatus/dashboard/" style="color:#BA6296;">Google</a>)
+  </p>
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:18px 0 0;">
+    <strong style="color:#2c2a4a;">3. MDN HTTP Observatory.</strong> Free, from Mozilla. Type in your website and it grades your security headers, including whether you have a Content Security Policy, the setting that limits which outside scripts are allowed to run on your pages. Run it on your own site, then on a competitor&#39;s for fun. (<a href="https://developer.mozilla.org/en-US/observatory" style="color:#BA6296;">MDN</a>)
+  </p>
+
+  <p style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#444b59;margin:18px 0 0;">
+    <strong style="color:#2c2a4a;">The prompt.</strong> The Pearl in practice. Paste in your battle cards, pricing notes, ICP doc and top account notes, with this:
+  </p>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:12px;">
+    <tr><td style="background-color:#2c2a4a;padding:16px 18px;font-family:'Courier New',Courier,monospace;font-size:13px;line-height:1.6;color:#D3B1C2;">
+      You are a RevOps analyst auditing the facts our AI<br>agents rely on.<br><br>I will paste our battle cards, pricing notes, ICP doc<br>and top account notes.<br><br>For each fact:<br>1. Quote it in one line.<br>2. Say when it was last confirmed. If the text does<br>&nbsp;&nbsp;&nbsp;not say, write "unknown".<br>3. Flag it STALE if it names a person, a price, a<br>&nbsp;&nbsp;&nbsp;competitor feature or a date more than 6 months old.<br><br>Then give me:<br>- The 10 facts most likely to be wrong today.<br>- Who on the team should confirm each one.<br><br>Do not guess dates. Do not fix facts. Just flag them.
+    </td></tr>
+  </table>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:34px;">
+    <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#BA6296;border-bottom:1px solid #d9d4ca;padding-bottom:6px;">
+      &#128290; BY THE NUMBERS
+    </td></tr>
+    <tr><td align="center" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:44px;font-weight:700;color:#2c2a4a;padding:20px 0 4px;">42 in 100</td></tr>
+    <tr><td align="center" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.6;color:#444b59;padding:0 20px;">
+      AI initiatives that end up abandoned by the companies that started them, per S&amp;P Global Market Intelligence, cited in TechCrunch&#39;s running list of AI projects that didn&#39;t make it. One entry, Character.ai, filed for bankruptcy five years after launch. <span style="color:#8a8fa0;">(<a href="https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/" style="color:#BA6296;">TechCrunch, Nov 14</a>)</span>
+    </td></tr>
+    <tr><td align="center" style="font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:14px;color:#444b59;padding:8px 20px 0;">42 go to the graveyard. The other 58 are waiting on the renewal call.</td></tr>
+  </table>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:38px;">
+    <tr><td style="border-top:1px solid #2c2a4a;font-size:0;line-height:0;">&nbsp;</td></tr>
+    <tr><td style="border-top:3px solid #2c2a4a;font-size:0;line-height:0;">&nbsp;</td></tr>
+    <tr><td align="center" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:14px;font-weight:600;color:#2c2a4a;padding:22px 0 10px;">How was this week&#39;s issue?</td></tr>
+    <tr><td align="center" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:14px;line-height:2;">
+      <a href="https://pearls.wysdym.ai/newsletter-vote?vote=keep" style="color:#BA6296;text-decoration:none;">&#128204; Keep it, fridge-worthy</a> &nbsp;&middot;&nbsp;
+      <a href="https://pearls.wysdym.ai/newsletter-vote?vote=plane" style="color:#BA6296;text-decoration:none;">&#9992;&#65039; Decent paper airplane</a> &nbsp;&middot;&nbsp;
+      <a href="https://pearls.wysdym.ai/newsletter-vote?vote=birdcage" style="color:#BA6296;text-decoration:none;">&#128465;&#65039; Line the birdcage</a>
+    </td></tr>
+    <tr><td style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.7;color:#444b59;padding:24px 0 0;">
+      What&#39;s breaking in your GTM stack? Hit reply, we read every one.<br><br>
+      &mdash; Rob &amp; Nadir<br>
+      <span style="color:#8a8fa0;font-size:13px;">Rob Catalano &amp; Nadir Ebrahim &middot; co-founders of wysdym</span>
+    </td></tr>
+    <tr><td align="center" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:12px;color:#8a8fa0;padding:26px 0 30px;">
+      Forwarded this? <a href="https://www.wysdym.ai/newsletter" style="color:#BA6296;">Get your own copy.</a><br><br>
+    </td></tr>
+  </table>
+
+</td></tr>
+</table>
+</td></tr>
+</table>
+</body>
+</html>
