@@ -1,7 +1,8 @@
 {
   "_readme": "pearls of wysdym issue archive. Read by the 'Issue Archive' embed on https://www.wysdym.ai/newsletter. Newest first. A row shows once visibleAfter <= today (UTC). Updated by the Thursday 'pearls-archive-publisher' routine.",
-  "updated": "2026-11-19",
+  "updated": "2026-11-26",
   "issues": [
+    {"no": 15, "title": "Amazon blocks OpenAI's bots, then buys its ads", "sent": "2026-11-25", "visibleAfter": "2026-11-26", "url": "https://gtmstats.wysdym.ai/pearls/issue-15.html"},
     {"no": 14, "title": "Hackers turned an A/B testing tool into malware", "sent": "2026-11-18", "visibleAfter": "2026-11-19", "url": "https://gtmstats.wysdym.ai/pearls/issue-14.html"},
     {"no": 13, "title": "Outlook bounced your best email. Nobody told you.", "sent": "2026-11-11", "visibleAfter": "2026-11-12", "url": "https://gtmstats.wysdym.ai/pearls/issue-13.html"},
     {"no": 12, "title": "90% of agent work doesn't need the big model", "sent": "2026-11-04", "visibleAfter": "2026-11-05", "url": "https://gtmstats.wysdym.ai/pearls/issue-12.html"},
